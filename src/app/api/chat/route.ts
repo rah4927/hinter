@@ -1,6 +1,9 @@
 import { NextResponse } from 'next/server';
-import { ChatMessage } from '@/types';
-import { generateHint } from '@/lib/llm';
+import OpenAI from 'openai';
+
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY,
+});
 
 // In a real app, this would come from a database
 const problemsDb = new Map([
@@ -35,38 +38,47 @@ Therefore, no such function can exist.`,
 
 export async function POST(request: Request) {
   try {
-    const { message, problemId, history } = await request.json();
-    
-    const problem = problemsDb.get(problemId);
-    if (!problem) {
+    const { message, problem, history } = await request.json();
+    console.log('Received request:', { message, problem, history });
+
+    if (!process.env.OPENAI_API_KEY) {
+      console.error('OpenAI API key is not set');
       return NextResponse.json(
-        { error: 'Problem not found' },
-        { status: 404 }
+        { error: 'OpenAI API key is not configured' },
+        { status: 500 }
       );
     }
 
-    // Calculate hint index based on history
-    const hintIndex = history.filter((msg: ChatMessage) => msg.role === 'assistant').length;
-    const isComplete = hintIndex >= problem.hints.length;
-
-    // Generate hint using OpenAI
-    const response = await generateHint({
-      userMessage: message,
-      history,
-      problemStatement: problem.statement,
-      solution: problem.solution,
-      previousHints: problem.hints,
-      hintIndex: Math.min(hintIndex, problem.hints.length - 1),
+    const completion = await openai.chat.completions.create({
+      model: "gpt-4",
+      messages: [
+        {
+          role: "system",
+          content: `You are a helpful assistant for solving IMO problems. The current problem is:\n\n${problem.statement}\n\nProvide hints and guidance to help solve the problem, but don't give away the solution directly.`
+        },
+        ...history.map((msg: any) => ({
+          role: msg.role,
+          content: msg.content
+        })),
+        {
+          role: "user",
+          content: message
+        }
+      ],
+      temperature: 0.7,
+      max_tokens: 500,
     });
+
+    console.log('OpenAI response:', completion.choices[0].message);
 
     return NextResponse.json({
-      message: response,
-      isComplete,
+      message: completion.choices[0].message.content,
+      isComplete: false
     });
   } catch (error) {
-    console.error('Error in chat endpoint:', error);
+    console.error('Detailed error in chat API:', error);
     return NextResponse.json(
-      { error: 'Internal server error' },
+      { error: error instanceof Error ? error.message : 'Failed to process chat message' },
       { status: 500 }
     );
   }

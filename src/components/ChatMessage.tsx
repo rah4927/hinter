@@ -1,56 +1,43 @@
 'use client';
 
 import { memo, useEffect } from 'react';
-import { ChatMessage } from '@/types';
 
-interface ChatMessageProps {
-  message: ChatMessage;
+declare global {
+  interface Window {
+    MathJax: {
+      typesetPromise: (elements?: Element[]) => Promise<void>;
+    };
+  }
 }
 
-function ChatMessageDisplay({ message }: ChatMessageProps) {
+interface ChatMessageProps {
+  content: string;
+  role: 'user' | 'assistant';
+  timestamp: number;
+}
+
+const ChatMessageDisplay = memo(function ChatMessageDisplay({ content, role, timestamp }: ChatMessageProps) {
   useEffect(() => {
-    // Only typeset this specific message when it's first rendered
-    const messageElement = document.getElementById(`message-${message.timestamp}`);
+    // Only typeset this specific message
+    const messageElement = document.getElementById(`message-${timestamp}`);
     if (messageElement && window.MathJax?.typesetPromise) {
-      // First ensure MathJax is ready
-      window.MathJax.startup?.promise.then(() => {
-        // Then typeset just this element
-        window.MathJax?.typesetPromise?.()
-          .then(() => {
-            console.log(`Typeset message ${message.timestamp}`);
-          })
-          .catch(err => {
-            console.error('Error typesetting message:', err);
-          });
+      window.MathJax.typesetPromise().then(() => {
+        window.MathJax.typesetPromise([messageElement]);
       });
     }
-  }, [message.timestamp]);
+  }, [timestamp]); // Only re-run if timestamp changes
 
   return (
     <div
-      className={`flex ${
-        message.role === 'user' ? 'justify-end' : 'justify-start'
+      id={`message-${timestamp}`}
+      className={`p-4 rounded-lg mb-4 ${
+        role === 'user' 
+          ? 'bg-blue-500 text-white ml-12' 
+          : 'bg-white shadow-sm text-gray-900 mr-12'
       }`}
-    >
-      <div
-        className={`max-w-[80%] rounded-lg p-4 ${
-          message.role === 'user'
-            ? 'bg-blue-500 text-white'
-            : 'bg-white shadow-sm'
-        }`}
-      >
-        <div 
-          id={`message-${message.timestamp}`}
-          className={`prose max-w-none break-words whitespace-pre-wrap text-lg ${
-            message.role === 'user' 
-              ? 'text-white' 
-              : 'text-gray-900'
-          }`} 
-          dangerouslySetInnerHTML={{ __html: message.content }} 
-        />
-      </div>
-    </div>
+      dangerouslySetInnerHTML={{ __html: content }}
+    />
   );
-}
+});
 
-export default memo(ChatMessageDisplay); 
+export default ChatMessageDisplay; 

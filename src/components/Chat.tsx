@@ -1,24 +1,28 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { ChatMessage, Problem, Solution } from '@/types';
+import { Message } from '@/types/chat';
 import ProblemDisplay from './Problem';
 import ChatMessageDisplay from './ChatMessage';
 
 interface ChatProps {
-  problem: Problem;
-  solution: Solution;
+  problem: string;
+  solution?: {
+    problemId: string;
+    solution: string;
+    hints: string[];
+  };
   onComplete?: () => void;
 }
 
 export default function Chat({ problem, solution, onComplete }: ChatProps) {
-  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const chatEndRef = useRef<HTMLDivElement>(null);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
-    chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
   useEffect(() => {
@@ -49,7 +53,7 @@ export default function Chat({ problem, solution, onComplete }: ChatProps) {
     e.preventDefault();
     if (!input.trim() || isLoading) return;
 
-    const userMessage: ChatMessage = {
+    const userMessage: Message = {
       role: 'user',
       content: input,
       timestamp: Date.now(),
@@ -60,6 +64,7 @@ export default function Chat({ problem, solution, onComplete }: ChatProps) {
     setIsLoading(true);
 
     try {
+      console.log('Sending request with:', { message: input, problem, history: messages });
       const response = await fetch('/api/chat', {
         method: 'POST',
         headers: {
@@ -67,14 +72,15 @@ export default function Chat({ problem, solution, onComplete }: ChatProps) {
         },
         body: JSON.stringify({
           message: input,
-          problemId: problem.id,
+          problem: problem,
           history: messages,
         }),
       });
 
       const data = await response.json();
+      console.log('Received response:', data);
       
-      const assistantMessage: ChatMessage = {
+      const assistantMessage: Message = {
         role: 'assistant',
         content: data.message,
         timestamp: Date.now(),
@@ -87,29 +93,35 @@ export default function Chat({ problem, solution, onComplete }: ChatProps) {
       }
     } catch (error) {
       console.error('Error sending message:', error);
+      // Add error message to chat
+      const errorMessage: Message = {
+        role: 'assistant',
+        content: 'Sorry, there was an error processing your message. Please try again.',
+        timestamp: Date.now(),
+      };
+      setMessages(prev => [...prev, errorMessage]);
     } finally {
       setIsLoading(false);
     }
   };
 
   return (
-    <div className="flex flex-col h-[80vh] max-w-4xl mx-auto">
+    <div className="flex flex-col h-[600px] bg-white rounded-lg shadow-lg">
       <ProblemDisplay problem={problem} />
-
-      <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50">
+      <div className="flex-1 overflow-y-auto p-4 space-y-4">
         {messages.map((message) => (
-          <ChatMessageDisplay 
-            key={message.timestamp} 
-            message={message} 
+          <ChatMessageDisplay
+            key={message.timestamp}
+            content={message.content}
+            role={message.role}
+            timestamp={message.timestamp}
           />
         ))}
-        <div ref={chatEndRef} />
+        <div ref={messagesEndRef} />
       </div>
-
-      <form onSubmit={handleSubmit} className="p-4 border-t bg-white">
+      <form onSubmit={handleSubmit} className="p-4 border-t">
         <div className="flex space-x-2">
           <textarea
-            rows={1}
             value={input}
             onChange={(e) => {
               setInput(e.target.value);
@@ -123,14 +135,15 @@ export default function Chat({ problem, solution, onComplete }: ChatProps) {
                 handleSubmit(e);
               }
             }}
-            placeholder="Ask for a hint... (Press Enter to send, Shift+Enter for new line)"
-            className="flex-1 p-3 border rounded text-gray-900 bg-white text-lg resize-none overflow-hidden min-h-[3.2rem] max-h-32"
+            placeholder="Type your message..."
+            className="flex-1 p-2 border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900"
+            rows={1}
             disabled={isLoading}
           />
           <button
             type="submit"
+            className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
             disabled={isLoading}
-            className="px-6 py-3 bg-blue-500 text-white rounded hover:bg-blue-600 disabled:opacity-50 text-lg font-medium h-fit"
           >
             {isLoading ? 'Thinking...' : 'Send'}
           </button>

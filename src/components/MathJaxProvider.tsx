@@ -1,16 +1,8 @@
 'use client';
 
-import { memo, useEffect } from 'react';
+import { useEffect } from 'react';
 
-interface ProblemDisplayProps {
-  problem: string | { statement: string };
-}
-
-function ProblemDisplay({ problem }: ProblemDisplayProps) {
-  console.log('Problem prop:', problem);
-  console.log('Problem type:', typeof problem);
-  
-  // Load MathJax dynamically
+export default function MathJaxProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     // Add MathJax configuration
     const config = document.createElement('script');
@@ -30,13 +22,6 @@ function ProblemDisplay({ problem }: ProblemDisplayProps) {
           skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
           ignoreHtmlClass: 'tex2jax_ignore',
           processHtmlClass: 'tex2jax_process'
-        },
-        startup: {
-          ready: () => {
-            console.log('MathJax is loaded and ready');
-            MathJax.startup.defaultReady();
-            MathJax.typesetPromise();
-          }
         }
       };
     `;
@@ -57,17 +42,5 @@ function ProblemDisplay({ problem }: ProblemDisplayProps) {
     };
   }, []);
 
-  return (
-    <div className="bg-white p-4 rounded-t-lg shadow">
-      <h2 className="text-xl font-bold mb-2 text-gray-900">Problem</h2>
-      <div 
-        className="prose max-w-none text-lg leading-relaxed text-gray-900" 
-        dangerouslySetInnerHTML={{ 
-          __html: typeof problem === 'string' ? problem : problem.statement
-        }} 
-      />
-    </div>
-  );
-}
-
-export default memo(ProblemDisplay); 
+  return <>{children}</>;
+} 
