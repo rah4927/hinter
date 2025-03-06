@@ -1,13 +1,11 @@
 import { getProblemById } from '@/app/actions';
 import Chat from '@/components/Chat';
 
-interface PageProps {
-  params: {
-    id: string;
-  };
-}
-
-export default async function ProblemPage({ params }: PageProps) {
+export default async function ProblemPage({
+  params,
+}: {
+  params: { id: string }
+}) {
   const { id } = params;
   const problem = await getProblemById(id);
   
