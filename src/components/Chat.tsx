@@ -2,6 +2,8 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { ChatMessage, Problem, Solution } from '@/types';
+import ProblemDisplay from './Problem';
+import ChatMessageDisplay from './ChatMessage';
 
 interface ChatProps {
   problem: Problem;
@@ -36,61 +38,9 @@ export default function Chat({ problem, solution, onComplete }: ChatProps) {
     }
   };
 
-  // Load MathJax dynamically
+  // Re-run MathJax typesetting only when messages change
   useEffect(() => {
-    // Add MathJax configuration
-    const config = document.createElement('script');
-    config.type = 'text/javascript';
-    config.text = `
-      window.MathJax = {
-        loader: {
-          load: ['[tex]/ams', '[tex]/noerrors', '[tex]/noundefined']
-        },
-        tex: {
-          packages: {'[+]': ['ams', 'noerrors', 'noundefined']},
-          inlineMath: [['$', '$'], ['\\\\(', '\\\\)']],
-          displayMath: [['$$', '$$'], ['\\\\[', '\\\\]']],
-          processEscapes: true,
-        },
-        options: {
-          skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-          ignoreHtmlClass: 'tex2jax_ignore',
-          processHtmlClass: 'tex2jax_process'
-        },
-        startup: {
-          ready: () => {
-            console.log('MathJax is loaded and ready');
-            MathJax.startup.defaultReady();
-          }
-        }
-      };
-    `;
-    document.head.appendChild(config);
-
-    // Load MathJax script
-    const script = document.createElement('script');
-    script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-    script.async = true;
-    script.id = 'MathJax-script';
-    script.onload = () => {
-      console.log('MathJax script loaded');
-      window.MathJax.startup.promise.then(() => {
-        console.log('MathJax initial typesetting complete');
-        typesetMath();
-      });
-    };
-    document.head.appendChild(script);
-
-    return () => {
-      document.head.removeChild(config);
-      if (script.parentNode) {
-        script.parentNode.removeChild(script);
-      }
-    };
-  }, []);
-
-  useEffect(() => {
-    if (window.MathJax) {
+    if (window.MathJax && messages.length > 0) {
       typesetMath();
     }
   }, [messages]);
@@ -143,42 +93,15 @@ export default function Chat({ problem, solution, onComplete }: ChatProps) {
   };
 
   return (
-    <div className="flex flex-col h-full max-w-2xl mx-auto">
-      <div className="bg-white p-4 rounded-t-lg shadow">
-        <h2 className="text-xl font-bold mb-2 text-gray-900">Problem</h2>
-        <div 
-          className="prose max-w-none text-lg leading-relaxed text-gray-900" 
-          dangerouslySetInnerHTML={{ 
-            __html: problem.statement
-          }} 
-        />
-      </div>
+    <div className="flex flex-col h-[80vh] max-w-4xl mx-auto">
+      <ProblemDisplay problem={problem} />
 
       <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50">
-        {messages.map((message, index) => (
-          <div
-            key={index}
-            className={`flex ${
-              message.role === 'user' ? 'justify-end' : 'justify-start'
-            }`}
-          >
-            <div
-              className={`max-w-[80%] rounded-lg p-3 ${
-                message.role === 'user'
-                  ? 'bg-blue-500 text-white'
-                  : 'bg-white shadow-sm'
-              }`}
-            >
-              <div 
-                className={`prose ${
-                  message.role === 'user' 
-                    ? 'text-white' 
-                    : 'text-gray-900'
-                }`} 
-                dangerouslySetInnerHTML={{ __html: message.content }} 
-              />
-            </div>
-          </div>
+        {messages.map((message) => (
+          <ChatMessageDisplay 
+            key={message.timestamp} 
+            message={message} 
+          />
         ))}
         <div ref={chatEndRef} />
       </div>
@@ -190,13 +113,13 @@ export default function Chat({ problem, solution, onComplete }: ChatProps) {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Ask for a hint..."
-            className="flex-1 p-2 border rounded text-gray-900 bg-white"
+            className="flex-1 p-3 border rounded text-gray-900 bg-white text-lg"
             disabled={isLoading}
           />
           <button
             type="submit"
             disabled={isLoading}
-            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 disabled:opacity-50"
+            className="px-6 py-3 bg-blue-500 text-white rounded hover:bg-blue-600 disabled:opacity-50 text-lg font-medium"
           >
             {isLoading ? 'Thinking...' : 'Send'}
           </button>

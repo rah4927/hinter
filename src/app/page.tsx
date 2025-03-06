@@ -41,9 +41,9 @@ Therefore, no such function can exist.`,
 
 export default function Home() {
   return (
-    <main className="min-h-screen p-4 bg-gray-50">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold mb-8 text-center text-gray-900">IMO Problem Assistant</h1>
+    <main className="min-h-screen p-6 bg-gray-50">
+      <div className="max-w-5xl mx-auto">
+        <h1 className="text-4xl font-bold mb-8 text-center text-gray-900">IMO Problem Assistant</h1>
         <Chat
           problem={sampleProblem}
           solution={sampleSolution}
