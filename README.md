@@ -1,6 +1,6 @@
-# IMO Problem Assistant
+# Problem Assistant
 
-An AI-powered assistant for International Mathematical Olympiad (IMO) problems that provides progressive hints to help students develop their problem-solving skills.
+An AI-powered assistant for mathematical problems that provides progressive hints to help students develop their problem-solving skills.
 
 ## Features
 

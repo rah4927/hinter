@@ -54,7 +54,7 @@ export async function POST(request: Request) {
       messages: [
         {
           role: "system",
-          content: `You are a helpful assistant for solving IMO problems. The current problem is:\n\n${problem.statement}\n\nProvide hints and guidance to help solve the problem, but don't give away the solution directly.`
+          content: `You are a helpful assistant for solving IMO problems. The current problem is:\n\n${problem}\n\nProvide hints and guidance to help solve the problem, but don't give away the solution directly.`
         },
         ...history.map((msg: any) => ({
           role: msg.role,

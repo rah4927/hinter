@@ -45,10 +45,10 @@ export async function getProblemById(id: string): Promise<Problem | null> {
       if (data.id === id) {
         const [statement, solution] = content.split('---').map((s: string) => s.trim());
         return {
-          metadata: data as ProblemMetadata,
+          ...data,
           statement,
           solution
-        };
+        } as Problem;
       }
     }
   }

@@ -5,10 +5,9 @@ export interface ProblemMetadata {
   difficulty: 'easy' | 'medium' | 'hard';
   topics: string[];
   source: string;
+  statement: string;
 }
 
-export interface Problem {
-  metadata: ProblemMetadata;
-  statement: string;
+export interface Problem extends ProblemMetadata {
   solution: string;
 } 
