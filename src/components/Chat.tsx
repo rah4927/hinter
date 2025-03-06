@@ -108,18 +108,29 @@ export default function Chat({ problem, solution, onComplete }: ChatProps) {
 
       <form onSubmit={handleSubmit} className="p-4 border-t bg-white">
         <div className="flex space-x-2">
-          <input
-            type="text"
+          <textarea
+            rows={1}
             value={input}
-            onChange={(e) => setInput(e.target.value)}
-            placeholder="Ask for a hint..."
-            className="flex-1 p-3 border rounded text-gray-900 bg-white text-lg"
+            onChange={(e) => {
+              setInput(e.target.value);
+              // Auto-grow the textarea
+              e.target.style.height = 'auto';
+              e.target.style.height = `${e.target.scrollHeight}px`;
+            }}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                handleSubmit(e);
+              }
+            }}
+            placeholder="Ask for a hint... (Press Enter to send, Shift+Enter for new line)"
+            className="flex-1 p-3 border rounded text-gray-900 bg-white text-lg resize-none overflow-hidden min-h-[3.2rem] max-h-32"
             disabled={isLoading}
           />
           <button
             type="submit"
             disabled={isLoading}
-            className="px-6 py-3 bg-blue-500 text-white rounded hover:bg-blue-600 disabled:opacity-50 text-lg font-medium"
+            className="px-6 py-3 bg-blue-500 text-white rounded hover:bg-blue-600 disabled:opacity-50 text-lg font-medium h-fit"
           >
             {isLoading ? 'Thinking...' : 'Send'}
           </button>
