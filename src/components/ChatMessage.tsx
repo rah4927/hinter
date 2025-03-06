@@ -2,14 +2,6 @@
 
 import { memo, useEffect } from 'react';
 
-declare global {
-  interface Window {
-    MathJax: {
-      typesetPromise: (elements?: Element[]) => Promise<void>;
-    };
-  }
-}
-
 interface ChatMessageProps {
   content: string;
   role: 'user' | 'assistant';
