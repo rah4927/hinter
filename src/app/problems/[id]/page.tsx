@@ -5,10 +5,9 @@ interface PageProps {
   params: {
     id: string;
   };
-  searchParams: { [key: string]: string | string[] | undefined };
 }
 
-export default async function ProblemPage({ params, searchParams }: PageProps) {
+export default async function ProblemPage({ params }: PageProps) {
   const { id } = params;
   const problem = await getProblemById(id);
   
