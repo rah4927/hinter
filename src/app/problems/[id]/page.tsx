@@ -1,8 +1,15 @@
 import { getProblemById } from '@/app/actions';
 import Chat from '@/components/Chat';
 
-export default async function ProblemPage({ params }: { params: { id: string } }) {
-  const { id } = await Promise.resolve(params);
+interface PageProps {
+  params: {
+    id: string;
+  };
+  searchParams: { [key: string]: string | string[] | undefined };
+}
+
+export default async function ProblemPage({ params, searchParams }: PageProps) {
+  const { id } = params;
   const problem = await getProblemById(id);
   
   if (!problem) {
