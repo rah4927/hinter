@@ -23,19 +23,45 @@ export default function Chat({ problem, solution, onComplete }: ChatProps) {
     scrollToBottom();
   }, [messages]);
 
+  // Function to typeset math when content changes
+  const typesetMath = () => {
+    if (window.MathJax?.typesetPromise) {
+      window.MathJax.typesetPromise()
+        .then(() => {
+          console.log('Typesetting completed');
+        })
+        .catch(err => {
+          console.error('Error typesetting math:', err);
+        });
+    }
+  };
+
   // Load MathJax dynamically
   useEffect(() => {
     // Add MathJax configuration
     const config = document.createElement('script');
+    config.type = 'text/javascript';
     config.text = `
       window.MathJax = {
+        loader: {
+          load: ['[tex]/ams', '[tex]/noerrors', '[tex]/noundefined']
+        },
         tex: {
+          packages: {'[+]': ['ams', 'noerrors', 'noundefined']},
           inlineMath: [['$', '$'], ['\\\\(', '\\\\)']],
-          displayMath: [['$$', '$$'], ['\\\\[', '\\\\]']]
+          displayMath: [['$$', '$$'], ['\\\\[', '\\\\]']],
+          processEscapes: true,
         },
         options: {
           skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-          ignoreHtmlClass: 'tex2jax_ignore'
+          ignoreHtmlClass: 'tex2jax_ignore',
+          processHtmlClass: 'tex2jax_process'
+        },
+        startup: {
+          ready: () => {
+            console.log('MathJax is loaded and ready');
+            MathJax.startup.defaultReady();
+          }
         }
       };
     `;
@@ -45,26 +71,28 @@ export default function Chat({ problem, solution, onComplete }: ChatProps) {
     const script = document.createElement('script');
     script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
     script.async = true;
+    script.id = 'MathJax-script';
+    script.onload = () => {
+      console.log('MathJax script loaded');
+      window.MathJax.startup.promise.then(() => {
+        console.log('MathJax initial typesetting complete');
+        typesetMath();
+      });
+    };
     document.head.appendChild(script);
 
     return () => {
       document.head.removeChild(config);
-      document.head.removeChild(script);
+      if (script.parentNode) {
+        script.parentNode.removeChild(script);
+      }
     };
   }, []);
 
-  // Function to typeset math when content changes
-  const typesetMath = () => {
-    const mathJax = window.MathJax;
-    if (mathJax?.typesetPromise) {
-      mathJax.typesetPromise().catch(err => {
-        console.error('Error typesetting math:', err);
-      });
-    }
-  };
-
   useEffect(() => {
-    typesetMath();
+    if (window.MathJax) {
+      typesetMath();
+    }
   }, [messages]);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -117,11 +145,16 @@ export default function Chat({ problem, solution, onComplete }: ChatProps) {
   return (
     <div className="flex flex-col h-full max-w-2xl mx-auto">
       <div className="bg-white p-4 rounded-t-lg shadow">
-        <h2 className="text-xl font-bold mb-2">Problem</h2>
-        <div className="prose" dangerouslySetInnerHTML={{ __html: `\\[${problem.statement}\\]` }} />
+        <h2 className="text-xl font-bold mb-2 text-gray-900">Problem</h2>
+        <div 
+          className="prose max-w-none text-lg leading-relaxed text-gray-900" 
+          dangerouslySetInnerHTML={{ 
+            __html: problem.statement
+          }} 
+        />
       </div>
 
-      <div className="flex-1 overflow-y-auto p-4 space-y-4">
+      <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50">
         {messages.map((message, index) => (
           <div
             key={index}
@@ -133,24 +166,31 @@ export default function Chat({ problem, solution, onComplete }: ChatProps) {
               className={`max-w-[80%] rounded-lg p-3 ${
                 message.role === 'user'
                   ? 'bg-blue-500 text-white'
-                  : 'bg-gray-100'
+                  : 'bg-white shadow-sm'
               }`}
             >
-              <div className="prose" dangerouslySetInnerHTML={{ __html: message.content }} />
+              <div 
+                className={`prose ${
+                  message.role === 'user' 
+                    ? 'text-white' 
+                    : 'text-gray-900'
+                }`} 
+                dangerouslySetInnerHTML={{ __html: message.content }} 
+              />
             </div>
           </div>
         ))}
         <div ref={chatEndRef} />
       </div>
 
-      <form onSubmit={handleSubmit} className="p-4 border-t">
+      <form onSubmit={handleSubmit} className="p-4 border-t bg-white">
         <div className="flex space-x-2">
           <input
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Ask for a hint..."
-            className="flex-1 p-2 border rounded"
+            className="flex-1 p-2 border rounded text-gray-900 bg-white"
             disabled={isLoading}
           />
           <button

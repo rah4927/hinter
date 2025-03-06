@@ -4,10 +4,11 @@ import Chat from '@/components/Chat';
 
 const sampleProblem = {
   id: 'imo-2019-1',
-  statement: `Let \\mathbb{Z}^+ denote the set of positive integers. Determine all functions f: \\mathbb{Z}^+ \\to \\mathbb{Z}^+ such that for each x \\in \\mathbb{Z}^+,
-  the sequence
-  x, f(x), f(f(x)), f(f(f(x))), \\ldots
-  contains every positive integer exactly once.`,
+  statement: `Let \\(\\mathbb{Z}^+\\) denote the set of positive integers. Determine all functions \\(f\\colon \\mathbb{Z}^+ \\to \\mathbb{Z}^+\\) such that for each \\(x \\in \\mathbb{Z}^+\\), the sequence
+
+\\[x, f(x), f(f(x)), f(f(f(x))), \\ldots\\]
+
+contains every positive integer exactly once.`,
   difficulty: 'hard' as const,
   topics: ['Number Theory', 'Functions', 'Sequences'],
   source: 'IMO 2019 Problem 1',
@@ -42,7 +43,7 @@ export default function Home() {
   return (
     <main className="min-h-screen p-4 bg-gray-50">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold mb-8 text-center">IMO Problem Solver</h1>
+        <h1 className="text-3xl font-bold mb-8 text-center text-gray-900">IMO Problem Assistant</h1>
         <Chat
           problem={sampleProblem}
           solution={sampleSolution}
