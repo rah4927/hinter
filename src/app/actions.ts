@@ -5,10 +5,20 @@ import path from 'path';
 import matter from 'gray-matter';
 import { ProblemMetadata, Problem } from '../lib/problems';
 
+function isProblemMetadata(data: unknown): data is ProblemMetadata {
+  const d = data as Record<string, unknown>;
+  return typeof d.id === 'string' &&
+    typeof d.year === 'number' &&
+    typeof d.number === 'number' &&
+    typeof d.difficulty === 'string' &&
+    Array.isArray(d.topics) &&
+    typeof d.source === 'string' &&
+    typeof d.statement === 'string';
+}
+
 export async function getAllProblems(): Promise<ProblemMetadata[]> {
   const problemsDir = path.join(process.cwd(), 'problems');
   const years = fs.readdirSync(problemsDir);
-
   const problems: ProblemMetadata[] = [];
 
   years.forEach(year => {
@@ -19,7 +29,10 @@ export async function getAllProblems(): Promise<ProblemMetadata[]> {
       const filePath = path.join(yearDir, file);
       const fileContents = fs.readFileSync(filePath, 'utf8');
       const { data } = matter(fileContents);
-      problems.push(data as ProblemMetadata);
+      if (!isProblemMetadata(data)) {
+        throw new Error(`Invalid problem metadata in ${filePath}`);
+      }
+      problems.push(data);
     });
   });
 
