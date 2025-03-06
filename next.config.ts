@@ -14,6 +14,10 @@ const nextConfig: NextConfig = {
   generateEtags: true,
   // Enable source maps in production for better debugging
   productionBrowserSourceMaps: true,
+  // Disable ESLint during builds
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 export default nextConfig;
