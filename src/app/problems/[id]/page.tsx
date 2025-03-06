@@ -1,11 +1,12 @@
 import { getProblemById } from '@/app/actions';
 import Chat from '@/components/Chat';
 
-export default async function ProblemPage({
-  params,
-}: {
+type Props = {
   params: { id: string }
-}) {
+  searchParams: { [key: string]: string | string[] | undefined }
+}
+
+export default async function ProblemPage({ params }: Props) {
   const { id } = params;
   const problem = await getProblemById(id);
   
