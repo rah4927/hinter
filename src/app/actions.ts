@@ -5,15 +5,14 @@ import path from 'path';
 import matter from 'gray-matter';
 import { ProblemMetadata, Problem } from '../lib/problems';
 
-function isProblemMetadata(data: unknown): data is ProblemMetadata {
+function isProblemMetadata(data: unknown): data is Omit<ProblemMetadata, 'statement'> {
   const d = data as Record<string, unknown>;
   return typeof d.id === 'string' &&
     typeof d.year === 'number' &&
     typeof d.number === 'number' &&
     typeof d.difficulty === 'string' &&
     Array.isArray(d.topics) &&
-    typeof d.source === 'string' &&
-    typeof d.statement === 'string';
+    typeof d.source === 'string';
 }
 
 export async function getAllProblems(): Promise<ProblemMetadata[]> {
@@ -28,11 +27,12 @@ export async function getAllProblems(): Promise<ProblemMetadata[]> {
     problemFiles.forEach(file => {
       const filePath = path.join(yearDir, file);
       const fileContents = fs.readFileSync(filePath, 'utf8');
-      const { data } = matter(fileContents);
+      const { data, content } = matter(fileContents);
       if (!isProblemMetadata(data)) {
         throw new Error(`Invalid problem metadata in ${filePath}`);
       }
-      problems.push(data);
+      const [statement] = content.split('---').map(s => s.trim());
+      problems.push({ ...data, statement });
     });
   });
 
@@ -56,12 +56,15 @@ export async function getProblemById(id: string): Promise<Problem | null> {
       const { data, content } = matter(fileContents);
       
       if (data.id === id) {
-        const [statement, solution] = content.split('---').map((s: string) => s.trim());
+        if (!isProblemMetadata(data)) {
+          throw new Error(`Invalid problem metadata in ${filePath}`);
+        }
+        const [statement, solution] = content.split('---').map(s => s.trim());
         return {
           ...data,
           statement,
           solution
-        } as Problem;
+        };
       }
     }
   }
