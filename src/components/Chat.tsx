@@ -7,15 +7,10 @@ import ChatMessageDisplay from './ChatMessage';
 
 interface ChatProps {
   problem: string;
-  solution?: {
-    problemId: string;
-    solution: string;
-    hints: string[];
-  };
   onComplete?: () => void;
 }
 
-export default function Chat({ problem, solution, onComplete }: ChatProps) {
+export default function Chat({ problem, onComplete }: ChatProps) {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);

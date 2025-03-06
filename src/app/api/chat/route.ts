@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import OpenAI from 'openai';
+import { Message } from '@/types/chat';
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -56,7 +57,7 @@ export async function POST(request: Request) {
           role: "system",
           content: `You are a helpful assistant for solving IMO problems. The current problem is:\n\n${problem}\n\nProvide hints and guidance to help solve the problem, but don't give away the solution directly.`
         },
-        ...history.map((msg: any) => ({
+        ...history.map((msg: Message) => ({
           role: msg.role,
           content: msg.content
         })),

@@ -1,10 +1,10 @@
 interface MathJaxConfig {
-  typesetPromise: () => Promise<any>;
+  typesetPromise: (elements?: Element[]) => Promise<void>;
   tex: {
     inlineMath: [string, string][];
     displayMath: [string, string][];
     processEscapes: boolean;
-    packages: string[];
+    packages: Record<string, string[]>;
   };
   options: {
     skipHtmlTags: string[];
@@ -14,13 +14,29 @@ interface MathJaxConfig {
   startup: {
     ready: () => void;
     defaultReady: () => void;
-    promise: Promise<any>;
   };
 }
 
 declare global {
   interface Window {
-    MathJax: MathJaxConfig;
+    MathJax: {
+      typesetPromise: (elements?: Element[]) => Promise<void>;
+      startup: {
+        ready: () => void;
+        defaultReady: () => void;
+      };
+      tex: {
+        packages: Record<string, string[]>;
+        inlineMath: [string, string][];
+        displayMath: [string, string][];
+        processEscapes: boolean;
+      };
+      options: {
+        skipHtmlTags: string[];
+        ignoreHtmlClass: string;
+        processHtmlClass: string;
+      };
+    };
   }
 }
 
