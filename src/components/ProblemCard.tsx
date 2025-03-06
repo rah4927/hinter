@@ -12,7 +12,8 @@ export default function ProblemCard({ problem }: ProblemCardProps) {
     <Link href={`/problems/${problem.id}`} className="block">
       <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
         <h2 className="text-2xl font-bold mb-2 text-gray-900">{problem.source}</h2>
-        <div className="flex gap-2 mb-4">
+        <p className="text-gray-600 mb-4">Year: {problem.year} • Problem {problem.number}</p>
+        <div className="flex flex-wrap gap-2 mb-4">
           <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm">
             {problem.difficulty}
           </span>
@@ -22,7 +23,6 @@ export default function ProblemCard({ problem }: ProblemCardProps) {
             </span>
           ))}
         </div>
-        <div className="prose max-w-none text-gray-900" dangerouslySetInnerHTML={{ __html: problem.statement }} />
       </div>
     </Link>
   );
