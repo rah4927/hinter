@@ -126,3 +126,12 @@ The system uses GPT-4 to:
 - International Mathematical Olympiad for inspiring this project
 - OpenAI for providing the GPT-4 API
 - MathJax for LaTeX rendering capabilities
+
+## Data Sources
+
+This project includes problems from the following sources:
+
+1. FIMO Dataset: IMO Shortlisted Problems (2006-2021)
+   - Source: [FIMO Repository](https://github.com/liuchengwucn/FIMO.git)
+   - The problems have been converted to our format using the script in `scripts/convert_fimo.py`
+   - Original data is stored in `fimo_data/` (gitignored)
