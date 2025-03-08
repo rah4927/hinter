@@ -83,6 +83,60 @@ def determine_topics(filename):
     return topics
 
 
+def clean_problem_statement(statement: str) -> str:
+    """Remove lines containing variations of 'the final answer(s)' from the problem statement."""
+    # Match any line containing 'the final answer(s)' (case insensitive)
+    return re.sub(
+        r".*the final answers? (?:is|are).*\n?", "", statement, flags=re.IGNORECASE
+    )
+
+
+def convert_latex_lists(text):
+    """Convert LaTeX itemize environments to Markdown lists."""
+    # Remove \begin{itemize} and \end{itemize}, ensuring blank lines around lists
+    text = re.sub(r"\\begin\{itemize\}\s*", "\n\n", text)
+    text = re.sub(r"\\end\{itemize\}\s*", "\n\n", text)
+
+    # Convert \item to Markdown list items with proper indentation
+    text = re.sub(r"\s*\\item\s*", "\n* ", text)
+
+    # Fix multiple consecutive newlines
+    text = re.sub(r"\n{3,}", "\n\n", text)
+
+    # Remove spaces at the beginning of lines except for list items
+    text = re.sub(r"^(?!\*)\s+", "", text, flags=re.MULTILINE)
+
+    # Convert hyphens at the start of lines that look like list items or cases
+    text = re.sub(
+        r"(?:^|\n)-\s+(?:Case|\([a-z0-9]\))", "\n* ", text, flags=re.MULTILINE
+    )
+    text = re.sub(r"(?:^|\n)-\s*Case\s+(\d+)", r"\n* Case \1", text, flags=re.MULTILINE)
+
+    # Ensure proper spacing around lists:
+    # 1. Add blank line before lists if not present
+    text = re.sub(r"([^\n])\n(?=\*)", r"\1\n\n", text)
+    # 2. Add blank line after lists if not present
+    text = re.sub(r"(\*[^\n]*)\n(?=[^\s\*])", r"\1\n\n", text)
+    # 3. Ensure list items are properly spaced
+    text = re.sub(r"(\*[^\n]*)\n(?=\*)", r"\1\n", text)
+    # 4. Ensure space after asterisk
+    text = re.sub(r"\*(?=\S)", "* ", text)
+
+    # Clean up any remaining formatting issues
+    text = re.sub(r" +", " ", text)  # Remove multiple spaces
+    text = re.sub(r"\n{3,}", "\n\n", text)  # Clean up multiple newlines again
+    text = re.sub(
+        r"\n\n\*", "\n\n* ", text
+    )  # Ensure space after asterisk at start of line
+
+    # Fix any remaining case formatting issues
+    text = re.sub(
+        r"(?:^|\n)(?:-|\*)\s*Case\s+(\d+)", r"\n* Case \1", text, flags=re.MULTILINE
+    )
+
+    return text
+
+
 def convert_problem(input_file, output_dir):
     """Convert a single FIMO problem to our format."""
     with open(input_file, "r", encoding="utf-8") as f:
@@ -101,9 +155,16 @@ def convert_problem(input_file, output_dir):
     statement = convert_latex_delimiters(data["informal_statement"])
     solution = convert_latex_delimiters(data["informal_proof"])
 
+    # Clean the statement to remove final answer lines
+    statement = clean_problem_statement(statement)
+
     # Fix inequality symbols
     statement = fix_latex_inequalities(statement)
     solution = fix_latex_inequalities(solution)
+
+    # Convert LaTeX lists to Markdown
+    statement = convert_latex_lists(statement)
+    solution = convert_latex_lists(solution)
 
     # Create the markdown content
     content = f"""---
