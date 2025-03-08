@@ -4,11 +4,11 @@ import Chat from '@/components/Chat';
 export default async function ProblemPage({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }> | { id: string };
   searchParams?: { [key: string]: string | string[] | undefined };
 }) {
-  const { id } = params;
-  const problem = await getProblemById(id);
+  const resolvedParams = await params;
+  const problem = await getProblemById(resolvedParams.id);
   
   if (!problem) {
     return (
