@@ -7,10 +7,11 @@ import ChatMessageDisplay from './ChatMessage';
 
 interface ChatProps {
   problem: string;
+  solution: string;
   onComplete?: () => void;
 }
 
-export default function Chat({ problem, onComplete }: ChatProps) {
+export default function Chat({ problem, solution, onComplete }: ChatProps) {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -59,7 +60,7 @@ export default function Chat({ problem, onComplete }: ChatProps) {
     setIsLoading(true);
 
     try {
-      console.log('Sending request with:', { message: input, problem, history: messages });
+      console.log('Sending request with:', { message: input, problem, solution, history: messages });
       const response = await fetch('/api/chat', {
         method: 'POST',
         headers: {
@@ -68,6 +69,7 @@ export default function Chat({ problem, onComplete }: ChatProps) {
         body: JSON.stringify({
           message: input,
           problem: problem,
+          solution: solution,
           history: messages,
         }),
       });

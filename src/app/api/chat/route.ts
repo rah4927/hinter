@@ -8,7 +8,7 @@ const openai = new OpenAI({
 
 export async function POST(request: Request) {
   try {
-    const { message, problem, history } = await request.json();
+    const { message, problem, solution, history } = await request.json();
     console.log('Received request:', { message, problem, history });
 
     if (!process.env.OPENAI_API_KEY) {
@@ -24,7 +24,24 @@ export async function POST(request: Request) {
       messages: [
         {
           role: "system",
-          content: `You are a helpful assistant for solving IMO problems. The current problem is:\n\n${problem}\n\nProvide hints and guidance to help solve the problem, but don't give away the solution directly.`
+          content: `You are a helpful assistant for solving IMO problems. 
+          
+The current problem is:
+${problem}
+
+The solution is:
+${solution}
+
+Your role is to help students learn and understand the problem-solving process. You should:
+1. Use your knowledge of the solution to provide accurate and helpful guidance
+2. Never give away the solution directly
+3. Provide hints that lead students towards understanding
+4. Ask probing questions to help students discover key insights
+5. Confirm when students are on the right track
+6. Gently redirect when students go off track
+7. Focus on teaching problem-solving techniques
+
+Remember: Your goal is to help students learn how to solve the problem, not to solve it for them.`
         },
         ...history.map((msg: Message) => ({
           role: msg.role,
