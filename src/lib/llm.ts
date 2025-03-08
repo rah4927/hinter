@@ -1,6 +1,5 @@
 import OpenAI from 'openai';
 import { ChatMessage } from '@/types';
-import { SYSTEM_PROMPT } from './config';
 import { MODEL_CONFIGS, formatMessagesForModel } from './models';
 
 if (!process.env.OPENAI_API_KEY) {
