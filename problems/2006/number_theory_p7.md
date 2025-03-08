@@ -10,7 +10,7 @@ source: "IMO 2006 Number Theory Problem 7"
 Prove that, for every positive integer \(n\), there exists an integer \(m\) such that \(2^{m}+m\) is divisible by \(n\).
 
 ---
-We will prove by induction on \(d\) that, for every positive integer \(N\), there exist positive integers \(b_{0}, b_{1}, \ldots, b_{d-1}\) such that, for each \(i=0,1,2, \ldots, d-1\), we have \(b_{i}>N\) and
+We will prove by induction on \(d\) that, for every positive integer \(N\), there exist positive integers \(b_{0}, b_{1}, \ldots, b_{d-1}\) such that, for each \(i=0,1,2, \ldots, d-1\), we have \(b_{i} > N\) and
 
 \[
 2^{b_{i}}+b_{i} \equiv i \quad(\bmod d)

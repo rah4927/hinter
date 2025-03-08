@@ -70,7 +70,7 @@ and
 so \(p, q < \frac{2(n+1)}{3}\). Combining these inequalities with \(p+q=n\), we obtain
 
 \[
-\frac{n-2}{3}<p, q < \frac{2(n+1)}{3} .
+\frac{n-2}{3} < p, q < \frac{2(n+1)}{3} .
 \]
 
 Now let \(h=\min (p, q)\). By (3) we have \(h > \frac{n-2}{3}\); in particular, we have \(h > 1\). On the left-hand side of \((2)\), both terms are divisible by \(3^{h}\), therefore \(9\left|3^{h}\right| 2^{n+1}-1\). It is easy check that \(\operatorname{ord}_{9}(2)=6\), so \(9 \mid 2^{n+1}-1\) if and only if \(6 \mid n+1\). Therefore, \(n+1=6 r\) for some positive integer \(r\), and we can write

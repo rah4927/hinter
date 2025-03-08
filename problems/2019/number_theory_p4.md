@@ -7,13 +7,13 @@ topics: ["number theory"]
 source: "IMO 2019 Number Theory Problem 4"
 ---
 
-Let \(\mathbb{Z}_{  >  0}\) be the set of positive integers. A positive integer constant \(C\) is given. Find all functions \(f: \mathbb{Z}_{  >  0} \rightarrow \mathbb{Z}_{  >  0}\) such that, for all positive integers \(a\) and \(b\) satisfying \(a+b > C\),
+Let \(\mathbb{Z}_{ > 0}\) be the set of positive integers. A positive integer constant \(C\) is given. Find all functions \(f: \mathbb{Z}_{ > 0} \rightarrow \mathbb{Z}_{ > 0}\) such that, for all positive integers \(a\) and \(b\) satisfying \(a+b > C\),
 
 \[
 a+f(b) \mid a^{2}+b f(a)
 \]
 
-The final answers are exactly the functions \(f(a)=k a\) for some constant \(k \in \mathbb{Z}_{  >  0}\) (irrespective of the value of \(C\) ).
+The final answers are exactly the functions \(f(a)=k a\) for some constant \(k \in \mathbb{Z}_{ > 0}\) (irrespective of the value of \(C\) ).
 
 ---
 It is easy to verify that the functions \(f(a)=k a\) satisfy \((*)\). Thus, in the proofs below, we will only focus on the converse implication: that condition \((*)\) implies that \(f=k a\).

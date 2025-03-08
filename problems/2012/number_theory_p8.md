@@ -33,14 +33,14 @@ Proof. (a) For each residue class \(r\) there exist exactly \(s_{r}\) pairs \((a
 (b) Choose an arbitrary pair \((b, d) \in \mathcal{P}\) and look for the possible values of \(a, c\).
 
 \begin{enumerate}
-  \item Suppose that \(b^{5} \equiv d^{5}\), and let \(k\) be the number of such pairs \((b, d)\). The value \(b\) can be chosen in \(p\) different ways. For \(b \equiv 0\) only \(d=0\) has this property; for the nonzero values of \(b\) there are at most 5 possible values for \(d\). So we have \(k \leq 1+5(p-1)=5 p-4\).
+ \item Suppose that \(b^{5} \equiv d^{5}\), and let \(k\) be the number of such pairs \((b, d)\). The value \(b\) can be chosen in \(p\) different ways. For \(b \equiv 0\) only \(d=0\) has this property; for the nonzero values of \(b\) there are at most 5 possible values for \(d\). So we have \(k \leq 1+5(p-1)=5 p-4\).
 \end{enumerate}
 
 The values \(a\) and \(c\) must satisfy \(a^{2} \equiv c^{2}\), so \(a \equiv \pm c\), and there are exactly \(2 p-1\) such pairs \((a, c)\).
 
 \begin{enumerate}
-  \setcounter{enumi}{1}
-  \item Now suppose \(b^{5} \not \equiv d^{5}\). In this case \(a\) and \(c\) must be distinct. By \((a-c)(a+c)=d^{5}-b^{5}\), the value of \(a-c\) uniquely determines \(a+c\) and thus \(a\) and \(c\) as well. Hence, there are \(p-1\) suitable pairs \((a, c)\).
+ \setcounter{enumi}{1}
+ \item Now suppose \(b^{5} \not \equiv d^{5}\). In this case \(a\) and \(c\) must be distinct. By \((a-c)(a+c)=d^{5}-b^{5}\), the value of \(a-c\) uniquely determines \(a+c\) and thus \(a\) and \(c\) as well. Hence, there are \(p-1\) suitable pairs \((a, c)\).
 \end{enumerate}
 
 Thus, for each of the \(k\) pairs \((b, d)\) with \(b^{5} \equiv d^{5}\) there are \(2 p-1\) pairs \((a, c)\), and for each of the other \(p^{2}-k\) pairs \((b, d)\) there are \(p-1\) pairs \((a, c)\). Hence,
@@ -60,7 +60,7 @@ For every \(t \in T\), we have \(S_{t r}=\emptyset\). Indeed, if \((x, y) \in S_
 so \(\left(z^{-5} x, z^{-2} y\right) \in S_{r}\). So, there are at least \(\frac{p-1}{10} \geq 4\) empty sets among \(S_{1}, \ldots, S_{p-1}\), and there are at most \(p-4\) nonzero values among \(s_{0}, s_{2}, \ldots, s_{p-1}\). Then by the AM-QM inequality we obtain
 
 \[
-N=\sum_{r \in \mathcal{P} \backslash r T} s_{r}^{2} \geq \frac{1}{p-4}\left(\sum_{r \in \mathcal{P} \backslash r T} s_{r}\right)^{2}=\frac{|\mathcal{P} \times \mathcal{P}|^{2}}{p-4}=\frac{p^{4}}{p-4}>p\left(p^{2}+4 p-4\right)
+N=\sum_{r \in \mathcal{P} \backslash r T} s_{r}^{2} \geq \frac{1}{p-4}\left(\sum_{r \in \mathcal{P} \backslash r T} s_{r}\right)^{2}=\frac{|\mathcal{P} \times \mathcal{P}|^{2}}{p-4}=\frac{p^{4}}{p-4} > p\left(p^{2}+4 p-4\right)
 \]
 
 which is impossible by the lemma.

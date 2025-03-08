@@ -15,7 +15,7 @@ The final answer are all composite numbers together with 2.
 In this solution, we always use \(p_{i}\) to denote primes congruent to \(1 \bmod 3\), and use \(q_{j}\) to denote primes congruent to \(2 \bmod 3\). When we express a positive integer \(m\) using its prime factorization, we also include the special case \(m=1\) by allowing the exponents to be zeros. We first compute \(\tau_{1}(m)\) for a positive integer \(m\).
 
 \begin{itemize}
-  \item Claim. Let \(m=3^{x} p_{1}^{a_{1}} p_{2}^{a_{2}} \cdots p_{s}^{a_{s}} q_{1}^{b_{1}} q_{2}^{b_{2}} \cdots q_{t}^{b_{t}}\) be the prime factorization of \(m\). Then
+ \item Claim. Let \(m=3^{x} p_{1}^{a_{1}} p_{2}^{a_{2}} \cdots p_{s}^{a_{s}} q_{1}^{b_{1}} q_{2}^{b_{2}} \cdots q_{t}^{b_{t}}\) be the prime factorization of \(m\). Then
 \end{itemize}
 
 \[

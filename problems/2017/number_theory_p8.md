@@ -7,14 +7,14 @@ topics: ["number theory"]
 source: "IMO 2017 Number Theory Problem 8"
 ---
 
-Let \(p\) be an odd prime number and \(\mathbb{Z}_{  >  0}\) be the set of positive integers. Suppose that a function \(f: \mathbb{Z}_{  >  0} \times \mathbb{Z}_{  >  0} \rightarrow\{0,1\}\) satisfies the following properties:
+Let \(p\) be an odd prime number and \(\mathbb{Z}_{ > 0}\) be the set of positive integers. Suppose that a function \(f: \mathbb{Z}_{ > 0} \times \mathbb{Z}_{ > 0} \rightarrow\{0,1\}\) satisfies the following properties:
 
 \begin{itemize}
-  \item \(f(1,1)=0\)
+ \item \(f(1,1)=0\)
 
-  \item \(f(a, b)+f(b, a)=1\) for any pair of relatively prime positive integers \((a, b)\) not both equal to 1
+ \item \(f(a, b)+f(b, a)=1\) for any pair of relatively prime positive integers \((a, b)\) not both equal to 1
 
-  \item \(f(a+b, b)=f(a, b)\) for any pair of relatively prime positive integers \((a, b)\).
+ \item \(f(a+b, b)=f(a, b)\) for any pair of relatively prime positive integers \((a, b)\).
 
 \end{itemize}
 
@@ -40,7 +40,7 @@ Case 2: \(a < b\). (Then, clearly, \(b \geqslant 2\).)
 Now we estimate \(v\). Since \(v b=1-u a\), we have
 
 \[
-1+\frac{a b}{2}>v b \geqslant 1-\frac{a b}{2}, \quad \text { so } \quad \frac{1+a}{2} \geqslant \frac{1}{b}+\frac{a}{2}>v \geqslant \frac{1}{b}-\frac{a}{2} > -\frac{a}{2}
+1+\frac{a b}{2} > v b \geqslant 1-\frac{a b}{2}, \quad \text { so } \quad \frac{1+a}{2} \geqslant \frac{1}{b}+\frac{a}{2} > v \geqslant \frac{1}{b}-\frac{a}{2} > -\frac{a}{2}
 \]
 
 Thus \(1+a > 2 v > -a\), so \(a \geqslant 2 v > -a\), hence \(a / 2 \geqslant v > -a / 2\), and thus \(g(b, a)=(v, u)\).

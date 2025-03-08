@@ -24,7 +24,7 @@ Henceforth, assume that \(n\) is even, say \(n=2 t\) for some integer \(t \geqsl
 n^{k}=\left(n^{2^{m}}\right)^{p} \equiv\left(2^{m}\right)^{p}=\left(2^{p}\right)^{m} \equiv 2^{m},
 \]
 
-where the congruences are taken modulo \(p\) (recall that \(2^{p} \equiv 2(\bmod p)\), by Fermat's little theorem). Also, from \(n^{k}-2^{m}<n^{k}<n^{k}+2^{m}(p-1)\), we see that the fraction \(\frac{n^{k}}{k}\) lies strictly between the consecutive integers \(\frac{n^{k}-2^{m}}{p \cdot 2^{m}}\) and \(\frac{n^{k}+2^{m}(p-1)}{p \cdot 2^{m}}\), which gives
+where the congruences are taken modulo \(p\) (recall that \(2^{p} \equiv 2(\bmod p)\), by Fermat's little theorem). Also, from \(n^{k}-2^{m} < n^{k} < n^{k}+2^{m}(p-1)\), we see that the fraction \(\frac{n^{k}}{k}\) lies strictly between the consecutive integers \(\frac{n^{k}-2^{m}}{p \cdot 2^{m}}\) and \(\frac{n^{k}+2^{m}(p-1)}{p \cdot 2^{m}}\), which gives
 
 \[
 \left\lfloor\frac{n^{k}}{k}\right\rfloor=\frac{n^{k}-2^{m}}{p \cdot 2^{m}} .

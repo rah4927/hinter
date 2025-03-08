@@ -34,7 +34,7 @@ On the other hand, for any \(k \in\{1, \ldots, n+1\} \backslash\{\ell\}\), we ha
 
 Comment. Instead of attempting to show that \(P\) is not a power of 2 , one may try to find an odd factor of \(P\) (greater than 1 ) as follows:
 
-From \(a_{k}=\frac{m-n}{n+k} \in \mathbb{Z}_{  >  0}\), we get that \(m-n\) is divisible by \(n+1, n+2, \ldots, 2 n+1\), and thus it is also divisible by their least common multiple \(L\). So \(m-n=q L\) for some positive integer \(q\); hence \(x_{k}=q \cdot \frac{L}{n+k}+1\).
+From \(a_{k}=\frac{m-n}{n+k} \in \mathbb{Z}_{ > 0}\), we get that \(m-n\) is divisible by \(n+1, n+2, \ldots, 2 n+1\), and thus it is also divisible by their least common multiple \(L\). So \(m-n=q L\) for some positive integer \(q\); hence \(x_{k}=q \cdot \frac{L}{n+k}+1\).
 
 Then, since \(n+1 \leqslant 2^{c}=n+\ell \leqslant 2 n+1 \leqslant 2^{c+1}-1\), we have \(2^{c} \mid L\), but \(2^{c+1} \nmid L\). So \(\frac{L}{n+\ell}\) is odd, while \(\frac{L}{n+k}\) is even for \(k \neq \ell\). Computing modulo \(2 q\) yields
 

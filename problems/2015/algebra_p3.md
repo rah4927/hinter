@@ -10,7 +10,7 @@ source: "IMO 2015 Algebra Problem 3"
 Let \(n\) be a fixed positive integer. Find the maximum possible value of
 
 \[
-\sum_{1 \leqslant r  <  s \leqslant 2 n}(s-r-n) x_{r} x_{s},
+\sum_{1 \leqslant r < s \leqslant 2 n}(s-r-n) x_{r} x_{s},
 \]
 
 where \(-1 \leqslant x_{i} \leqslant 1\) for all \(i=1,2, \ldots, 2 n\).
@@ -30,15 +30,15 @@ Taking squares of both sides, we have
 
 \[
 \begin{aligned}
-y_{i}^{2} & =\sum_{r=1}^{2 n} x_{r}^{2}+\sum_{r  <  s \leqslant i} 2 x_{r} x_{s}+\sum_{i < r  <  s} 2 x_{r} x_{s}-\sum_{r \leqslant i  <  s} 2 x_{r} x_{s} \\
-& =2 n+\sum_{r  <  s \leqslant i} 2 x_{r} x_{s}+\sum_{i < r  <  s} 2 x_{r} x_{s}-\sum_{r \leqslant i  <  s} 2 x_{r} x_{s},
+y_{i}^{2} & =\sum_{r=1}^{2 n} x_{r}^{2}+\sum_{r < s \leqslant i} 2 x_{r} x_{s}+\sum_{i < r < s} 2 x_{r} x_{s}-\sum_{r \leqslant i < s} 2 x_{r} x_{s} \\
+& =2 n+\sum_{r < s \leqslant i} 2 x_{r} x_{s}+\sum_{i < r < s} 2 x_{r} x_{s}-\sum_{r \leqslant i < s} 2 x_{r} x_{s},
 \end{aligned}
 \]
 
 where the last equality follows from the fact that \(x_{r} \in\{-1,1\}\). Notice that for every \(r < s\), the coefficient of \(x_{r} x_{s}\) in (1) is 2 for each \(i=1, \ldots, r-1, s, \ldots, 2 n\), and this coefficient is \(-2\) for each \(i=r, \ldots, s-1\). This implies that the coefficient of \(x_{r} x_{s}\) in \(\sum_{i=1}^{2 n} y_{i}^{2}\) is \(2(2 n-s+r)-2(s-r)=\) \(4(n-s+r)\). Therefore, summing (1) for \(i=1,2, \ldots, 2 n\) yields
 
 \[
-\sum_{i=1}^{2 n} y_{i}^{2}=4 n^{2}+\sum_{1 \leqslant r  <  s \leqslant 2 n} 4(n-s+r) x_{r} x_{s}=4 n^{2}-4 Z .
+\sum_{i=1}^{2 n} y_{i}^{2}=4 n^{2}+\sum_{1 \leqslant r < s \leqslant 2 n} 4(n-s+r) x_{r} x_{s}=4 n^{2}-4 Z .
 \]
 
 Hence, it suffices to find the minimum of the left-hand side.

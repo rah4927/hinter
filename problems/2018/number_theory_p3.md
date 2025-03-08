@@ -30,9 +30,9 @@ Also notice that \(S_{n-1}-a_{n}=2^{\lceil n / 2]}-3 < a_{n}\).
 
 The main tool of the solution is the following claim.
 
-Claim 1. Assume that \(b\) is a positive integer such that \(S_{n-1}-a_{n}<b < a_{n}\) for some \(n \geqslant 3\). Then \(b \sim S_{n-1}-b\).
+Claim 1. Assume that \(b\) is a positive integer such that \(S_{n-1}-a_{n} < b < a_{n}\) for some \(n \geqslant 3\). Then \(b \sim S_{n-1}-b\).
 
-Proof. As seen above, we have \(S_{n-1}>a_{n}\). Denote \(c=S_{n-1}-b\); then \(S_{n-1}-a_{n}<c < a_{n}\), so the roles of \(b\) and \(c\) are symmetrical.
+Proof. As seen above, we have \(S_{n-1} > a_{n}\). Denote \(c=S_{n-1}-b\); then \(S_{n-1}-a_{n} < c < a_{n}\), so the roles of \(b\) and \(c\) are symmetrical.
 
 Assume that \(b\) is representable. The representation cannot contain \(a_{i}\) with \(i \geqslant n\), since \(b < a_{n}\). So \(b\) is the sum of some subset of \(\left\{a_{0}, a_{1}, \ldots, a_{n-1}\right\}\); then \(c\) is the sum of the complement. The converse is obtained by swapping \(b\) and \(c\).
 
@@ -40,7 +40,7 @@ We also need the following version of this claim.
 
 Claim 2. For any \(n \geqslant 3\), the number \(a_{n}\) can be represented as a sum of two or more distinct terms of the sequence if and only if \(S_{n-1}-a_{n}=2^{[n / 2]}-3\) is representable.
 
-Proof. Denote \(c=S_{n-1}-a_{n}<a_{n}\). If \(a_{n}\) satisfies the required condition, then it is the sum of some subset of \(\left\{a_{0}, a_{1}, \ldots, a_{n-1}\right\}\); then \(c\) is the sum of the complement. Conversely, if \(c\) is representable, then its representation consists only of the numbers from \(\left\{a_{0}, \ldots, a_{n-1}\right\}\), so \(a_{n}\) is the sum of the complement.
+Proof. Denote \(c=S_{n-1}-a_{n} < a_{n}\). If \(a_{n}\) satisfies the required condition, then it is the sum of some subset of \(\left\{a_{0}, a_{1}, \ldots, a_{n-1}\right\}\); then \(c\) is the sum of the complement. Conversely, if \(c\) is representable, then its representation consists only of the numbers from \(\left\{a_{0}, \ldots, a_{n-1}\right\}\), so \(a_{n}\) is the sum of the complement.
 
 By Claim 2, in order to prove the problem statement, it suffices to find infinitely many representable numbers of the form \(2^{t}-3\), as well as infinitely many non-representable ones. Claim 3. For every \(t \geqslant 3\), we have \(2^{t}-3 \sim 2^{4 t-6}-3\), and \(2^{4 t-6}-3 > 2^{t}-3\).
 

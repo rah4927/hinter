@@ -16,7 +16,7 @@ An integer \(n \geqslant 3\) is given. We call an \(n\)-tuple of real numbers \(
 Find the largest constant \(K=K(n)\) such that
 
 \[
-\sum_{1 \leqslant i  <  j \leqslant n} x_{i} x_{j} \geqslant K
+\sum_{1 \leqslant i < j \leqslant n} x_{i} x_{j} \geqslant K
 \]
 
 holds for every Shiny \(n\)-tuple \(\left(x_{1}, x_{2}, \ldots, x_{n}\right)\).
@@ -24,10 +24,10 @@ holds for every Shiny \(n\)-tuple \(\left(x_{1}, x_{2}, \ldots, x_{n}\right)\).
 The final answer is \(K=-(n-1) / 2\).
 
 ---
-We present another proof that \(\sum_{i  <  j} x_{i} x_{j} \geqslant-(n-1) / 2\) for any Shiny \(n\)-tuple \(\left(x_{1}, \ldots, x_{n}\right)\). Assume an ordering of the \(x_{i}\) as in \((2)\), and let \(\ell=n-k\). Assume without loss of generality that \(k \geqslant \ell\). Also assume \(k \neq n\), (as otherwise, all of the \(x_{i}\) are nonpositive, and so the inequality is trivial). Define the sets of indices \(S=\{1,2, \ldots, k\}\) and \(T=\{k+1, \ldots, n\}\). Define the following sums:
+We present another proof that \(\sum_{i < j} x_{i} x_{j} \geqslant-(n-1) / 2\) for any Shiny \(n\)-tuple \(\left(x_{1}, \ldots, x_{n}\right)\). Assume an ordering of the \(x_{i}\) as in \((2)\), and let \(\ell=n-k\). Assume without loss of generality that \(k \geqslant \ell\). Also assume \(k \neq n\), (as otherwise, all of the \(x_{i}\) are nonpositive, and so the inequality is trivial). Define the sets of indices \(S=\{1,2, \ldots, k\}\) and \(T=\{k+1, \ldots, n\}\). Define the following sums:
 
 \[
-K=\sum_{\substack{i  <  j \\ i, j \in S}} x_{i} x_{j}, \quad M=\sum_{\substack{i \in S \\ j \in T}} x_{i} x_{j}, \quad \text { and } \quad L=\sum_{\substack{i  <  j \\ i, j \in T}} x_{i} x_{j}
+K=\sum_{\substack{i < j \\ i, j \in S}} x_{i} x_{j}, \quad M=\sum_{\substack{i \in S \\ j \in T}} x_{i} x_{j}, \quad \text { and } \quad L=\sum_{\substack{i < j \\ i, j \in T}} x_{i} x_{j}
 \]
 
 By definition, \(K, L \geqslant 0\) and \(M \leqslant 0\). We aim to show that \(K+L+M \geqslant-(n-1) / 2\).

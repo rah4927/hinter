@@ -58,7 +58,7 @@ If \(x, y \leq 0\) then we can switch to \(-c,-x\) and \(-y\).
 
 From this point, write \(c=a x-b y\) instead of \(c=a x+b y\) and consider only those cases where \(x\) and \(y\) are nonzero and have the same sign. By Lemma 1, there is no loss of generality in doing so.
 
-Lemma 2. Let \(c=a x-b y\) where \(|x|+|y|\) is minimal and \(x, y\) have the same sign. The number \(c\) is a local champion if and only if \(|x|<b\) and \(|x|+|y|=\left\lfloor\frac{a+b}{2}\right\rfloor\).
+Lemma 2. Let \(c=a x-b y\) where \(|x|+|y|\) is minimal and \(x, y\) have the same sign. The number \(c\) is a local champion if and only if \(|x| < b\) and \(|x|+|y|=\left\lfloor\frac{a+b}{2}\right\rfloor\).
 
 Proof. Without loss of generality we may assume \(x, y > 0\).
 
@@ -68,7 +68,7 @@ The numbers \(c-a\) and \(c+b\) can be written as
 c-a=a(x-1)-b y \quad \text { and } \quad c+b=a x-b(y-1)
 \]
 
-and trivially \(w(c-a) \leq(x-1)+y < w(c)\) and \(w(c+b) \leq x+(y-1)<w(c)\) in all cases.
+and trivially \(w(c-a) \leq(x-1)+y < w(c)\) and \(w(c+b) \leq x+(y-1) < w(c)\) in all cases.
 
 Now assume that \(c\) is a local champion and consider \(w(c+a)\). Since \(w(c+a) \leq w(c)\), there exists an integer \(k\) such that
 
@@ -119,7 +119,7 @@ w(c-b) \leq|x-b|+|y+1-a|=a+b-1-(x+y) \leq x+y=w(c)
 
 therefore \(c\) is a local champion indeed.
 
-Lemma 3. Let \(c=a x-b y\) and assume that \(x\) and \(y\) have the same sign, \(|x|<b,|y|<a\) and \(|x|+|y|=\left\lfloor\frac{a+b}{2}\right\rfloor\). Then \(w(c)=x+y\).
+Lemma 3. Let \(c=a x-b y\) and assume that \(x\) and \(y\) have the same sign, \(|x| < b,|y| < a\) and \(|x|+|y|=\left\lfloor\frac{a+b}{2}\right\rfloor\). Then \(w(c)=x+y\).
 
 Proof. By definition \(w(c)=\min \{|x-k b|+|y-k a|: \quad k \in \mathbb{Z}\}\). If \(k \leq 0\) then obviously \(|x-k b|+|y-k a| \geq x+y\). If \(k \geq 1\) then
 

@@ -34,7 +34,7 @@ By the induction hypothesis, there is a representation of the form
 \frac{m}{2}=\left(2^{n-1}-2^{k_{1}}\right)+\left(2^{n-1}-2^{k_{2}}\right)+\cdots+\left(2^{n-1}-2^{k_{r}}\right)
 \]
 
-for some \(k_{i}\) with \(0 \leqslant k_{i}<n-1\). It follows that
+for some \(k_{i}\) with \(0 \leqslant k_{i} < n-1\). It follows that
 
 \[
 m=\left(2^{n}-2^{k_{1}+1}\right)+\left(2^{n}-2^{k_{2}+1}\right)+\cdots+\left(2^{n}-2^{k_{r}+1}\right)
@@ -52,7 +52,7 @@ By the induction hypothesis, there is a representation of the form
 \frac{m-\left(2^{n}-1\right)}{2}=\left(2^{n-1}-2^{k_{1}}\right)+\left(2^{n-1}-2^{k_{2}}\right)+\cdots+\left(2^{n-1}-2^{k_{r}}\right)
 \]
 
-for some \(k_{i}\) with \(0 \leqslant k_{i}<n-1\). It follows that
+for some \(k_{i}\) with \(0 \leqslant k_{i} < n-1\). It follows that
 
 \[
 m=\left(2^{n}-2^{k_{1}+1}\right)+\left(2^{n}-2^{k_{2}+1}\right)+\cdots+\left(2^{n}-2^{k_{r}+1}\right)+\left(2^{n}-1\right),
@@ -66,7 +66,7 @@ Part II. It remains to show that there is no representation for \((n-2) 2^{n}+1\
 N=\left(2^{n}-2^{k_{1}}\right)+\left(2^{n}-2^{k_{2}}\right)+\cdots+\left(2^{n}-2^{k_{r}}\right),
 \]
 
-where \(0 \leqslant k_{1}, k_{2}, \ldots, k_{r}<n\). Suppose first that two of the terms in the sum are the same, i.e., \(k_{i}=k_{j}\) for some \(i \neq j\). If \(k_{i}=k_{j}=n-1\), then we can simply remove these two terms to get a representation for
+where \(0 \leqslant k_{1}, k_{2}, \ldots, k_{r} < n\). Suppose first that two of the terms in the sum are the same, i.e., \(k_{i}=k_{j}\) for some \(i \neq j\). If \(k_{i}=k_{j}=n-1\), then we can simply remove these two terms to get a representation for
 
 \[
 N-2\left(2^{n}-2^{n-1}\right)=N-2^{n}

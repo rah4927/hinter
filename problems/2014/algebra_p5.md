@@ -73,12 +73,12 @@ Now assume that \(n \geqslant 4\). Plugging \(y=\sqrt{P(x)}\) into (1) we get \(
 P(\sqrt{P(x)}) \leqslant x^{2}+2 \sqrt{P(x)}
 \]
 
-for all real \(x\). Choose positive real numbers \(x_{0}, a\), and \(b\) such that if \(x \in\left(x_{0}, \infty\right)\), then \(a x^{n} < \) \(P(x)<b x^{n}\); this is indeed possible, for if \(d > 0\) denotes the leading coefficient of \(P\), then \(\lim _{x \rightarrow \infty} \frac{P(x)}{x^{n}}=d\), whence for instance the numbers \(a=\frac{d}{2}\) and \(b=2 d\) work provided that \(x_{0}\) is chosen large enough.
+for all real \(x\). Choose positive real numbers \(x_{0}, a\), and \(b\) such that if \(x \in\left(x_{0}, \infty\right)\), then \(a x^{n} < \) \(P(x) < b x^{n}\); this is indeed possible, for if \(d > 0\) denotes the leading coefficient of \(P\), then \(\lim _{x \rightarrow \infty} \frac{P(x)}{x^{n}}=d\), whence for instance the numbers \(a=\frac{d}{2}\) and \(b=2 d\) work provided that \(x_{0}\) is chosen large enough.
 
 Now for all sufficiently large real numbers \(x\) we have
 
 \[
-a^{n / 2+1} x^{n^{2} / 2}<a P(x)^{n / 2}<P(\sqrt{P(x)}) \leqslant x^{2}+2 \sqrt{P(x)}<x^{n / 2}+2 b^{1 / 2} x^{n / 2}
+a^{n / 2+1} x^{n^{2} / 2} < a P(x)^{n / 2} < P(\sqrt{P(x)}) \leqslant x^{2}+2 \sqrt{P(x)} < x^{n / 2}+2 b^{1 / 2} x^{n / 2}
 \]
 
 i.e.

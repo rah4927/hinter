@@ -45,7 +45,7 @@ f\left(f(x)^{2}\right) \stackrel{(3)}{=} \frac{f(f(x))}{f(x)} \stackrel{(4)}{=} 
 It remains to show the following key step.
 
 \begin{itemize}
-  \item Claim. The function \(f\) is injective.
+ \item Claim. The function \(f\) is injective.
 \end{itemize}
 
 Proof. Using (3) and (4), we rewrite (1) as

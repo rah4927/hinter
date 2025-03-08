@@ -87,7 +87,7 @@ In view of (1), this means
 (1-\alpha)^{\frac{1}{2}}(1-\beta)^{\frac{1}{2}}=\sum_{k=0, \ell=0}^{k_{0}-1, \ell_{0}-1} c_{k, \ell} \cdot \alpha^{k} \beta^{\ell}
 \]
 
-for all real numbers \(\alpha, \beta \in(0,1)\). We choose \(k^{*}<k_{0}\) maximal such that there is some \(i\) with \(c_{k^{*}, i} \neq 0\). Squaring (5) and comparing coefficients of \(\alpha^{2 k^{*}} \beta^{2 i^{*}}\), where \(i^{*}\) is maximal with \(c_{k^{*}, i^{*}} \neq 0\), we see that \(k^{*}=0\). This means that the right hand side of \((5)\) is independent of \(\alpha\), which is clearly impossible.
+for all real numbers \(\alpha, \beta \in(0,1)\). We choose \(k^{*} < k_{0}\) maximal such that there is some \(i\) with \(c_{k^{*}, i} \neq 0\). Squaring (5) and comparing coefficients of \(\alpha^{2 k^{*}} \beta^{2 i^{*}}\), where \(i^{*}\) is maximal with \(c_{k^{*}, i^{*}} \neq 0\), we see that \(k^{*}=0\). This means that the right hand side of \((5)\) is independent of \(\alpha\), which is clearly impossible.
 
 We are left with the case that \(a^{\mu}=b^{\nu}\) for some positive integers \(\mu\) and \(\nu\). We may assume that \(\mu\) and \(\nu\) are relatively prime. Then there is some positive integer \(c\) such that \(a=c^{\nu}\) and \(b=c^{\mu}\). Now starting with the expansion (2), i. e.,
 

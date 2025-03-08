@@ -48,19 +48,19 @@ To establish (4), first the inequality
 a\left(\sum_{i=1}^{2^{d}} n_{i}\right) \leq 2^{d} \sum_{i=1}^{2^{d}} a\left(n_{i}\right)
 \]
 
-can be proved by an obvious induction on \(d\). Then, turning to (4), we find an integer \(d\) such that \(2^{d-1}<k \leq 2^{d}\) to obtain
+can be proved by an obvious induction on \(d\). Then, turning to (4), we find an integer \(d\) such that \(2^{d-1} < k \leq 2^{d}\) to obtain
 
 \[
 a\left(\sum_{i=1}^{k} n_{i}\right)=a\left(\sum_{i=1}^{k} n_{i}+\sum_{i=k+1}^{2^{d}} 0\right) \leq 2^{d}\left(\sum_{i=1}^{k} a\left(n_{i}\right)+\sum_{i=k+1}^{2^{d}} a(0)\right)=2^{d} \sum_{i=1}^{k} a\left(n_{i}\right) \leq 2 k \sum_{i=1}^{k} a\left(n_{i}\right) .
 \]
 
-Fix an increasing unbounded sequence \(0=M_{0}<M_{1}<M_{2} < \ldots\) of real numbers; the exact values will be defined later. Let \(n\) be an arbitrary positive integer and write
+Fix an increasing unbounded sequence \(0=M_{0} < M_{1} < M_{2} < \ldots\) of real numbers; the exact values will be defined later. Let \(n\) be an arbitrary positive integer and write
 
 \[
 n=\sum_{i=0}^{d} \varepsilon_{i} \cdot 2^{i}, \quad \text { where } \varepsilon_{i} \in\{0,1\} .
 \]
 
-Set \(\varepsilon_{i}=0\) for \(i > d\), and take some positive integer \(f\) such that \(M_{f}>d\). Applying (3), we get
+Set \(\varepsilon_{i}=0\) for \(i > d\), and take some positive integer \(f\) such that \(M_{f} > d\). Applying (3), we get
 
 \[
 a(n)=a\left(\sum_{k=1}^{f} \sum_{M_{k-1} \leq i < M_{k}} \varepsilon_{i} \cdot 2^{i}\right) \leq \sum_{k=1}^{f} 2^{k} a\left(\sum_{M_{k-1} \leq i < M_{k}} \varepsilon_{i} \cdot 2^{i}\right) .

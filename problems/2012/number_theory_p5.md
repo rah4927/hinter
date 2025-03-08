@@ -7,7 +7,7 @@ topics: ["number theory"]
 source: "IMO 2012 Number Theory Problem 5"
 ---
 
-For a nonnegative integer \(n\) define \(\operatorname{rad}(n)=1\) if \(n=0\) or \(n=1\), and \(\operatorname{rad}(n)=p_{1} p_{2} \cdots p_{k}\) where \(p_{1}<p_{2} < \cdots < p_{k}\) are all prime factors of \(n\). Find all polynomials \(f(x)\) with nonnegative integer coefficients such that \(\operatorname{rad}(f(n))\) divides \(\operatorname{rad}\left(f\left(n^{\operatorname{rad}(n)}\right)\right)\) for every nonnegative integer \(n\).
+For a nonnegative integer \(n\) define \(\operatorname{rad}(n)=1\) if \(n=0\) or \(n=1\), and \(\operatorname{rad}(n)=p_{1} p_{2} \cdots p_{k}\) where \(p_{1} < p_{2} < \cdots < p_{k}\) are all prime factors of \(n\). Find all polynomials \(f(x)\) with nonnegative integer coefficients such that \(\operatorname{rad}(f(n))\) divides \(\operatorname{rad}\left(f\left(n^{\operatorname{rad}(n)}\right)\right)\) for every nonnegative integer \(n\).
 
 The final answer is \(f(x)=a x^{m}\).
 

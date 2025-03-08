@@ -27,7 +27,7 @@ Lemma 1.2. \(\sqrt{1}+\cdots+\sqrt{n} > \frac{2}{3} n^{3 / 2}\).
 Proof. Bernoulli's inequality \((1+t)^{3 / 2} > 1+\frac{3}{2} t\) for \(0 > t \geqslant-1\) (or, alternatively, a straightforward check) gives
 
 \[
-(k-1)^{3 / 2}=k^{3 / 2}\left(1-\frac{1}{k}\right)^{3 / 2}>k^{3 / 2}\left(1-\frac{3}{2 k}\right)=k^{3 / 2}-\frac{3}{2} \sqrt{k}
+(k-1)^{3 / 2}=k^{3 / 2}\left(1-\frac{1}{k}\right)^{3 / 2} > k^{3 / 2}\left(1-\frac{3}{2 k}\right)=k^{3 / 2}-\frac{3}{2} \sqrt{k}
 \]
 
 Summing up \((*)\) over \(k=1,2, \ldots, n\) yields

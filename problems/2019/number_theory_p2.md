@@ -19,10 +19,10 @@ The first two solutions all start by proving that \(c=1\).
 We will start by proving that \(c=1\). Note that
 
 \[
-3 a^{3} \geqslant a^{3}+b^{3}+c^{3}>a^{3}
+3 a^{3} \geqslant a^{3}+b^{3}+c^{3} > a^{3}
 \]
 
-So \(3 a^{3} \geqslant(a b c)^{2}>a^{3}\) and hence \(3 a \geqslant b^{2} c^{2}>a\). Now \(b^{3}+c^{3}=a^{2}\left(b^{2} c^{2}-a\right) \geqslant a^{2}\), and so
+So \(3 a^{3} \geqslant(a b c)^{2} > a^{3}\) and hence \(3 a \geqslant b^{2} c^{2} > a\). Now \(b^{3}+c^{3}=a^{2}\left(b^{2} c^{2}-a\right) \geqslant a^{2}\), and so
 
 \[
 18 b^{3} \geqslant 9\left(b^{3}+c^{3}\right) \geqslant 9 a^{2} \geqslant b^{4} c^{4} \geqslant b^{3} c^{5}
@@ -39,13 +39,13 @@ a^{3}-b^{3} \geqslant(b+1)^{3}-b^{3} > 1
 and
 
 \[
-2 a^{3} > 1+a^{3}+b^{3}>a^{3}
+2 a^{3} > 1+a^{3}+b^{3} > a^{3}
 \]
 
-which implies \(2 a^{3}>a^{2} b^{2}>a^{3}\) and so \(2 a > b^{2}>a\). Therefore
+which implies \(2 a^{3} > a^{2} b^{2} > a^{3}\) and so \(2 a > b^{2} > a\). Therefore
 
 \[
-4\left(1+b^{3}\right)=4 a^{2}\left(b^{2}-a\right) \geqslant 4 a^{2}>b^{4}
+4\left(1+b^{3}\right)=4 a^{2}\left(b^{2}-a\right) \geqslant 4 a^{2} > b^{4}
 \]
 
 so \(4 > b^{3}(b-4)\); that is, \(b \leqslant 4\).

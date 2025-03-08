@@ -18,9 +18,9 @@ for all real numbers \(x\) and \(y\).
 The final answer is
 
 \begin{itemize}
-  \item \(f(x)=-1\) for any \(x \in \mathbb{R}\); or
+ \item \(f(x)=-1\) for any \(x \in \mathbb{R}\); or
 
-  \item \(f(x)=x-1\) for any \(x \in \mathbb{R}\).
+ \item \(f(x)=x-1\) for any \(x \in \mathbb{R}\).
 
 \end{itemize}
 
@@ -40,7 +40,7 @@ From (1), we find that \(f(x+y)^{2} \geqslant 2 f(x) f(y)+f\left(x^{2}\right)+f\
 Putting \(x=1\) in (2), we get \(g(1)=0\) or 1 . The two cases are handled separately.
 
 \begin{itemize}
-  \item Case 1. \(g(1)=0\), which is the same as \(f(1)=-1\).
+ \item Case 1. \(g(1)=0\), which is the same as \(f(1)=-1\).
 \end{itemize}
 
 We put \(x=-1\) and \(y=0\) in (1). This gives \(f(-1)^{2}=-2 f(-1)-1\), which forces \(f(-1)=-1\). Next, we take \(x=-1\) and \(y=1\) in (1) to get \(1=2+\max \{-2, f(2)\}\). This clearly implies \(1=2+f(2)\) and hence \(f(2)=-1\), that is, \(g(2)=0\). From (2), we can prove inductively that \(g\left(2^{2^{n}}\right)=g(2)^{2^{n}}=0\) for any \(n \in \mathbb{N}\). Substitute \(y=2^{2^{n}}-x\) in (3). We obtain

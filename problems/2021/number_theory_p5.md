@@ -37,7 +37,7 @@ and a well-know corollary of this formula is that
 \nu_{p}(n !) < \sum_{s=1}^{\infty} \frac{n}{p^{s}}=\frac{n}{p-1}
 \]
 
-If \(n\) is odd then \(a^{n-1}, b^{n-1}, c^{n-1}\) are squares, and by considering them modulo 4 we conclude that \(a, b\) and \(c\) must be even. Hence, \(2^{n-1} \mid n\) ! but that is impossible for odd \(n\) because \(\nu_{2}(n !)=\nu_{2}((n-1) !)<n-1\) by \((\nabla)\)
+If \(n\) is odd then \(a^{n-1}, b^{n-1}, c^{n-1}\) are squares, and by considering them modulo 4 we conclude that \(a, b\) and \(c\) must be even. Hence, \(2^{n-1} \mid n\) ! but that is impossible for odd \(n\) because \(\nu_{2}(n !)=\nu_{2}((n-1) !) < n-1\) by \((\nabla)\)
 
 From now on we assume that \(n\) is even. If all three numbers \(a+b, b+c, c+a\) are powers of 2 then \(a, b, c\) have the same parity. If they all are odd, then \(n !=a^{n-1}+b^{n-1}+c^{n-1}\) is also odd which is absurd. If all \(a, b, c\) are divisible by 4 , this contradicts \(\nu_{2}(n !) \leqslant n-1\). If, say, \(a\) is not divisible by 4 , then \(2 a=(a+b)+(a+c)-(b+c)\) is not divisible by 8 , and since all \(a+b, b+c\), \(c+a\) are powers of 2 , we get that one of these sums equals 4 , so two of the numbers of \(a, b, c\) are equal to 2. Say, \(a=b=2\), then \(c=2^{r}-2\) and, since \(c \mid n\) !, we must have \(c \mid a^{n-1}+b^{n-1}=2^{n}\) implying \(r=2\), and so \(c=2\), which is impossible because \(n ! \equiv 0 \not \equiv 3 \cdot 2^{n-1}(\bmod 5)\).
 

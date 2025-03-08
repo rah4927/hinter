@@ -24,7 +24,7 @@ so it suffices to prove that \((a+2 b+3 c+4 d)\left(a^{2}+b^{2}+c^{2}+d^{2}\righ
 
 \[
 \begin{aligned}
-(a+b+c+d)^{3} >  & a^{2}(a+3 b+3 c+3 d)+b^{2}(3 a+b+3 c+3 d) \\
+(a+b+c+d)^{3} > & a^{2}(a+3 b+3 c+3 d)+b^{2}(3 a+b+3 c+3 d) \\
 & +c^{2}(3 a+3 b+c+3 d)+d^{2}(3 a+3 b+3 c+d) \\
 \geqslant & \left(a^{2}+b^{2}+c^{2}+d^{2}\right) \cdot(a+2 b+3 c+4 d) .
 \end{aligned}

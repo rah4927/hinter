@@ -18,7 +18,7 @@ We show two numbers, \(a_{m}\) and \(a_{k}\) such that their arithmetic mean, \(
 
 Choose the index \(m \in\{1, \ldots, n\}\) such that \(a_{m}=\max \left(a_{1}, \ldots, a_{n}\right)\). Note that \(a_{m} \geqslant 2\), because \(a_{1}, \ldots, a_{n}\) are not all equal. Let \(p\) be a prime divisor of \(a_{m}\).
 
-Let \(k \in\{1, \ldots, n\}\) be an index such that \(a_{k}=\max \left\{a_{i}: p \nmid a_{i}\right\}\). Due to \(\operatorname{gcd}\left(a_{1} \ldots, a_{n}\right)=1\), not all \(a_{i}\) are divisible by \(p\), so such a \(k\) exists. Note that \(a_{m}>a_{k}\) because \(a_{m} \geqslant a_{k}, p \mid a_{m}\) and \(p \nmid a_{k}\).
+Let \(k \in\{1, \ldots, n\}\) be an index such that \(a_{k}=\max \left\{a_{i}: p \nmid a_{i}\right\}\). Due to \(\operatorname{gcd}\left(a_{1} \ldots, a_{n}\right)=1\), not all \(a_{i}\) are divisible by \(p\), so such a \(k\) exists. Note that \(a_{m} > a_{k}\) because \(a_{m} \geqslant a_{k}, p \mid a_{m}\) and \(p \nmid a_{k}\).
 
 Let \(b=\frac{a_{m}+a_{k}}{2}\); we will show that \(b\) cannot be the geometric mean of any subsequence of \(a_{1}, \ldots, a_{n}\).
 

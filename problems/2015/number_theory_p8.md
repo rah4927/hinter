@@ -54,20 +54,20 @@ f(a), f(a+1), \ldots, f\left(a+k_{0}-1\right) \text { and } f(a+1), f(a+2), \ldo
 
 forms a complete residue system modulo \(k_{0}\). This yields \(f(a) \equiv f\left(a+k_{0}\right)\left(\bmod k_{0}\right)\). Thus, \(f(a) \equiv f(b)\left(\bmod k_{0}\right)\) whenever \(a \equiv b\left(\bmod k_{0}\right)\).
 
-Finally, if \(a \neq \equiv b\left(\bmod k_{0}\right)\) then there exists an integer \(b^{\prime}\) such that \(b^{\prime} \equiv b\left(\bmod k_{0}\right)\) and \(\left|a-b^{\prime}\right|<k_{0}\). Then \(f(b) \equiv f\left(b^{\prime}\right) \not \equiv f(a)\left(\bmod k_{0}\right)\). The induction step is proved.
+Finally, if \(a \neq \equiv b\left(\bmod k_{0}\right)\) then there exists an integer \(b^{\prime}\) such that \(b^{\prime} \equiv b\left(\bmod k_{0}\right)\) and \(\left|a-b^{\prime}\right| < k_{0}\). Then \(f(b) \equiv f\left(b^{\prime}\right) \not \equiv f(a)\left(\bmod k_{0}\right)\). The induction step is proved.
 
 Step 2. We prove that for some small integer a there exist infinitely many integers \(n\) such that \(\overline{f(n)}=\) an. In other words, \(f\) is linear on some infinite set.
 
-We start with the following general statement. Claim 2. There exists a constant \(c\) such that \(f(t)<c t\) for every positive integer \(t > N\).
+We start with the following general statement. Claim 2. There exists a constant \(c\) such that \(f(t) < c t\) for every positive integer \(t > N\).
 
-Proof. Let \(d\) be the product of all small primes, and let \(\alpha\) be a positive integer such that \(2^{\alpha}>f(N)\). Then, for every \(p \in \mathcal{S}\) the numbers \(f(0), f(1), \ldots, f(N)\) are distinct modulo \(p^{\alpha}\). Set \(P=d^{\alpha}\) and \(c=P+f(N)\).
+Proof. Let \(d\) be the product of all small primes, and let \(\alpha\) be a positive integer such that \(2^{\alpha} > f(N)\). Then, for every \(p \in \mathcal{S}\) the numbers \(f(0), f(1), \ldots, f(N)\) are distinct modulo \(p^{\alpha}\). Set \(P=d^{\alpha}\) and \(c=P+f(N)\).
 
-Choose any integer \(t > N\). Due to the choice of \(\alpha\), for every \(p \in \mathcal{S}\) there exists at most one nonnegative integer \(i \leqslant N\) with \(p^{\alpha} \mid f(t)-f(i)\). Since \(|\mathcal{S}|<N\), we can choose a nonnegative integer \(j \leqslant N\) such that \(p^{\alpha} \nmid f(t)-f(j)\) for all \(p \in \mathcal{S}\). Therefore, \(S(f(t)-f(j))<P\).
+Choose any integer \(t > N\). Due to the choice of \(\alpha\), for every \(p \in \mathcal{S}\) there exists at most one nonnegative integer \(i \leqslant N\) with \(p^{\alpha} \mid f(t)-f(i)\). Since \(|\mathcal{S}| < N\), we can choose a nonnegative integer \(j \leqslant N\) such that \(p^{\alpha} \nmid f(t)-f(j)\) for all \(p \in \mathcal{S}\). Therefore, \(S(f(t)-f(j)) < P\).
 
 On the other hand, Step 1 shows that \(L(f(t)-f(j))=L(t-j) \leqslant t-j\). Since \(0 \leqslant j \leqslant N\), this yields
 
 \[
-f(t)=f(j)+L(f(t)-f(j)) \cdot S(f(t)-f(j))<f(N)+(t-j) P \leqslant(P+f(N)) t=c t .
+f(t)=f(j)+L(f(t)-f(j)) \cdot S(f(t)-f(j)) < f(N)+(t-j) P \leqslant(P+f(N)) t=c t .
 \]
 
 Now let \(\mathcal{T}\) be the set of large primes. For every \(t \in \mathcal{T}\), Step 1 implies \(L(f(t))=t\), so the ratio \(f(t) / t\) is an integer. Now Claim 2 leaves us with only finitely many choices for this ratio, which means that there exists an infinite subset \(\mathcal{T}^{\prime} \subseteq \mathcal{T}\) and a positive integer a such that \(f(t)=\) at for all \(t \in \mathcal{T}^{\prime}\), as required.

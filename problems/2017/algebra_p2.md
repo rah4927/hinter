@@ -10,11 +10,11 @@ source: "IMO 2017 Algebra Problem 2"
 Let \(q\) be a real number. Gugu has a napkin with ten distinct real numbers written on it, and he writes the following three lines of real numbers on the blackboard:
 
 \begin{itemize}
-  \item In the first line, Gugu writes down every number of the form \(a-b\), where \(a\) and \(b\) are two (not necessarily distinct) numbers on his napkin.
+ \item In the first line, Gugu writes down every number of the form \(a-b\), where \(a\) and \(b\) are two (not necessarily distinct) numbers on his napkin.
 
-  \item In the second line, Gugu writes down every number of the form \(q a b\), where \(a\) and \(b\) are two (not necessarily distinct) numbers from the first line.
+ \item In the second line, Gugu writes down every number of the form \(q a b\), where \(a\) and \(b\) are two (not necessarily distinct) numbers from the first line.
 
-  \item In the third line, Gugu writes down every number of the form \(a^{2}+b^{2}-c^{2}-d^{2}\), where \(a, b, c, d\) are four (not necessarily distinct) numbers from the first line.
+ \item In the third line, Gugu writes down every number of the form \(a^{2}+b^{2}-c^{2}-d^{2}\), where \(a, b, c, d\) are four (not necessarily distinct) numbers from the first line.
 
 \end{itemize}
 

@@ -23,17 +23,30 @@ def fix_latex_inequalities(text):
     )  # For _{i<j} cases
     text = re.sub(r"([^\\]|^)<(?![a-zA-Z])", r"\1 < ", text)  # For general < cases
     text = re.sub(r"(?<=[a-zA-Z0-9])<", r" < ", text)  # For cases like n<m
+    text = re.sub(r"<(?=[a-zA-Z0-9])", r" < ", text)  # For cases like <z_1
 
     # Fix > in similar contexts
     text = re.sub(r"([^\\]|^)([_^]\{[^}]*)>([^}]*\})", r"\1\2 > \3", text)
     text = re.sub(r"([^\\]|^)>(?![a-zA-Z])", r"\1 > ", text)
     text = re.sub(r"(?<=[a-zA-Z0-9])>", r" > ", text)
+    text = re.sub(r">(?=[a-zA-Z0-9])", r" > ", text)
 
     # Fix <= and >= (both ≤/≥ unicode and <= />= ASCII versions)
-    text = re.sub(r"([^\\]|^)≤", r"\1 ≤ ", text)
-    text = re.sub(r"([^\\]|^)≥", r"\1 ≥ ", text)
-    text = re.sub(r"([^\\]|^)<=", r"\1 ≤ ", text)
-    text = re.sub(r"([^\\]|^)>=", r"\1 ≥ ", text)
+    text = re.sub(r"([^\\]|^)≤(?=[a-zA-Z0-9])", r"\1 ≤ ", text)  # Add space after ≤
+    text = re.sub(r"([a-zA-Z0-9])≤", r"\1 ≤", text)  # Add space before ≤
+    text = re.sub(r"([^\\]|^)≥(?=[a-zA-Z0-9])", r"\1 ≥ ", text)  # Add space after ≥
+    text = re.sub(r"([a-zA-Z0-9])≥", r"\1 ≥", text)  # Add space before ≥
+    text = re.sub(
+        r"([^\\]|^)<=(?=[a-zA-Z0-9])", r"\1 ≤ ", text
+    )  # Convert <= to ≤ and add spaces
+    text = re.sub(r"([a-zA-Z0-9])<=", r"\1 ≤", text)  # Convert <= to ≤ and add spaces
+    text = re.sub(
+        r"([^\\]|^)>=(?=[a-zA-Z0-9])", r"\1 ≥ ", text
+    )  # Convert >= to ≥ and add spaces
+    text = re.sub(r"([a-zA-Z0-9])>=", r"\1 ≥", text)  # Convert >= to ≥ and add spaces
+
+    # Clean up any double spaces that might have been created
+    text = re.sub(r" +", " ", text)
 
     return text
 

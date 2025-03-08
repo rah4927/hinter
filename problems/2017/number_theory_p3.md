@@ -26,7 +26,7 @@ a_{i}+a_{i+1}+\cdots+a_{i+j-1}=a \cdot b=n \equiv 0 \quad(\bmod n)
 
 It follows that the given example is indeed a counterexample to the property of the statement.
 
-Now let \(n\) be a prime number. Suppose by contradiction that the property in the statement of the problem does not hold. Then there are integers \(a_{1}, a_{2}, \ldots, a_{n}\) whose sum is not divisible by \(n\) such that for each \(i, 1 \leqslant i \leqslant n\), there is \(j, 1 \leqslant j \leqslant n\), for which the number \(a_{i}+a_{i+1}+\) \(\cdots+a_{i+j-1}\) is divisible by \(n\). Notice that, in any such case, we should have \(1 \leqslant j \leqslant n-1\), since \(a_{1}+a_{2}+\cdots+a_{n}\) is not divisible by \(n\). So we may construct recursively a finite sequence of integers \(0=i_{0}<i_{1}<i_{2} < \cdots < i_{n}\) with \(i_{s+1}-i_{s} \leqslant n-1\) for \(0 \leqslant s \leqslant n-1\) such that, for \(0 \leqslant s \leqslant n-1\)
+Now let \(n\) be a prime number. Suppose by contradiction that the property in the statement of the problem does not hold. Then there are integers \(a_{1}, a_{2}, \ldots, a_{n}\) whose sum is not divisible by \(n\) such that for each \(i, 1 \leqslant i \leqslant n\), there is \(j, 1 \leqslant j \leqslant n\), for which the number \(a_{i}+a_{i+1}+\) \(\cdots+a_{i+j-1}\) is divisible by \(n\). Notice that, in any such case, we should have \(1 \leqslant j \leqslant n-1\), since \(a_{1}+a_{2}+\cdots+a_{n}\) is not divisible by \(n\). So we may construct recursively a finite sequence of integers \(0=i_{0} < i_{1} < i_{2} < \cdots < i_{n}\) with \(i_{s+1}-i_{s} \leqslant n-1\) for \(0 \leqslant s \leqslant n-1\) such that, for \(0 \leqslant s \leqslant n-1\)
 
 \[
 a_{i_{s}+1}+a_{i_{s}+2}+\cdots+a_{i_{s+1}} \equiv 0 \quad(\bmod n)

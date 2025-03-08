@@ -30,7 +30,7 @@ so \(f\) is nondecreasing.
 
 Function \(f \equiv 1\) is an obvious solution. To find other solutions, assume that \(f \not \equiv 1\) and take the smallest \(a \in \mathbb{N}\) such that \(f(a) > 1\). Then \(f(b) \geq f(a) > 1\) for all integer \(b \geq a\).
 
-Suppose that \(f(n)>n\) for some \(n \in \mathbb{N}\). Then we have
+Suppose that \(f(n) > n\) for some \(n \in \mathbb{N}\). Then we have
 
 \[
 f(f(n))=f((f(n)-n)+n) \geq f(f(n)-n)+f(f(n))-1

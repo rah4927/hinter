@@ -7,7 +7,7 @@ topics: ["algebra"]
 source: "IMO 2016 Algebra Problem 8"
 ---
 
-Determine the largest real number \(a\) such that for all \(n \geqslant 1\) and for all real numbers \(x_{0}, x_{1}, \ldots, x_{n}\) satisfying \(0=x_{0}<x_{1}<x_{2} < \cdots < x_{n}\), we have
+Determine the largest real number \(a\) such that for all \(n \geqslant 1\) and for all real numbers \(x_{0}, x_{1}, \ldots, x_{n}\) satisfying \(0=x_{0} < x_{1} < x_{2} < \cdots < x_{n}\), we have
 
 \[
 \frac{1}{x_{1}-x_{0}}+\frac{1}{x_{2}-x_{1}}+\cdots+\frac{1}{x_{n}-x_{n-1}} \geqslant a\left(\frac{2}{x_{1}}+\frac{3}{x_{2}}+\cdots+\frac{n+1}{x_{n}}\right) .

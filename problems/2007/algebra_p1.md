@@ -40,7 +40,7 @@ By the definition, sequence \(\left(x_{k}\right)\) is non-decreasing and \(x_{k}
 x_{k}-a_{k} \leq \frac{d}{2} \quad \text { for all } 1 \leq k \leq n .
 \]
 
-Consider an arbitrary index \(1 \leq k \leq n\). Let \(\ell \leq k\) be the smallest index such that \(x_{k}=x_{\ell}\). We have either \(\ell=1\), or \(\ell \geq 2\) and \(x_{\ell}>x_{\ell-1}\). In both cases,
+Consider an arbitrary index \(1 \leq k \leq n\). Let \(\ell \leq k\) be the smallest index such that \(x_{k}=x_{\ell}\). We have either \(\ell=1\), or \(\ell \geq 2\) and \(x_{\ell} > x_{\ell-1}\). In both cases,
 
 \[
 x_{k}=x_{\ell}=a_{\ell}-\frac{d}{2} .

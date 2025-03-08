@@ -53,15 +53,15 @@ x_{m+1}^{3}-4 x_{m+1}^{2}+5 x_{m+1} & \equiv\left(L x_{m}+1\right)^{3}-4\left(L 
 
 which in turn gives indeed \(x_{m+2} \equiv 2 c^{2}+1 \equiv x_{2}\left(\bmod x_{m}^{2}\right)\)
 
-Claim 3. For each integer \(n \geqslant 2\), we have \(x_{n}>x_{1} \cdot x_{2} \cdots x_{n-2}\).
+Claim 3. For each integer \(n \geqslant 2\), we have \(x_{n} > x_{1} \cdot x_{2} \cdots x_{n-2}\).
 
 Proof. The cases \(n=2\) and \(n=3\) are clear. Arguing inductively, we assume now that the claim holds for some \(n \geqslant 3\). Recall that \(x_{2} \geqslant 3\), so by monotonicity and (2) we get \(x_{n} \geqslant x_{3} \geqslant x_{2}\left(x_{2}-2\right)^{2}+x_{2}+1 \geqslant 7\). It follows that
 
 \[
-x_{n+1}>x_{n}^{3}-4 x_{n}^{2}+5 x_{n} > 7 x_{n}^{2}-4 x_{n}^{2}>x_{n}^{2}>x_{n} x_{n-1},
+x_{n+1} > x_{n}^{3}-4 x_{n}^{2}+5 x_{n} > 7 x_{n}^{2}-4 x_{n}^{2} > x_{n}^{2} > x_{n} x_{n-1},
 \]
 
-which by the induction hypothesis yields \(x_{n+1}>x_{1} \cdot x_{2} \cdots x_{n-1}\), as desired. Now we direct our attention to the problem itself: let any integer \(n \geqslant 2\) be given. By Claim 3 there exists a prime number \(p\) appearing with a higher exponent in the prime factorisation of \(x_{n}\) than in the prime factorisation of \(x_{1} \cdots x_{n-2}\). In particular, \(p \mid x_{n}\), and it suffices to prove that \(p\) divides none of \(x_{1}, \ldots, x_{n-1}\).
+which by the induction hypothesis yields \(x_{n+1} > x_{1} \cdot x_{2} \cdots x_{n-1}\), as desired. Now we direct our attention to the problem itself: let any integer \(n \geqslant 2\) be given. By Claim 3 there exists a prime number \(p\) appearing with a higher exponent in the prime factorisation of \(x_{n}\) than in the prime factorisation of \(x_{1} \cdots x_{n-2}\). In particular, \(p \mid x_{n}\), and it suffices to prove that \(p\) divides none of \(x_{1}, \ldots, x_{n-1}\).
 
 Otherwise let \(k \in\{1, \ldots, n-1\}\) be minimal such that \(p\) divides \(x_{k}\). Since \(x_{n-1}\) and \(x_{n}\) are coprime by (1) and \(x_{1}=1\), we actually have \(2 \leqslant k \leqslant n-2\). Write \(n=q k+r\) with some integers \(q \geqslant 0\) and \(0 \leqslant r < k\). By Claim 1 we have \(x_{n} \equiv x_{r}\left(\bmod x_{k}\right)\), whence \(p \mid x_{r}\). Due to the minimality of \(k\) this entails \(r=0\), i.e. \(k \mid n\).
 

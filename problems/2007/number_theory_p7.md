@@ -16,7 +16,7 @@ For arbitrary prime \(p\) and positive integer \(n\), denote by \(\operatorname{
 \nu_{p}(n)=\operatorname{ord}_{p}(n !)=\sum_{i=1}^{n} \operatorname{ord}_{p}(i) .
 \]
 
-Lemma. Let \(p\) be a prime number, \(q\) be a positive integer, \(k\) and \(r\) be positive integers such that \(p^{k}>r\). Then \(\nu_{p}\left(q p^{k}+r\right)=\nu_{p}\left(q p^{k}\right)+\nu_{p}(r)\).
+Lemma. Let \(p\) be a prime number, \(q\) be a positive integer, \(k\) and \(r\) be positive integers such that \(p^{k} > r\). Then \(\nu_{p}\left(q p^{k}+r\right)=\nu_{p}\left(q p^{k}\right)+\nu_{p}(r)\).
 
 Proof. We claim that \(\operatorname{ord}_{p}\left(q p^{k}+i\right)=\operatorname{ord}_{p}(i)\) for all \(0 < i < p^{k}\). Actually, if \(d=\operatorname{ord}_{p}(i)\) then \(d < k\), so \(q p^{k}+i\) is divisible by \(p^{d}\), but only the first term is divisible by \(p^{d+1}\); hence the sum is not.
 
@@ -36,7 +36,7 @@ f\left(n_{\ell_{1}}+n_{\ell_{2}}+\ldots+n_{\ell_{m}}\right)=f\left(n_{\ell_{1}}\
 
 for any \(\ell_{1} < \ell_{2} < \ldots < \ell_{m}\). (The addition of \(k\)-tuples is componentwise.) The base case \(m=1\) is trivial.
 
-Suppose that \(m > 1\). By the construction of the sequence, \(p_{i}^{n_{\ell_{1}}}\) divides \(n_{\ell_{2}}+\ldots+n_{\ell_{m}}\); clearly, \(p_{i}^{n_{\ell_{1}}}>n_{\ell_{1}}\) for all \(1 \leq i \leq k\). Therefore the Lemma can be applied for \(p=p_{i}, k=r=n_{\ell_{1}}\) and \(q p^{k}=n_{\ell_{2}}+\ldots+n_{\ell_{m}}\) to obtain
+Suppose that \(m > 1\). By the construction of the sequence, \(p_{i}^{n_{\ell_{1}}}\) divides \(n_{\ell_{2}}+\ldots+n_{\ell_{m}}\); clearly, \(p_{i}^{n_{\ell_{1}}} > n_{\ell_{1}}\) for all \(1 \leq i \leq k\). Therefore the Lemma can be applied for \(p=p_{i}, k=r=n_{\ell_{1}}\) and \(q p^{k}=n_{\ell_{2}}+\ldots+n_{\ell_{m}}\) to obtain
 
 \[
 f_{i}\left(n_{\ell_{1}}+n_{\ell_{2}}+\ldots+n_{\ell_{m}}\right)=f_{i}\left(n_{\ell_{1}}\right)+f_{i}\left(n_{\ell_{2}}+\ldots+n_{\ell_{m}}\right) \quad \text { for all } 1 \leq i \leq k,

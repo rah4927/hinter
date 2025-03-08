@@ -66,4 +66,4 @@ so
 \left\lceil\frac{r^{2}}{b}\right\rceil=k(k-r)
 \]
 
-Notice that relation (2) provides another positive integer solution of (1), namely \(c^{\prime}=r\) and \(k^{\prime}=k-r\), with \(c^{\prime} > 0\) and \(0 < k^{\prime}<k\). That contradicts the minimality of \(k\), and hence finishes the solution.
+Notice that relation (2) provides another positive integer solution of (1), namely \(c^{\prime}=r\) and \(k^{\prime}=k-r\), with \(c^{\prime} > 0\) and \(0 < k^{\prime} < k\). That contradicts the minimality of \(k\), and hence finishes the solution.

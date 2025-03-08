@@ -7,7 +7,7 @@ topics: ["number theory"]
 source: "IMO 2014 Number Theory Problem 6"
 ---
 
-Let \(a_{1}<a_{2} < \cdots < a_{n}\) be pairwise coprime positive integers with \(a_{1}\) being prime and \(a_{1} \geqslant n+2\). On the segment \(I=\left[0, a_{1} a_{2} \cdots a_{n}\right]\) of the real line, mark all integers that are divisible by at least one of the numbers \(a_{1}, \ldots, a_{n}\). These points split \(I\) into a number of smaller segments. Prove that the sum of the squares of the lengths of these segments is divisible by \(a_{1}\).
+Let \(a_{1} < a_{2} < \cdots < a_{n}\) be pairwise coprime positive integers with \(a_{1}\) being prime and \(a_{1} \geqslant n+2\). On the segment \(I=\left[0, a_{1} a_{2} \cdots a_{n}\right]\) of the real line, mark all integers that are divisible by at least one of the numbers \(a_{1}, \ldots, a_{n}\). These points split \(I\) into a number of smaller segments. Prove that the sum of the squares of the lengths of these segments is divisible by \(a_{1}\).
 
 ---
 Let \(A=a_{1} \cdots a_{n}\). Throughout the solution, all intervals will be nonempty and have integer end-points. For any interval \(X\), the length of \(X\) will be denoted by \(|X|\).

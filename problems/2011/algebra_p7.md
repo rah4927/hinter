@@ -16,7 +16,7 @@ Let \(a, b\), and \(c\) be positive real numbers satisfying \(\min (a+b, b+c, c+
 ---
 Throughout the solution, we denote the sums of the form \(f(a, b, c)+f(b, c, a)+f(c, a, b)\) by \(\sum f(a, b, c)\).
 
-The condition \(b+c > \sqrt{2}\) implies \(b^{2}+c^{2} > 1\), so \(a^{2}=3-\left(b^{2}+c^{2}\right) < 2\), i.e. \(a < \sqrt{2}<b+c\). Hence we have \(b+c-a > 0\), and also \(c+a-b > 0\) and \(a+b-c > 0\) for similar reasons.
+The condition \(b+c > \sqrt{2}\) implies \(b^{2}+c^{2} > 1\), so \(a^{2}=3-\left(b^{2}+c^{2}\right) < 2\), i.e. \(a < \sqrt{2} < b+c\). Hence we have \(b+c-a > 0\), and also \(c+a-b > 0\) and \(a+b-c > 0\) for similar reasons.
 
 We will use the variant of HÖLDER's inequality
 

@@ -36,7 +36,7 @@ and
 
 (the last equality in (2) follows from (1)). We readily get from (2) that \(a, d > 0\).
 
-In the sequel we will use only the relations (1) and (2), along with the fact that \(a, d, s\) are positive integers, while \(b\) and \(c\) are nonnegative integers, at most one of which may be zero. Since both relations are symmetric with respect to the simultaneous swappings \(a \leftrightarrow d\) and \(b \leftrightarrow c\), we assume, without loss of generality, that \(b \geqslant c\) (and hence \(b > 0\) ). Therefore, \(d^{2}=2 s+b^{2}>c^{2}\), whence
+In the sequel we will use only the relations (1) and (2), along with the fact that \(a, d, s\) are positive integers, while \(b\) and \(c\) are nonnegative integers, at most one of which may be zero. Since both relations are symmetric with respect to the simultaneous swappings \(a \leftrightarrow d\) and \(b \leftrightarrow c\), we assume, without loss of generality, that \(b \geqslant c\) (and hence \(b > 0\) ). Therefore, \(d^{2}=2 s+b^{2} > c^{2}\), whence
 
 \[
 d^{2} > \frac{c^{2}+d^{2}}{2}=\frac{s^{2}}{2}

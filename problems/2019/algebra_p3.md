@@ -49,11 +49,11 @@ Without loss of generality, assume \(\sum_{i \in X} a_{i} \leqslant 1\), and we 
 If \(n \in X\), add \(\Delta\) to \(a_{n}\), producing a sequence of \(c_{i}\) with \(\sum_{i \in X} c_{i}=\sum_{i \in X^{c}} c_{i}\), and then scale as described above to make the sum equal to 2. Otherwise, there is some \(k\) with \(k \in X\) and \(k+1 \in X^{c}\). Let \(\delta=a_{k+1}-a_{k}\).
 
 \begin{itemize}
-  \item If \(\delta > \Delta\), add \(\Delta\) to \(a_{k}\) and then scale.
+ \item If \(\delta > \Delta\), add \(\Delta\) to \(a_{k}\) and then scale.
 
-  \item If \(\delta < \Delta\), then considering \(X \cup\{k+1\} \backslash\{k\}\) contradicts \(X\) being \(\left(a_{i}\right)\)-minimising.
+ \item If \(\delta < \Delta\), then considering \(X \cup\{k+1\} \backslash\{k\}\) contradicts \(X\) being \(\left(a_{i}\right)\)-minimising.
 
-  \item If \(\delta=\Delta\), choose any \(j \neq k, k+1\) (possible since \(n \geqslant 3\) ), and any \(\epsilon\) less than the least of \(a_{1}\) and all the differences \(a_{i+1}-a_{i}\). If \(j \in X\) then add \(\Delta-\epsilon\) to \(a_{k}\) and \(\epsilon\) to \(a_{j}\), then scale; otherwise, add \(\Delta\) to \(a_{k}\) and \(\epsilon / 2\) to \(a_{k+1}\), and subtract \(\epsilon / 2\) from \(a_{j}\), then scale.
+ \item If \(\delta=\Delta\), choose any \(j \neq k, k+1\) (possible since \(n \geqslant 3\) ), and any \(\epsilon\) less than the least of \(a_{1}\) and all the differences \(a_{i+1}-a_{i}\). If \(j \in X\) then add \(\Delta-\epsilon\) to \(a_{k}\) and \(\epsilon\) to \(a_{j}\), then scale; otherwise, add \(\Delta\) to \(a_{k}\) and \(\epsilon / 2\) to \(a_{k+1}\), and subtract \(\epsilon / 2\) from \(a_{j}\), then scale.
 
 \end{itemize}
 

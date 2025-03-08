@@ -47,7 +47,7 @@ v_{2}(m !) < \sum_{i=1}^{\infty} \frac{m}{2^{i}}=m .
 Thus, \(L_{n}=m\) ! implies the inequality
 
 \[
-\frac{n(n-1)}{2}<m
+\frac{n(n-1)}{2} < m
 \]
 
 In order to obtain an opposite estimate, observe that
@@ -76,7 +76,7 @@ For \(n \geqslant 7\) we prove (3) by the following inequalities:
 Putting together (2) and (3), for \(n \geqslant 6\) we get a contradiction, since
 
 \[
-L_{n} < 2^{n^{2}} < \left(\frac{n(n-1)}{2}\right) !<m !=L_{n}
+L_{n} < 2^{n^{2}} < \left(\frac{n(n-1)}{2}\right) ! < m !=L_{n}
 \]
 
 Hence \(n \geqslant 6\) is not possible.
@@ -85,8 +85,8 @@ Checking manually the cases \(n \leqslant 5\) we find
 
 \[
 \begin{gathered}
-L_{1}=1=1 !, \quad L_{2}=6=3 !, \quad 5 !<L_{3}=168 < 6 !, \\
-7 !<L_{4}=20160 < 8 ! \quad \text { and } \quad 10 !<L_{5}=9999360 < 11 !
+L_{1}=1=1 !, \quad L_{2}=6=3 !, \quad 5 ! < L_{3}=168 < 6 !, \\
+7 ! < L_{4}=20160 < 8 ! \quad \text { and } \quad 10 ! < L_{5}=9999360 < 11 !
 \end{gathered}
 \]
 

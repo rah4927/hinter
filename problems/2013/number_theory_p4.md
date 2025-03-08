@@ -16,13 +16,13 @@ Assume that \(a_{1}, a_{2}, a_{3}, \ldots\) is such a sequence. For each positiv
 
 I. For every \(n\), let \(5^{\gamma_{n}}\) be the greatest power of 5 dividing \(x_{n}\). Let us show first that \(2 \gamma_{n} \geqslant n\) for every positive integer \(n > N\).
 
-Assume, to the contrary, that there exists a positive integer \(n > N\) such that \(2 \gamma_{n}<n\), which yields
+Assume, to the contrary, that there exists a positive integer \(n > N\) such that \(2 \gamma_{n} < n\), which yields
 
 \[
 y_{n+1}=\overline{a_{n+1} a_{n} \ldots a_{1}}=10^{n} a_{n+1}+\overline{a_{n} a_{n-1} \ldots a_{1}}=10^{n} a_{n+1}+y_{n}=5^{2 \gamma_{n}}\left(2^{n} 5^{n-2 \gamma_{n}} a_{n+1}+\frac{y_{n}}{5^{2 \gamma_{n}}}\right) .
 \]
 
-Since \(5 \backslash y_{n} / 5^{2 \gamma_{n}}\), we obtain \(\gamma_{n+1}=\gamma_{n}<n < n+1\). By the same arguments we obtain that \(\gamma_{n}=\gamma_{n+1}=\gamma_{n+2}=\ldots\). Denote this common value by \(\gamma\).
+Since \(5 \backslash y_{n} / 5^{2 \gamma_{n}}\), we obtain \(\gamma_{n+1}=\gamma_{n} < n < n+1\). By the same arguments we obtain that \(\gamma_{n}=\gamma_{n+1}=\gamma_{n+2}=\ldots\). Denote this common value by \(\gamma\).
 
 Now, for each \(k \geqslant n\) we have
 

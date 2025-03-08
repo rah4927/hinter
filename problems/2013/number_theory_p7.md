@@ -48,7 +48,7 @@ So, in both cases one of the numbers \(f(a+b, a)\) and \(f(a, b+a)\) is equal to
 
 Now let us say that the pairs \((a+b, b)\) and \((a, b+a)\) are the children of the pair \((a, b)\), while this pair is their parent. Next, if a pair \((c, d)\) can be obtained from \((a, b)\) by several passings from a parent to a child, we will say that \((c, d)\) is a descendant of \((a, b)\), while \((a, b)\) is an ancestor of \((c, d)\) (a pair is neither an ancestor nor a descendant of itself). Thus each pair \((a, b)\) has two children, it has a unique parent if \(a \neq b\), and no parents otherwise. Therefore, each pair of distinct positive integers has a unique ancestor of the form \((a, a)\); our aim is now to find how many m-excellent descendants each such pair has.
 
-Notice now that if a pair \((a, b)\) is m-excellent then \(\min \{a, b\} \leqslant m\). Indeed, if \(a=b\) then \(f(a, a)=a=m\), so the statement is valid. Otherwise, the pair \((a, b)\) is a child of some pair \(\left(a^{\prime}, b^{\prime}\right)\). If \(b=b^{\prime}\) and \(a=a^{\prime}+b^{\prime}\), then we should have \(m=f(a, b)=f\left(a^{\prime}, b^{\prime}\right)+b^{\prime}\), so \(b=b^{\prime}=m-f\left(a^{\prime}, b^{\prime}\right)<m\). Similarly, if \(a=a^{\prime}\) and \(b=b^{\prime}+a^{\prime}\) then \(a < m\).
+Notice now that if a pair \((a, b)\) is m-excellent then \(\min \{a, b\} \leqslant m\). Indeed, if \(a=b\) then \(f(a, a)=a=m\), so the statement is valid. Otherwise, the pair \((a, b)\) is a child of some pair \(\left(a^{\prime}, b^{\prime}\right)\). If \(b=b^{\prime}\) and \(a=a^{\prime}+b^{\prime}\), then we should have \(m=f(a, b)=f\left(a^{\prime}, b^{\prime}\right)+b^{\prime}\), so \(b=b^{\prime}=m-f\left(a^{\prime}, b^{\prime}\right) < m\). Similarly, if \(a=a^{\prime}\) and \(b=b^{\prime}+a^{\prime}\) then \(a < m\).
 
 Let us consider the set \(S_{m}\) of all pairs \((a, b)\) such that \(f(a, b) \leqslant m\) and \(\min \{a, b\} \leqslant m\). Then all the ancestors of the elements in \(S_{m}\) are again in \(S_{m}\), and each element in \(S_{m}\) either is of the form \((a, a)\) with \(a \leqslant m\), or has a unique ancestor of this form. From the arguments above we see that all \(m\)-excellent pairs lie in \(S_{m}\).
 
@@ -70,7 +70,7 @@ g(a, b)=g(a+b, b)+g(a, b+a)=h(a+b, b)+h(a, b+a) .
 
 Notice that both pairs \((a+b, b)\) and \((a, b+a)\) are descendants of \((a, b)\) and thus each of them has strictly less descendants in \(S_{m}\) than \((a, b)\) does.
 
-Next, each one of the \(h(a+b, b)\) representations of \(m-f(a+b, b)=m-b-f(a, b)\) as the sum \(k^{\prime}(a+b)+\ell^{\prime} b\) provides the representation \(m-f(a, b)=k a+\ell b\) with \(k=k^{\prime}<k^{\prime}+\ell^{\prime}+1=\ell\). Similarly, each one of the \(h(a, b+a)\) representations of \(m-f(a, b+a)=m-f(a, b)\) as the sum \(k^{\prime} a+\ell^{\prime}(b+a)\) provides the representation \(m-f(a, b)=k a+\ell b\) with \(k=k^{\prime}+\ell^{\prime} \geqslant \ell^{\prime}=\ell\). This correspondence is obviously bijective, so
+Next, each one of the \(h(a+b, b)\) representations of \(m-f(a+b, b)=m-b-f(a, b)\) as the sum \(k^{\prime}(a+b)+\ell^{\prime} b\) provides the representation \(m-f(a, b)=k a+\ell b\) with \(k=k^{\prime} < k^{\prime}+\ell^{\prime}+1=\ell\). Similarly, each one of the \(h(a, b+a)\) representations of \(m-f(a, b+a)=m-f(a, b)\) as the sum \(k^{\prime} a+\ell^{\prime}(b+a)\) provides the representation \(m-f(a, b)=k a+\ell b\) with \(k=k^{\prime}+\ell^{\prime} \geqslant \ell^{\prime}=\ell\). This correspondence is obviously bijective, so
 
 \[
 h(a, b)=h(a+b, b)+h(a, b+a)=g(a, b),
@@ -83,7 +83,7 @@ Finally, if \(f(a, b)+b=m\) then \((a+b, b)\) is m-excellent, so \(g(a, b)=1+g(a
 Now it is easy to finish the solution. There exists a unique \(m\)-excellent pair of the form \((a, a)\), and each other \(m\)-excellent pair \((a, b)\) has a unique ancestor of the form \((x, x)\) with \(x < m\). By the lemma, for every \(x < m\) the number of its \(m\)-excellent descendants is \(h(x, x)\), which is the number of ways to represent \(m-f(x, x)=m-x\) as \(k x+\ell x\) (with nonnegative integer \(k\) and \(\ell\) ). This number is 0 if \(x \backslash m\), and \(m / x\) otherwise. So the total number of excellent pairs is
 
 \[
-1+\sum_{x \mid m, x  <  m} \frac{m}{x}=1+\sum_{d \mid m, d  >  1} d=\sum_{d \mid m} d
+1+\sum_{x \mid m, x < m} \frac{m}{x}=1+\sum_{d \mid m, d > 1} d=\sum_{d \mid m} d
 \]
 
 as required.

@@ -26,7 +26,7 @@ Due to symmetry of the problem conditions, the sum of all the \(C_{j}\) is also 
 
 By condition \((i)\), the number \(n\) divides \(a_{i, j}\) for all \(i\) and \(j\). So, every product of at least two of the \(a_{i, j}\) is divisible by \(n^{2}\), hence
 
-\(R_{i}=\prod_{j=1}^{n}\left(1+a_{i, j}\right)=1+\sum_{j=1}^{n} a_{i, j}+\sum_{1 \leqslant j_{1}<j_{2} \leqslant n} a_{i, j_{1}} a_{i, j_{2}}+\cdots \equiv 1+\sum_{j=1}^{n} a_{i, j} \equiv 1-n+\sum_{j=1}^{n} A_{i, j} \quad\left(\bmod n^{2}\right)\)
+\(R_{i}=\prod_{j=1}^{n}\left(1+a_{i, j}\right)=1+\sum_{j=1}^{n} a_{i, j}+\sum_{1 \leqslant j_{1} < j_{2} \leqslant n} a_{i, j_{1}} a_{i, j_{2}}+\cdots \equiv 1+\sum_{j=1}^{n} a_{i, j} \equiv 1-n+\sum_{j=1}^{n} A_{i, j} \quad\left(\bmod n^{2}\right)\)
 
 for every index \(i\). Using condition \((i i)\), we obtain \(R_{i} \equiv 1\left(\bmod n^{2}\right)\), and so \(n^{2} \mid r_{i}\).
 

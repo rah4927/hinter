@@ -31,9 +31,9 @@ Since \(p \geq 2 n\) and \(p\) is odd, all factors are non-zero. If \(d=\operato
 Next we show that no composite number \(m\) has the stated property. Consider two cases.
 
 \begin{itemize}
-  \item If \(m=2 k\) with \(k > 1\), pick \(n=k\). Then \(\frac{m}{3} \leq n \leq \frac{m}{2}\) but \(\left(\begin{array}{c}n \\ m-2 n\end{array}\right)=\left(\begin{array}{l}k \\ 0\end{array}\right)=1\) is not divisible by \(k > 1\).
+ \item If \(m=2 k\) with \(k > 1\), pick \(n=k\). Then \(\frac{m}{3} \leq n \leq \frac{m}{2}\) but \(\left(\begin{array}{c}n \\ m-2 n\end{array}\right)=\left(\begin{array}{l}k \\ 0\end{array}\right)=1\) is not divisible by \(k > 1\).
 
-  \item If \(m\) is odd then there exist an odd prime \(p\) and an integer \(k \geq 1\) with \(m=p(2 k+1)\). Pick \(n=p k\), then \(\frac{m}{3} \leq n \leq \frac{m}{2}\) by \(k \geq 1\). However
+ \item If \(m\) is odd then there exist an odd prime \(p\) and an integer \(k \geq 1\) with \(m=p(2 k+1)\). Pick \(n=p k\), then \(\frac{m}{3} \leq n \leq \frac{m}{2}\) by \(k \geq 1\). However
 
 \end{itemize}
 

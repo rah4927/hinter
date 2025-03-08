@@ -25,19 +25,19 @@ Since there are 2016 common linear factors on both sides, we need to erase at le
 \]
 
 \begin{itemize}
-  \item Case 1. \(x=1,2, \ldots, 2016\).
+ \item Case 1. \(x=1,2, \ldots, 2016\).
 \end{itemize}
 
 In this case, one side of (1) is zero while the other side is not. This shows \(x\) cannot satisfy (1).
 
 \begin{itemize}
-  \item Case 2. \(4 k+1 < x < 4 k+2\) or \(4 k+3 < x < 4 k+4\) for some \(k=0,1, \ldots, 503\).
+ \item Case 2. \(4 k+1 < x < 4 k+2\) or \(4 k+3 < x < 4 k+4\) for some \(k=0,1, \ldots, 503\).
 \end{itemize}
 
 For \(j=0,1, \ldots, 503\) with \(j \neq k\), the product \((x-4 j-1)(x-4 j-4)\) is positive. For \(j=k\), the product \((x-4 k-1)(x-4 k-4)\) is negative. This shows the left-hand side of (1) is negative. On the other hand, each product \((x-4 j-2)(x-4 j-3)\) on the right-hand side of (1) is positive. This yields a contradiction.
 
 \begin{itemize}
-  \item Case 3. \(x < 1\) or \(x > 2016\) or \(4 k < x < 4 k+1\) for some \(k=1,2, \ldots, 503\).
+ \item Case 3. \(x < 1\) or \(x > 2016\) or \(4 k < x < 4 k+1\) for some \(k=1,2, \ldots, 503\).
 \end{itemize}
 
 The equation (1) can be rewritten as
@@ -49,7 +49,7 @@ The equation (1) can be rewritten as
 Note that \((x-4 j-2)(x-4 j-3) > 2\) for \(0 \leqslant j \leqslant 503\) in this case. So each term in the product lies strictly between 0 and 1 , and the whole product must be less than 1 , which is impossible.
 
 \begin{itemize}
-  \item Case 4. \(4 k+2 < x < 4 k+3\) for some \(k=0,1, \ldots, 503\).
+ \item Case 4. \(4 k+2 < x < 4 k+3\) for some \(k=0,1, \ldots, 503\).
 \end{itemize}
 
 This time we rewrite (1) as

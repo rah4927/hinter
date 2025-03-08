@@ -29,9 +29,9 @@ Then \(\ell_{i}\left(x_{j}, y_{j}\right)=0\) if and only if \(j=i\), because the
 Note that \(g_{i}(x, y)\) is a degree \(n-1\) polynomial with the following two properties:
 
 \begin{enumerate}
-  \item \(g_{i}\left(x_{j}, y_{j}\right)=0\) if \(j \neq i\).
+ \item \(g_{i}\left(x_{j}, y_{j}\right)=0\) if \(j \neq i\).
 
-  \item \(g_{i}\left(x_{i}, y_{i}\right)=a_{i}\).
+ \item \(g_{i}\left(x_{i}, y_{i}\right)=a_{i}\).
 
 \end{enumerate}
 
@@ -46,9 +46,9 @@ To see that this claim solves the problem, take \(a\) to be the least common mul
 We prove the claim by factoring \(a\). First, if \(a\) is a power of a prime \(\left(a=p^{k}\right)\), then we may choose either:
 
 \begin{itemize}
-  \item \(f_{a}(x, y)=\left(x^{p-1}+y^{p-1}\right)^{\phi(a)}\) if \(p\) is odd;
+ \item \(f_{a}(x, y)=\left(x^{p-1}+y^{p-1}\right)^{\phi(a)}\) if \(p\) is odd;
 
-  \item \(f_{a}(x, y)=\left(x^{2}+x y+y^{2}\right)^{\phi(a)}\) if \(p=2\).
+ \item \(f_{a}(x, y)=\left(x^{2}+x y+y^{2}\right)^{\phi(a)}\) if \(p=2\).
 
 \end{itemize}
 

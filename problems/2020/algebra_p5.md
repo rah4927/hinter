@@ -14,7 +14,7 @@ Can the magician find a strategy to perform such a trick?
 The final answer is that no, she cannot.
 
 ---
-Let \(x_{1}<x_{2} < \ldots < x_{2 n}\) be real numbers chosen by the magician. We will construct two distinct polynomials \(P(x)\) and \(Q(x)\), each of degree \(n\), such that the member of audience will write down the same sequence for both polynomials. This will mean that the magician cannot distinguish \(P\) from \(Q\).
+Let \(x_{1} < x_{2} < \ldots < x_{2 n}\) be real numbers chosen by the magician. We will construct two distinct polynomials \(P(x)\) and \(Q(x)\), each of degree \(n\), such that the member of audience will write down the same sequence for both polynomials. This will mean that the magician cannot distinguish \(P\) from \(Q\).
 
 Claim. There exists a polynomial \(P(x)\) of degree \(n\) such that \(P\left(x_{2 i-1}\right)+P\left(x_{2 i}\right)=0\) for \(i=\) \(1,2, \ldots, n\).
 

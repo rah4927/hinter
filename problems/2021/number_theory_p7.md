@@ -34,11 +34,11 @@ that is, \(a_{n-1}=a_{n-4}\) and \(a_{n-2}=a_{n-8}\). It follows from Lemma 1 th
 
 Since \(\left(a_{n}\right)\) is bounded, there exist only finitely many \(i\) for which \(a_{i}\) appears in the sequence finitely many times. In other words, there exists \(N\) such that if \(a_{i}=t\) and \(i > N\), then \(a_{j}=t\) for infinitely many \(j\).
 
-Clearly the sequence \(\left(a_{n+N}\right)_{n  >  0}\) satisfies the divisibility condition, and it is enough to prove that this sequence is eventually periodic. Thus truncating the sequence if necessary, we can assume that each number appears infinitely many times in the sequence. Let \(k\) be the maximum number appearing in the sequence.
+Clearly the sequence \(\left(a_{n+N}\right)_{n > 0}\) satisfies the divisibility condition, and it is enough to prove that this sequence is eventually periodic. Thus truncating the sequence if necessary, we can assume that each number appears infinitely many times in the sequence. Let \(k\) be the maximum number appearing in the sequence.
 
 Lemma 2. If a positive integer \(d\) divides \(a_{n}\) for some \(n\), then the numbers \(i\) such that \(d\) divides \(a_{i}\) form an arithmetical progression with an odd difference.
 
-Proof. Let \(i_{1}<i_{2}<i_{3} < \ldots\) be all the indices \(i\) such that \(d\) divides \(a_{i}\). If \(i_{s}+i_{s+1}\) is even, it follows from Lemma 1 that \(d\) also divides \(a_{\frac{i_{s}+i_{s+1}}{2}}\), impossible since \(i_{s} < \frac{i_{s}+i_{s+1}}{2}<i_{s+1}\). Thus \(i_{s}\) and \(i_{s+1}\) are always of different parity, and therefore \(i_{s}+i_{s+2}\) is even. Applying Lemma 1 again, we see that \(d\) divides \(a_{\frac{i_{s}+i_{s+2}}{2}}^{2}\), hence \(\frac{i_{s}+i_{s+2}}{2}=i_{s+1}\),
+Proof. Let \(i_{1} < i_{2} < i_{3} < \ldots\) be all the indices \(i\) such that \(d\) divides \(a_{i}\). If \(i_{s}+i_{s+1}\) is even, it follows from Lemma 1 that \(d\) also divides \(a_{\frac{i_{s}+i_{s+1}}{2}}\), impossible since \(i_{s} < \frac{i_{s}+i_{s+1}}{2} < i_{s+1}\). Thus \(i_{s}\) and \(i_{s+1}\) are always of different parity, and therefore \(i_{s}+i_{s+2}\) is even. Applying Lemma 1 again, we see that \(d\) divides \(a_{\frac{i_{s}+i_{s+2}}{2}}^{2}\), hence \(\frac{i_{s}+i_{s+2}}{2}=i_{s+1}\),
 
 We are ready now to solve the problem.
 

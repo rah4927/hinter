@@ -10,7 +10,7 @@ source: "IMO 2009 Algebra Problem 5"
 Let \(f\) be any function that maps the set of real numbers into the set of real numbers. Prove that there exist real numbers \(x\) and \(y\) such that
 
 \[
-f(x-f(y))>y f(x)+x .
+f(x-f(y)) > y f(x)+x .
 \]
 
 ---

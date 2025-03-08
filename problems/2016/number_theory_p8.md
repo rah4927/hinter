@@ -19,7 +19,7 @@ The condition shows that for each \(n \geqslant 1\), there exist integers \(y_{1
 By Dirichlet's Theorem, since \(d\) is odd, we can find a sufficiently large prime \(p\) such that \(p \equiv 2(\bmod d)\). In particular, we have \((p-1, d)=1\). For this fixed \(p\), we choose \(n\) to be sufficiently large. Then by the Pigeonhole Principle, there must be \(d+1\) of \(y_{1}, y_{2}, \ldots, y_{n}\) which are congruent \(\bmod p\). Without loss of generality, assume \(y_{i} \equiv y_{j}(\bmod p)\) for \(1 \leqslant i, j \leqslant d+1\). We shall establish the following.
 
 \begin{itemize}
-  \item Claim. \(\frac{Q\left(y_{i}\right)}{Q\left(y_{1}\right)}=\frac{y_{i}^{d}}{y_{1}^{d}}\) for \(2 \leqslant i \leqslant d+1\).
+ \item Claim. \(\frac{Q\left(y_{i}\right)}{Q\left(y_{1}\right)}=\frac{y_{i}^{d}}{y_{1}^{d}}\) for \(2 \leqslant i \leqslant d+1\).
 \end{itemize}
 
 Proof. Let \(\frac{Q\left(y_{i}\right)}{Q\left(y_{1}\right)}=\frac{l^{d}}{m^{d}}\) where \((l, m)=1\) and \(l, m > 0\). This can be rewritten in the expanded form
@@ -31,7 +31,7 @@ b_{d}\left(m^{d} y_{i}^{d}-l^{d} y_{1}^{d}\right)=-\sum_{j=0}^{d-2} b_{j}\left(m
 Let \(c\) be the common denominator of \(Q\), so that \(c Q(k)\) is an integer for any integer \(k\). Note that \(c\) depends only on \(P\) and so we may assume \((p, c)=1\). Then \(y_{1} \equiv y_{i}(\bmod p)\) implies \(c Q\left(y_{1}\right) \equiv c Q\left(y_{i}\right)(\bmod p)\).
 
 \begin{itemize}
-  \item Case 1. \(p \mid c Q\left(y_{1}\right)\).
+ \item Case 1. \(p \mid c Q\left(y_{1}\right)\).
 \end{itemize}
 
 In this case, there is a cancellation of \(p\) in the numerator and denominator of \(\frac{c Q\left(y_{i}\right)}{c Q\left(y_{1}\right)}\), so that \(m^{d} \leqslant p^{-1}\left|c Q\left(y_{1}\right)\right|\). Noting \(\left|Q\left(y_{1}\right)\right| < 2 B y_{1}^{d}\) as \(y_{1}\) is large, we get
@@ -78,7 +78,7 @@ by using successively (3), (4), (2) and again (3). This shows
 which is a contradiction for large \(p\) as \(b_{d}, B, c, d\) depend only on the polynomial \(P\). Therefore, we have \(m y_{i}-l y_{1}=0\) in this case.
 
 \begin{itemize}
-  \item Case 2. \(\left(p, c Q\left(y_{1}\right)\right)=1\).
+ \item Case 2. \(\left(p, c Q\left(y_{1}\right)\right)=1\).
 \end{itemize}
 
 From \(c Q\left(y_{1}\right) \equiv c Q\left(y_{i}\right)(\bmod p)\), we have \(l^{d} \equiv m^{d}(\bmod p)\). Since \((p-1, d)=1\), we use Fermat Little Theorem to conclude \(l \equiv m(\bmod p)\). Then \(p \mid m y_{i}-l y_{1}\). Suppose on the contrary that \(m y_{i}-l y_{1} \neq 0\). Then the left-hand side of (1) has absolute value at least \(\left|b_{d}\right| p m^{d-1} y_{i}^{d-1}\). Similar to Case 1 , the right-hand side of (1) has absolute value at most

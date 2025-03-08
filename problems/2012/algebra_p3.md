@@ -10,14 +10,14 @@ source: "IMO 2012 Algebra Problem 3"
 Let \(a_{2}, \ldots, a_{n}\) be \(n-1\) positive real numbers, where \(n \geq 3\), such that \(a_{2} a_{3} \cdots a_{n}=1\). Prove that
 
 \[
-\left(1+a_{2}\right)^{2}\left(1+a_{3}\right)^{3} \cdots\left(1+a_{n}\right)^{n}>n^{n} .
+\left(1+a_{2}\right)^{2}\left(1+a_{3}\right)^{3} \cdots\left(1+a_{n}\right)^{n} > n^{n} .
 \]
 
 ---
 The substitution \(a_{2}=\frac{x_{2}}{x_{1}}, a_{3}=\frac{x_{3}}{x_{2}}, \ldots, a_{n}=\frac{x_{1}}{x_{n-1}}\) transforms the original problem into the inequality
 
 \[
-\left(x_{1}+x_{2}\right)^{2}\left(x_{2}+x_{3}\right)^{3} \cdots\left(x_{n-1}+x_{1}\right)^{n}>n^{n} x_{1}^{2} x_{2}^{3} \cdots x_{n-1}^{n}
+\left(x_{1}+x_{2}\right)^{2}\left(x_{2}+x_{3}\right)^{3} \cdots\left(x_{n-1}+x_{1}\right)^{n} > n^{n} x_{1}^{2} x_{2}^{3} \cdots x_{n-1}^{n}
 \]
 
 for all \(x_{1}, \ldots, x_{n-1} > 0\). To prove this, we use the AM-GM inequality for each factor of the left-hand side as follows:

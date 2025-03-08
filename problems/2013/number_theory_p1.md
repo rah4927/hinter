@@ -7,7 +7,7 @@ topics: ["number theory"]
 source: "IMO 2013 Number Theory Problem 1"
 ---
 
-Let \(\mathbb{Z}_{  >  0}\) be the set of positive integers. Find all functions \(f: \mathbb{Z}_{  >  0} \rightarrow \mathbb{Z}_{  >  0}\) such that
+Let \(\mathbb{Z}_{ > 0}\) be the set of positive integers. Find all functions \(f: \mathbb{Z}_{ > 0} \rightarrow \mathbb{Z}_{ > 0}\) such that
 
 \[
 m^{2}+f(n) \mid m f(m)+n

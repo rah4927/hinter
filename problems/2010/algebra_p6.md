@@ -26,9 +26,9 @@ Next, we clarify which classes do not contain large elements.
 
 Claim 2. For any \(x \in \mathbb{N}\), we have \([x] \subseteq\{1,2, \ldots, b-1\}\) if and only if \(f(x)=a\). Analogously, \([x] \subseteq\{1,2, \ldots, a-1\}\) if and only if \(g(x)=b\).
 
-Proof. We will prove that \([x] \nsubseteq\{1,2, \ldots, b-1\} \Longleftrightarrow f(x)>a\); the proof of the second statement is similar.
+Proof. We will prove that \([x] \nsubseteq\{1,2, \ldots, b-1\} \Longleftrightarrow f(x) > a\); the proof of the second statement is similar.
 
-Note that \(f(x)>a\) implies that there exists some \(y\) satisfying \(f(y)=f(x)-1\), so \(f(g(y))=\) \(f(y)+1=f(x)\), and hence \(x \sim g(y) \geq b\). Conversely, if \(b \leq c \sim x\) then \(c=g(y)\) for some \(y \in \mathbb{N}\), which in turn follows \(f(x)=f(g(y))=f(y)+1 \geq a+1\), and hence \(f(x)>a\).
+Note that \(f(x) > a\) implies that there exists some \(y\) satisfying \(f(y)=f(x)-1\), so \(f(g(y))=\) \(f(y)+1=f(x)\), and hence \(x \sim g(y) \geq b\). Conversely, if \(b \leq c \sim x\) then \(c=g(y)\) for some \(y \in \mathbb{N}\), which in turn follows \(f(x)=f(g(y))=f(y)+1 \geq a+1\), and hence \(f(x) > a\).
 
 Claim 2 implies that there exists exactly one class contained in \(\{1, \ldots, a-1\}\) (that is, the class \(\left[n_{g}\right]\) ), as well as exactly one class contained in \(\{1, \ldots, b-1\}\) (the class \(\left.\left[n_{f}\right]\right)\). Assume for a moment that \(a \leq b\); then \(\left[n_{g}\right]\) is contained in \(\{1, \ldots, b-1\}\) as well, hence it coincides with \(\left[n_{g}\right]\). So, we get that
 

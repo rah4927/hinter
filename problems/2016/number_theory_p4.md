@@ -10,9 +10,9 @@ source: "IMO 2016 Number Theory Problem 4"
 Let \(n, m, k\) and \(l\) be positive integers with \(n \neq 1\) such that \(n^{k}+m n^{l}+1\) divides \(n^{k+l}-1\). Prove that
 
 \begin{itemize}
-  \item \(m=1\) and \(l=2 k ;\) or
+ \item \(m=1\) and \(l=2 k ;\) or
 
-  \item \(l \mid k\) and \(m=\frac{n^{k-l}-1}{n^{l}-1}\).
+ \item \(l \mid k\) and \(m=\frac{n^{k-l}-1}{n^{l}-1}\).
 
 \end{itemize}
 
@@ -32,7 +32,7 @@ n^{k}+m n^{l}+1 \mid\left(n^{k+l}-1\right)+\left(n^{k}+m n^{l}+1\right)=n^{k+l}+
 We have two cases to discuss.
 
 \begin{itemize}
-  \item Case 1. \(l \geqslant k\).
+ \item Case 1. \(l \geqslant k\).
 \end{itemize}
 
 Since \(\left(n^{k}+m n^{l}+1, n\right)=1,(2)\) yields
@@ -50,7 +50,7 @@ n^{k}+n^{l}+1 \mid n^{l}+n^{l-k}+1
 Note that \(n^{l}+n^{l-k}+1 < n^{l}+n^{l}+1 < 2\left(n^{k}+n^{l}+1\right)\). Thus we must have \(n^{l}+n^{l-k}+1=n^{k}+n^{l}+1\) so that \(l=2 k\), which gives the first result.
 
 \begin{itemize}
-  \item Case 2. \(l < k\).
+ \item Case 2. \(l < k\).
 \end{itemize}
 
 This time (2) yields

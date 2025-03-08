@@ -37,12 +37,12 @@ Let
 r \text { be the smallest index with } a_{r} \geqslant a_{r+1} \geqslant a_{r+2} \text {. }
 \]
 
-Then \(r \leqslant n-2\) by the above, but also \(r \geqslant 2\) : if \(b_{1}=1\), then \(a_{2}=a_{1}=1\) and \(a_{3}=a_{2} b_{2}+a_{1}>a_{2}\); if \(b_{1} > 1\), then \(a_{2}=b_{1} > 1=a_{1}\).
+Then \(r \leqslant n-2\) by the above, but also \(r \geqslant 2\) : if \(b_{1}=1\), then \(a_{2}=a_{1}=1\) and \(a_{3}=a_{2} b_{2}+a_{1} > a_{2}\); if \(b_{1} > 1\), then \(a_{2}=b_{1} > 1=a_{1}\).
 
-By the minimal choice (2) of \(r\), it follows that \(a_{r-1}<a_{r}\). And since \(2 \leqslant r \leqslant n-2\), by the minimal choice (1) of \(n\) we have \(a_{r-1}, a_{r}, a_{r+1} > 0\). In order to have \(a_{r+1} \geqslant a_{r+2}\), we must have \(a_{r+2}=a_{r+1} b_{r+1}-a_{r}\) so that \(b_{r} \geqslant 2\). Putting everything together, we conclude that
+By the minimal choice (2) of \(r\), it follows that \(a_{r-1} < a_{r}\). And since \(2 \leqslant r \leqslant n-2\), by the minimal choice (1) of \(n\) we have \(a_{r-1}, a_{r}, a_{r+1} > 0\). In order to have \(a_{r+1} \geqslant a_{r+2}\), we must have \(a_{r+2}=a_{r+1} b_{r+1}-a_{r}\) so that \(b_{r} \geqslant 2\). Putting everything together, we conclude that
 
 \[
-a_{r+1}=a_{r} b_{r} \pm a_{r-1} \geqslant 2 a_{r}-a_{r-1}=a_{r}+\left(a_{r}-a_{r-1}\right)>a_{r}
+a_{r+1}=a_{r} b_{r} \pm a_{r-1} \geqslant 2 a_{r}-a_{r-1}=a_{r}+\left(a_{r}-a_{r-1}\right) > a_{r}
 \]
 
 which contradicts (2).
@@ -74,19 +74,19 @@ Now we claim that \(a_{r}+a_{r-1} \geqslant r\). Indeed, this holds by inspectio
 Since \(r \geqslant 1\) and, by the lemma, \(a_{r} \geqslant 1\), from \(a_{r+1}-a_{r} \geqslant r\) we get the following two inequalities:
 
 \[
-a_{r+1} \geqslant r+1 \quad \text { and } \quad a_{r+1}>a_{r}
+a_{r+1} \geqslant r+1 \quad \text { and } \quad a_{r+1} > a_{r}
 \]
 
 Now observe that
 
 \[
-a_{m}>a_{m-1} \Longrightarrow a_{m+1}>a_{m} \text { for } m=r+1, r+2, \ldots, n-1,
+a_{m} > a_{m-1} \Longrightarrow a_{m+1} > a_{m} \text { for } m=r+1, r+2, \ldots, n-1,
 \]
 
-since \(a_{m+1}=a_{m} b_{m}-a_{m-1} \geqslant 2 a_{m}-a_{m-1}=a_{m}+\left(a_{m}-a_{m-1}\right)>a_{m}\). Thus
+since \(a_{m+1}=a_{m} b_{m}-a_{m-1} \geqslant 2 a_{m}-a_{m-1}=a_{m}+\left(a_{m}-a_{m-1}\right) > a_{m}\). Thus
 
 \[
-a_{n}>a_{n-1} > \cdots > a_{r+1} \geqslant r+1 \Longrightarrow a_{n} \geqslant n \text {. }
+a_{n} > a_{n-1} > \cdots > a_{r+1} \geqslant r+1 \Longrightarrow a_{n} \geqslant n \text {. }
 \]
 
 So \(\max \left\{a_{n}, a_{n+1}\right\} \geqslant n\), as desired.

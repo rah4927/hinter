@@ -52,7 +52,7 @@ Since \(1 \leqslant a_{1} \leqslant n\) and \(a_{a_{1}} \leqslant n\) by (2), we
 b_{1} \geqslant b_{2} \geqslant \ldots \geqslant b_{t} \geqslant b_{t+1}=0 .
 \]
 
-Next we claim that \(a_{i}+b_{i} \leqslant n\) for \(1 \leqslant i \leqslant t\). Indeed, by \(n+i-1 \geqslant a_{a_{i}}\) and \(a_{i} \leqslant n\), each \(j\) with \(a_{j} \geqslant n+i\) (thus \(a_{j}>a_{a_{i}}\) ) belongs to \(\left\{a_{i}+1, \ldots, n\right\}\), and for this reason \(b_{i} \leqslant n-a_{i}\).
+Next we claim that \(a_{i}+b_{i} \leqslant n\) for \(1 \leqslant i \leqslant t\). Indeed, by \(n+i-1 \geqslant a_{a_{i}}\) and \(a_{i} \leqslant n\), each \(j\) with \(a_{j} \geqslant n+i\) (thus \(a_{j} > a_{a_{i}}\) ) belongs to \(\left\{a_{i}+1, \ldots, n\right\}\), and for this reason \(b_{i} \leqslant n-a_{i}\).
 
 It follows from the definition of the \(b_{i} \mathrm{~s}\) and (5) that
 

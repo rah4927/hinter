@@ -30,7 +30,7 @@ Setting \(x=z\) and \(y=1\) this follows immediately from Step 1.
 
 Step 3. For all integers \(z \geq 1\), we have \(f(z) \leq z\).
 
-Let us show, that the contrary leads to a contradiction. Assume \(w+1=f(z)>z\) for some \(z\). From Step 1 we know that \(w \geq z \geq 2\). Let \(M=\max \{f(1), f(2), \ldots, f(w)\}\) be the largest value of \(f\) for the first \(w\) integers. First we show, that no positive integer \(t\) exists with
+Let us show, that the contrary leads to a contradiction. Assume \(w+1=f(z) > z\) for some \(z\). From Step 1 we know that \(w \geq z \geq 2\). Let \(M=\max \{f(1), f(2), \ldots, f(w)\}\) be the largest value of \(f\) for the first \(w\) integers. First we show, that no positive integer \(t\) exists with
 
 \[
 f(t) > \frac{z-1}{w} \cdot t+M
@@ -39,7 +39,7 @@ f(t) > \frac{z-1}{w} \cdot t+M
 otherwise we decompose the smallest value \(t\) as \(t=w r+s\) where \(r\) is an integer and \(1 \leq s \leq w\). Because of the definition of \(M\), we have \(t > w\). Setting \(x=z\) and \(y=t-w\) we get from the triangle inequality
 
 \[
-z+f(t-w)>f((t-w)+f(z)-1)=f(t-w+w)=f(t) .
+z+f(t-w) > f((t-w)+f(z)-1)=f(t-w+w)=f(t) .
 \]
 
 Hence,

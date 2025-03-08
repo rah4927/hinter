@@ -7,7 +7,7 @@ topics: ["algebra"]
 source: "IMO 2018 Algebra Problem 1"
 ---
 
-Let \(\mathbb{Q}_{  >  0}\) denote the set of all positive rational numbers. Determine all functions \(f: \mathbb{Q} > 0 \rightarrow \mathbb{Q} > 0\) satisfying
+Let \(\mathbb{Q}_{ > 0}\) denote the set of all positive rational numbers. Determine all functions \(f: \mathbb{Q} > 0 \rightarrow \mathbb{Q} > 0\) satisfying
 
 \[
 f\left(x^{2} f(y)^{2}\right)=f(x)^{2} f(y)
@@ -18,7 +18,7 @@ for all \(x, y \in \mathbb{Q} > 0\).
 The final answer is \(f(x)=1\) for all \(x \in \mathbb{Q} > 0\).
 
 ---
-Take any \(a, b \in \mathbb{Q}_{  >  0}\). By substituting \(x=f(a), y=b\) and \(x=f(b), y=a\) into \((*)\) we get
+Take any \(a, b \in \mathbb{Q}_{ > 0}\). By substituting \(x=f(a), y=b\) and \(x=f(b), y=a\) into \((*)\) we get
 
 \[
 f(f(a))^{2} f(b)=f\left(f(a)^{2} f(b)^{2}\right)=f(f(b))^{2} f(a)
@@ -27,10 +27,10 @@ f(f(a))^{2} f(b)=f\left(f(a)^{2} f(b)^{2}\right)=f(f(b))^{2} f(a)
 which yields
 
 \[
-\frac{f(f(a))^{2}}{f(a)}=\frac{f(f(b))^{2}}{f(b)} \quad \text { for all } a, b \in \mathbb{Q}_{  >  0} .
+\frac{f(f(a))^{2}}{f(a)}=\frac{f(f(b))^{2}}{f(b)} \quad \text { for all } a, b \in \mathbb{Q}_{ > 0} .
 \]
 
-In other words, this shows that there exists a constant \(C \in \mathbb{Q}_{  >  0}\) such that \(f(f(a))^{2}=C f(a)\), or
+In other words, this shows that there exists a constant \(C \in \mathbb{Q}_{ > 0}\) such that \(f(f(a))^{2}=C f(a)\), or
 
 \[
 \left(\frac{f(f(a))}{C}\right)^{2}=\frac{f(a)}{C} \quad \text { for all } a \in \mathbb{Q} > 0 .

@@ -52,7 +52,7 @@ As an immediate consequence, this implies \(|S(m)|=|C|=807\), finishing the prob
 c m\left|10^{t}-1 \Longrightarrow m\right| 10^{t}-1 \Longrightarrow \alpha \mid t \text {. }
 \]
 
-Hence \(t=k \alpha\) for some \(k \in \mathbb{Z}_{  >  0}\). We will show that \(k=c\).
+Hence \(t=k \alpha\) for some \(k \in \mathbb{Z}_{ > 0}\). We will show that \(k=c\).
 
 Denote by \(\nu_{p}(n)\) the number of prime factors \(p\) in \(n\), that is, the maximum exponent \(\beta\) for which \(p^{\beta} \mid n\). For every \(\ell \geqslant 1\) and \(p \in P\), the Lifting the Exponent Lemma provides
 

@@ -14,7 +14,7 @@ Denote by \(v_{p}(a)\) the exponent of the prime \(p\) in the prime decompositio
 
 Assume that there are only finitely many primes \(p_{1}, p_{2}, \ldots, p_{m}\) that divide some function value produced of \(f\).
 
-There are infinitely many positive integers \(a\) such that \(v_{p_{i}}(a)>v_{p_{i}}(f(1))\) for all \(i=1,2, \ldots, m\), e.g. \(a=\left(p_{1} p_{2} \ldots p_{m}\right)^{\alpha}\) with \(\alpha\) sufficiently large. Pick any such \(a\). The condition of the problem then yields \(a \mid(f(a+1)-f(1))\). Assume \(f(a+1) \neq f(1)\). Then we must have \(v_{p_{i}}(f(a+1)) \neq\) \(v_{p_{i}}(f(1))\) for at least one \(i\). This yields \(v_{p_{i}}(f(a+1)-f(1))=\min \left\{v_{p_{i}}(f(a+1)), v_{p_{i}}(f(1))\right\} \leq\) \(v_{p_{1}}(f(1))<v_{p_{i}}(a)\). But this contradicts the fact that \(a \mid(f(a+1)-f(1))\).
+There are infinitely many positive integers \(a\) such that \(v_{p_{i}}(a) > v_{p_{i}}(f(1))\) for all \(i=1,2, \ldots, m\), e.g. \(a=\left(p_{1} p_{2} \ldots p_{m}\right)^{\alpha}\) with \(\alpha\) sufficiently large. Pick any such \(a\). The condition of the problem then yields \(a \mid(f(a+1)-f(1))\). Assume \(f(a+1) \neq f(1)\). Then we must have \(v_{p_{i}}(f(a+1)) \neq\) \(v_{p_{i}}(f(1))\) for at least one \(i\). This yields \(v_{p_{i}}(f(a+1)-f(1))=\min \left\{v_{p_{i}}(f(a+1)), v_{p_{i}}(f(1))\right\} \leq\) \(v_{p_{1}}(f(1)) < v_{p_{i}}(a)\). But this contradicts the fact that \(a \mid(f(a+1)-f(1))\).
 
 Hence we must have \(f(a+1)=f(1)\) for all such \(a\).
 

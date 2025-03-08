@@ -23,7 +23,7 @@ This shows \(16 S^{2}\) is divisible by \(n^{2}\). Since \(n\) is odd, \(2 S\) i
 Assume \(k \geqslant 4\). If the square of length of one of the diagonals is divisible by \(n\), then that diagonal divides \(P\) into two smaller polygons, to which the induction hypothesis applies. Hence we may assume that none of the squares of diagonal lengths is divisible by \(n\). As usual, we denote by \(\nu_{p}(r)\) the exponent of \(p\) in the prime decomposition of \(r\). We claim the following.
 
 \begin{itemize}
-  \item Claim. \(\nu_{p}\left(A_{1} A_{m}^{2}\right) > \nu_{p}\left(A_{1} A_{m+1}^{2}\right)\) for \(2 \leqslant m \leqslant k-1\).
+ \item Claim. \(\nu_{p}\left(A_{1} A_{m}^{2}\right) > \nu_{p}\left(A_{1} A_{m+1}^{2}\right)\) for \(2 \leqslant m \leqslant k-1\).
 \end{itemize}
 
 Proof. The case \(m=2\) is obvious since \(\nu_{p}\left(A_{1} A_{2}^{2}\right) \geqslant p^{t} > \nu_{p}\left(A_{1} A_{3}^{2}\right)\) by the condition and the above assumption.

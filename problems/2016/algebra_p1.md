@@ -17,7 +17,7 @@ Let \(a, b\) and \(c\) be positive real numbers such that \(\min \{a b, b c, c a
 We first show the following.
 
 \begin{itemize}
-  \item Claim. For any positive real numbers \(x, y\) with \(x y \geqslant 1\), we have
+ \item Claim. For any positive real numbers \(x, y\) with \(x y \geqslant 1\), we have
 \end{itemize}
 
 \[

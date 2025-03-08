@@ -27,7 +27,7 @@ p^{n}-x^{n}=p^{r}\left(p^{d}\right)^{m}-x^{n} \equiv p^{r} f(x)^{m}-x^{n} \equiv
 Since we have \(r < d\), for large enough primes \(p \in P\) we obtain
 
 \[
-\left|p^{r} f(x)^{m}-x^{n}\right|<p^{d}-f(x) .
+\left|p^{r} f(x)^{m}-x^{n}\right| < p^{d}-f(x) .
 \]
 
 Hence \(p^{r} f(x)^{m}-x^{n}\) has to be zero. This implies \(r=0\) and \(x^{n}=\left(x^{d}\right)^{m}=f(x)^{m}\). Since \(m\) is odd, we obtain \(f(x)=x^{d}\)

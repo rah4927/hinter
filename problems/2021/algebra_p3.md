@@ -44,7 +44,7 @@ From the Claim it follows immediately that \(\sum_{i=1}^{n}\left\lfloor\frac{a_{
 
 Proof of the Claim. Apply induction on \(k\). For \(k=1\) the claim is trivial, \(\left\lfloor\frac{b_{1}}{1}\right\rfloor \geqslant 1\). Suppose the Claim holds true for some positive integer \(k\), and consider \(k+1\).
 
-If there exists an index \(j\) such that \(2^{k}<j \leqslant 2^{k+1}\) and \(b_{j} \geqslant j\) then
+If there exists an index \(j\) such that \(2^{k} < j \leqslant 2^{k+1}\) and \(b_{j} \geqslant j\) then
 
 \[
 \sum_{i=1}^{2^{k+1}}\left\lfloor\frac{b_{i}}{i}\right\rfloor \geqslant \sum_{i=1}^{2^{k}}\left\lfloor\frac{b_{i}}{i}\right\rfloor+\left\lfloor\frac{b_{j}}{j}\right\rfloor \geqslant(k+1)+1
@@ -52,7 +52,7 @@ If there exists an index \(j\) such that \(2^{k}<j \leqslant 2^{k+1}\) and \(b_{
 
 by the induction hypothesis, so the Claim is satisfied.
 
-Otherwise we have \(b_{j}<j \leqslant 2^{k+1}\) for every \(2^{k}<j \leqslant 2^{k+1}\). Among the \(2^{k+1}\) distinct numbers \(b_{1}, \ldots, b_{2^{k+1}}\) there is some \(b_{m}\) which is at least \(2^{k+1}\); that number must be among \(b_{1} \ldots, b_{2^{k}}\). Hence, \(1 \leqslant m \leqslant 2^{k}\) and \(b_{m} \geqslant 2^{k+1}\).
+Otherwise we have \(b_{j} < j \leqslant 2^{k+1}\) for every \(2^{k} < j \leqslant 2^{k+1}\). Among the \(2^{k+1}\) distinct numbers \(b_{1}, \ldots, b_{2^{k+1}}\) there is some \(b_{m}\) which is at least \(2^{k+1}\); that number must be among \(b_{1} \ldots, b_{2^{k}}\). Hence, \(1 \leqslant m \leqslant 2^{k}\) and \(b_{m} \geqslant 2^{k+1}\).
 
 We will apply the induction hypothesis to the numbers
 

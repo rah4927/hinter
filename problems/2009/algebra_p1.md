@@ -26,7 +26,7 @@ The final answer is that the largest possible number \(k\) of indices satisfying
 ---
 We will prove that the largest possible number \(k\) of indices satisfying the given condition is one.
 
-Firstly we prove that \(b_{2009}, r_{2009}, w_{2009}\) are always lengths of the sides of a triangle. Without loss of generality we may assume that \(w_{2009} \geq r_{2009} \geq b_{2009}\). We show that the inequality \(b_{2009}+r_{2009}>w_{2009}\) holds. Evidently, there exists a triangle with side lengths \(w, b, r\) for the white, blue and red side, respectively, such that \(w_{2009}=w\). By the conditions of the problem we have \(b+r > w, b_{2009} \geq b\) and \(r_{2009} \geq r\). From these inequalities it follows
+Firstly we prove that \(b_{2009}, r_{2009}, w_{2009}\) are always lengths of the sides of a triangle. Without loss of generality we may assume that \(w_{2009} \geq r_{2009} \geq b_{2009}\). We show that the inequality \(b_{2009}+r_{2009} > w_{2009}\) holds. Evidently, there exists a triangle with side lengths \(w, b, r\) for the white, blue and red side, respectively, such that \(w_{2009}=w\). By the conditions of the problem we have \(b+r > w, b_{2009} \geq b\) and \(r_{2009} \geq r\). From these inequalities it follows
 
 \[
 b_{2009}+r_{2009} \geq b+r > w=w_{2009} \text {. }

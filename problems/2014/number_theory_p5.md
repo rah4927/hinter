@@ -26,7 +26,7 @@ We take this equation modulo \(p^{a}\) and take into account that \(p-1\) is eve
 0 \equiv x^{(p-1)^{2}}+x \quad\left(\bmod p^{a}\right) .
 \]
 
-If \(p \mid x\), then \(p^{a} \mid x\), since \(x^{(p-1)^{2}-1}+1\) is not divisible by \(p\) in this case. However, this is impossible, since \(x \leqslant x^{p-1}<p^{a}\). Thus we know that \(p \nmid x\), which means that
+If \(p \mid x\), then \(p^{a} \mid x\), since \(x^{(p-1)^{2}-1}+1\) is not divisible by \(p\) in this case. However, this is impossible, since \(x \leqslant x^{p-1} < p^{a}\). Thus we know that \(p \nmid x\), which means that
 
 \[
 p^{a} \mid x^{(p-1)^{2}-1}+1=x^{p(p-2)}+1 .
@@ -74,7 +74,7 @@ so we must have \(x=p-1\) for \(p\) to divide \(x+1\).
 It follows that \(r=1\) and \(a=2\). If \(p \geqslant 5\), we obtain
 
 \[
-p^{a}=x^{p-1}+y > (p-1)^{4}=\left(p^{2}-2 p+1\right)^{2} > (3 p)^{2}>p^{2}=p^{a},
+p^{a}=x^{p-1}+y > (p-1)^{4}=\left(p^{2}-2 p+1\right)^{2} > (3 p)^{2} > p^{2}=p^{a},
 \]
 
 a contradiction. So the only case that remains is \(p=3\), and indeed \(x=2\) and \(y=p^{a}-x^{p-1}=5\) satisfy the conditions.

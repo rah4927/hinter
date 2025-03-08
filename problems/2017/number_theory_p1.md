@@ -27,9 +27,9 @@ Claim 1. If \(a_{n} \equiv-1(\bmod 3)\), then, for all \(m > n, a_{m}\) is not a
 
 Proof. A square cannot be congruent to \(-1\) modulo 3 , so \(a_{n} \equiv-1(\bmod 3)\) implies that \(a_{n}\) is not a square, therefore \(a_{n+1}=a_{n}+3 > a_{n}\). As a consequence, \(a_{n+1} \equiv a_{n} \equiv-1(\bmod 3)\), so \(a_{n+1}\) is not a square either. By repeating the argument, we prove that, from \(a_{n}\) on, all terms of the sequence are not perfect squares and are greater than their predecessors, which completes the proof.
 
-Claim 2. If \(a_{n} \not=-1(\bmod 3)\) and \(a_{n} > 9\) then there is an index \(m > n\) such that \(a_{m}<a_{n}\).
+Claim 2. If \(a_{n} \not=-1(\bmod 3)\) and \(a_{n} > 9\) then there is an index \(m > n\) such that \(a_{m} < a_{n}\).
 
-Proof. Let \(t^{2}\) be the largest perfect square which is less than \(a_{n}\). Since \(a_{n} > 9, t\) is at least 3. The first square in the sequence \(a_{n}, a_{n}+3, a_{n}+6, \ldots\) will be \((t+1)^{2},(t+2)^{2}\) or \((t+3)^{2}\), therefore there is an index \(m > n\) such that \(a_{m} \leqslant t+3 < t^{2}<a_{n}\), as claimed.
+Proof. Let \(t^{2}\) be the largest perfect square which is less than \(a_{n}\). Since \(a_{n} > 9, t\) is at least 3. The first square in the sequence \(a_{n}, a_{n}+3, a_{n}+6, \ldots\) will be \((t+1)^{2},(t+2)^{2}\) or \((t+3)^{2}\), therefore there is an index \(m > n\) such that \(a_{m} \leqslant t+3 < t^{2} < a_{n}\), as claimed.
 
 Claim 3. If \(a_{n} \equiv 0(\bmod 3)\), then there is an index \(m > n\) such that \(a_{m}=3\).
 

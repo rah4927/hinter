@@ -32,7 +32,7 @@ Notice that after any two consecutive negative numbers the next one must be posi
 
 Consider the case when the positive and negative values alternate. So, if \(a_{i}\) is a negative value then \(a_{i+1}\) is positive, \(a_{i+2}\) is negative and \(a_{i+3}\) is positive again.
 
-Notice that \(a_{i} a_{i+1}+1=a_{i+2} < 0 < a_{i+3}=a_{i+1} a_{i+2}+1\); by \(a_{i+1} > 0\) we conclude \(a_{i}<a_{i+2}\). Hence, the negative values form an infinite increasing subsequence, \(a_{i}<a_{i+2}<a_{i+4} < \ldots\), which is not possible, because the sequence is periodic.
+Notice that \(a_{i} a_{i+1}+1=a_{i+2} < 0 < a_{i+3}=a_{i+1} a_{i+2}+1\); by \(a_{i+1} > 0\) we conclude \(a_{i} < a_{i+2}\). Hence, the negative values form an infinite increasing subsequence, \(a_{i} < a_{i+2} < a_{i+4} < \ldots\), which is not possible, because the sequence is periodic.
 
 The only case left is when there are consecutive negative numbers in the sequence. Suppose that \(a_{i}\) and \(a_{i+1}\) are negative; then \(a_{i+2}=a_{i} a_{i+1}+1 > 1\). The number \(a_{i+3}\) must be negative. We show that \(a_{i+4}\) also must be negative.
 
@@ -42,6 +42,6 @@ Notice that \(a_{i+3}\) is negative and \(a_{i+4}=a_{i+2} a_{i+3}+1 < 1 < a_{i} 
 a_{i+5}-a_{i+4}=\left(a_{i+3} a_{i+4}+1\right)-\left(a_{i+2} a_{i+3}+1\right)=a_{i+3}\left(a_{i+4}-a_{i+2}\right) > 0,
 \]
 
-therefore \(a_{i+5}>a_{i+4}\). Since at most one of \(a_{i+4}\) and \(a_{i+5}\) can be positive, that means that \(a_{i+4}\) must be negative.
+therefore \(a_{i+5} > a_{i+4}\). Since at most one of \(a_{i+4}\) and \(a_{i+5}\) can be positive, that means that \(a_{i+4}\) must be negative.
 
 Now \(a_{i+3}\) and \(a_{i+4}\) are negative and \(a_{i+5}\) is positive; so after two negative and a positive terms, the next three terms repeat the same pattern. That completes the solution.

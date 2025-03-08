@@ -18,13 +18,13 @@ for all \(x, y \in \mathbb{R}^{+}\). (Symbol \(\mathbb{R}^{+}\)denotes the set o
 The final answer is \(f(x)=2 x\).
 
 ---
-First we show that \(f(y)>y\) for all \(y \in \mathbb{R}^{+}\). Functional equation (1) yields \(f(x+f(y))>f(x+y)\) and hence \(f(y) \neq y\) immediately. If \(f(y)<y\) for some \(y\), then setting \(x=y-f(y)\) we get
+First we show that \(f(y) > y\) for all \(y \in \mathbb{R}^{+}\). Functional equation (1) yields \(f(x+f(y)) > f(x+y)\) and hence \(f(y) \neq y\) immediately. If \(f(y) < y\) for some \(y\), then setting \(x=y-f(y)\) we get
 
 \[
-f(y)=f((y-f(y))+f(y))=f((y-f(y))+y)+f(y)>f(y)
+f(y)=f((y-f(y))+f(y))=f((y-f(y))+y)+f(y) > f(y)
 \]
 
-contradiction. Therefore \(f(y)>y\) for all \(y \in \mathbb{R}^{+}\).
+contradiction. Therefore \(f(y) > y\) for all \(y \in \mathbb{R}^{+}\).
 
 For \(x \in \mathbb{R}^{+}\)define \(g(x)=f(x)-x\); then \(f(x)=g(x)+x\) and, as we have seen, \(g(x) > 0\). Transforming (1) for function \(g(x)\) and setting \(t=x+y\),
 
@@ -75,6 +75,6 @@ and hence
 g(g(y))=y .
 \]
 
-Suppose that there exists an \(x \in \mathbb{R}^{+}\)such that \(g(x) \neq x\). By the monotonicity of \(g\), if \(x > g(x)\) then \(g(x)>g(g(x))=x\). Similarly, if \(x < g(x)\) then \(g(x)<g(g(x))=x\). Both cases lead to contradiction, so there exists no such \(x\).
+Suppose that there exists an \(x \in \mathbb{R}^{+}\)such that \(g(x) \neq x\). By the monotonicity of \(g\), if \(x > g(x)\) then \(g(x) > g(g(x))=x\). Similarly, if \(x < g(x)\) then \(g(x) < g(g(x))=x\). Both cases lead to contradiction, so there exists no such \(x\).
 
 We have proved that \(g(x)=x\) and therefore \(f(x)=g(x)+x=2 x\) for all \(x \in \mathbb{R}^{+}\). This function indeed satisfies the functional equation (1).

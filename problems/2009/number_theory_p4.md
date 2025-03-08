@@ -58,7 +58,7 @@ x^{2}-k\left(y_{1}+1\right) x+y_{1}^{2}-k\left(y_{1}+1\right)=0 .
 
 Let \(x_{2}\) be the second solution, which by VIETA's theorem fulfills \(x_{1}+x_{2}=k\left(y_{1}+1\right)\) and \(x_{1} x_{2}=y_{1}^{2}-k\left(y_{1}+1\right)\). If \(x_{2}=0\), the second equation implies \(y_{1}^{2}=k\left(y_{1}+1\right)\), which is impossible, as \(y_{1}+1 > 1\) cannot divide the relatively prime number \(y_{1}^{2}\). Therefore \(x_{2} \neq 0\).
 
-Also we get \(\left(x_{1}+1\right)\left(x_{2}+1\right)=x_{1} x_{2}+x_{1}+x_{2}+1=y_{1}^{2}+1\) which is odd, and hence \(x_{2}\) must be even and positive. Also we have \(x_{2}+1=\frac{y_{1}^{2}+1}{x_{1}+1} \leq \frac{y_{1}^{2}+1}{y_{1}+1} \leq y_{1} \leq x_{1}\). But this means that the pair \(\left(x^{\prime}, y^{\prime}\right)\) with \(x^{\prime}=y_{1}\) and \(y^{\prime}=x_{2}\) is another solution of \(k(x+1)(y+1)=x^{2}+y^{2}\) in even positive numbers with \(x^{\prime}+y^{\prime}<x_{1}+y_{1}\), a contradiction.
+Also we get \(\left(x_{1}+1\right)\left(x_{2}+1\right)=x_{1} x_{2}+x_{1}+x_{2}+1=y_{1}^{2}+1\) which is odd, and hence \(x_{2}\) must be even and positive. Also we have \(x_{2}+1=\frac{y_{1}^{2}+1}{x_{1}+1} \leq \frac{y_{1}^{2}+1}{y_{1}+1} \leq y_{1} \leq x_{1}\). But this means that the pair \(\left(x^{\prime}, y^{\prime}\right)\) with \(x^{\prime}=y_{1}\) and \(y^{\prime}=x_{2}\) is another solution of \(k(x+1)(y+1)=x^{2}+y^{2}\) in even positive numbers with \(x^{\prime}+y^{\prime} < x_{1}+y_{1}\), a contradiction.
 
 Therefore we must have \(n \leq 4\).
 

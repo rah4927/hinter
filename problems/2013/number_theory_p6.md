@@ -13,12 +13,12 @@ Determine all functions \(f: \mathbb{Q} \longrightarrow \mathbb{Z}\) satisfying
 f\left(\frac{f(x)+a}{b}\right)=f\left(\frac{x+a}{b}\right)
 \]
 
-for all \(x \in \mathbb{Q}, a \in \mathbb{Z}\), and \(b \in \mathbb{Z}_{  >  0}\). (Here, \(\mathbb{Z}_{  >  0}\) denotes the set of positive integers.)
+for all \(x \in \mathbb{Q}, a \in \mathbb{Z}\), and \(b \in \mathbb{Z}_{ > 0}\). (Here, \(\mathbb{Z}_{ > 0}\) denotes the set of positive integers.)
 
 The final answer is that there are three kinds of such functions, which are: all constant functions, the floor function, and the ceiling function.
 
 ---
-I. We start by verifying that these functions do indeed satisfy (1). This is clear for all constant functions. Now consider any triple \((x, a, b) \in \mathbb{Q} \times \mathbb{Z} \times \mathbb{Z}_{  >  0}\) and set
+I. We start by verifying that these functions do indeed satisfy (1). This is clear for all constant functions. Now consider any triple \((x, a, b) \in \mathbb{Q} \times \mathbb{Z} \times \mathbb{Z}_{ > 0}\) and set
 
 \[
 q=\left\lfloor\frac{x+a}{b}\right\rfloor .
@@ -32,11 +32,11 @@ This means that \(q\) is an integer and \(b q \leqslant x+a < b(q+1)\). It follo
 
 meaning that the floor function does indeed satisfy (1). One can check similarly that the ceiling function has the same property.
 
-II. Let us now suppose conversely that the function \(f: \mathbb{Q} \longrightarrow \mathbb{Z}\) satisfies (1) for all \((x, a, b) \in\) \(\mathbb{Q} \times \mathbb{Z} \times \mathbb{Z}_{  >  0}\). According to the behaviour of the restriction of \(f\) to the integers we distinguish two cases.
+II. Let us now suppose conversely that the function \(f: \mathbb{Q} \longrightarrow \mathbb{Z}\) satisfies (1) for all \((x, a, b) \in\) \(\mathbb{Q} \times \mathbb{Z} \times \mathbb{Z}_{ > 0}\). According to the behaviour of the restriction of \(f\) to the integers we distinguish two cases.
 
 Case 1: There is some \(m \in \mathbb{Z}\) such that \(f(m) \neq m\).
 
-Write \(f(m)=C\) and let \(\eta \in\{-1,+1\}\) and \(b\) denote the sign and absolute value of \(f(m)-m\), respectively. Given any integer \(r\), we may plug the triple \((m, r b-C, b)\) into (1), thus getting \(f(r)=f(r-\eta)\). Starting with \(m\) and using induction in both directions, we deduce from this that the equation \(f(r)=C\) holds for all integers \(r\). Now any rational number \(y\) can be written in the form \(y=\frac{p}{q}\) with \((p, q) \in \mathbb{Z} \times \mathbb{Z}_{  >  0}\), and substituting \((C-p, p-C, q)\) into (1) we get \(f(y)=f(0)=C\). Thus \(f\) is the constant function whose value is always \(C\).
+Write \(f(m)=C\) and let \(\eta \in\{-1,+1\}\) and \(b\) denote the sign and absolute value of \(f(m)-m\), respectively. Given any integer \(r\), we may plug the triple \((m, r b-C, b)\) into (1), thus getting \(f(r)=f(r-\eta)\). Starting with \(m\) and using induction in both directions, we deduce from this that the equation \(f(r)=C\) holds for all integers \(r\). Now any rational number \(y\) can be written in the form \(y=\frac{p}{q}\) with \((p, q) \in \mathbb{Z} \times \mathbb{Z}_{ > 0}\), and substituting \((C-p, p-C, q)\) into (1) we get \(f(y)=f(0)=C\). Thus \(f\) is the constant function whose value is always \(C\).
 
 Case 2: One has \(f(m)=m\) for all integers \(m\).
 

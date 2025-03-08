@@ -21,22 +21,22 @@ The final answer is that the only pair \((f, g)\) of functions that satisfies th
 The given relation implies
 
 \[
-f\left(f^{g(n)}(n)\right)<f(n+1) \quad \text { for all } n
+f\left(f^{g(n)}(n)\right) < f(n+1) \quad \text { for all } n
 \]
 
 which will turn out to be sufficient to determine \(f\).
 
-Let \(y_{1}<y_{2} < \ldots\) be all the values attained by \(f\) (this sequence might be either finite or infinite). We will prove that for every positive \(n\) the function \(f\) attains at least \(n\) values, and we have \((\mathrm{i})_{n}: f(x)=y_{n}\) if and only if \(x=n\), and (ii) \()_{n}: y_{n}=n\). The proof will follow the scheme
+Let \(y_{1} < y_{2} < \ldots\) be all the values attained by \(f\) (this sequence might be either finite or infinite). We will prove that for every positive \(n\) the function \(f\) attains at least \(n\) values, and we have \((\mathrm{i})_{n}: f(x)=y_{n}\) if and only if \(x=n\), and (ii) \()_{n}: y_{n}=n\). The proof will follow the scheme
 
 \[
 \left.(\mathrm{i})_{1}, \text { (ii }\right)_{1},(\mathrm{i})_{2},(\text { ii })_{2}, \ldots,(\mathrm{i})_{n},(\text { ii })_{n}, \ldots
 \]
 
-To start, consider any \(x\) such that \(f(x)=y_{1}\). If \(x > 1\), then (1) reads \(f\left(f^{g(x-1)}(x-1)\right)<y_{1}\), contradicting the minimality of \(y_{1}\). So we have that \(f(x)=y_{1}\) is equivalent to \(x=1\), establish\(\operatorname{ing}(\mathrm{i})_{1}\).
+To start, consider any \(x\) such that \(f(x)=y_{1}\). If \(x > 1\), then (1) reads \(f\left(f^{g(x-1)}(x-1)\right) < y_{1}\), contradicting the minimality of \(y_{1}\). So we have that \(f(x)=y_{1}\) is equivalent to \(x=1\), establish\(\operatorname{ing}(\mathrm{i})_{1}\).
 
 Next, assume that for some \(n\) statement \((\mathrm{i})_{n}\) is established, as well as all the previous statements in (2). Note that these statements imply that for all \(k \geq 1\) and \(a < n\) we have \(f^{k}(x)=a\) if and only if \(x=a\).
 
-Now, each value \(y_{i}\) with \(1 \leq i \leq n\) is attained at the unique integer \(i\), so \(y_{n+1}\) exists. Choose an arbitrary \(x\) such that \(f(x)=y_{n+1}\); we necessarily have \(x > n\). Substituting \(x-1\) into (1) we have \(f\left(f^{g(x-1)}(x-1)\right)<y_{n+1}\), which implies
+Now, each value \(y_{i}\) with \(1 \leq i \leq n\) is attained at the unique integer \(i\), so \(y_{n+1}\) exists. Choose an arbitrary \(x\) such that \(f(x)=y_{n+1}\); we necessarily have \(x > n\). Substituting \(x-1\) into (1) we have \(f\left(f^{g(x-1)}(x-1)\right) < y_{n+1}\), which implies
 
 \[
 f^{g(x-1)}(x-1) \in\{1, \ldots, n\}

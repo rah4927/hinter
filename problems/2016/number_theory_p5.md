@@ -19,7 +19,7 @@ for some integers \(x\) and \(y\) with \(x > \sqrt{a}\). Denote by \(B\) the set
 We first prove the following preliminary result.
 
 \begin{itemize}
-  \item Claim. For fixed \(k\), let \(x, y\) be integers satisfying (1). Then the numbers \(x_{1}, y_{1}\) defined by
+ \item Claim. For fixed \(k\), let \(x, y\) be integers satisfying (1). Then the numbers \(x_{1}, y_{1}\) defined by
 \end{itemize}
 
 \[
@@ -66,10 +66,10 @@ This implies \(k \in A\) and hence \(B \subset A\). Next, we shall show that \(A
 x_{1}=\frac{1}{2}\left|x-y+\frac{(x-y)^{2}-4 a}{x+y}\right|, \quad y_{1}=\frac{1}{2}\left(x-y-\frac{(x-y)^{2}-4 a}{x+y}\right) .
 \]
 
-By the Claim, \(x_{1}, y_{1}\) are integers satisfying (1). Since \(k > 1\), we get \(x > y > \sqrt{a}\). Therefore, we have \(y_{1} > \frac{4 a}{x+y} > 0\) and \(\frac{4 a}{x+y}<x+y\). It follows that
+By the Claim, \(x_{1}, y_{1}\) are integers satisfying (1). Since \(k > 1\), we get \(x > y > \sqrt{a}\). Therefore, we have \(y_{1} > \frac{4 a}{x+y} > 0\) and \(\frac{4 a}{x+y} < x+y\). It follows that
 
 \[
-x_{1}+y_{1} \leqslant \max \left\{x-y, \frac{4 a-(x-y)^{2}}{x+y}\right\}<x+y
+x_{1}+y_{1} \leqslant \max \left\{x-y, \frac{4 a-(x-y)^{2}}{x+y}\right\} < x+y
 \]
 
 If \(x_{1} > \sqrt{a}\), we get a contradiction due to the minimality of \(x+y\). Therefore, we must have \(0 \leqslant x_{1} < \sqrt{a}\), which means \(k \in B\) so that \(A \subset B\).

@@ -16,7 +16,7 @@ Let \(n\) be a positive integer, and set \(N=2^{n}\). Determine the smallest rea
 The final answer is \(a_{n}=N / 2\).
 
 ---
-First of all, assume that \(a_{n}<N / 2\) satisfies the condition. Take \(x=1+t\) for \(t > 0\), we should have
+First of all, assume that \(a_{n} < N / 2\) satisfies the condition. Take \(x=1+t\) for \(t > 0\), we should have
 
 \[
 \frac{(1+t)^{2 N}+1}{2} \leqslant\left(1+t+a_{n} t^{2}\right)^{N}
@@ -28,7 +28,7 @@ Expanding the brackets we get
 \left(1+t+a_{n} t^{2}\right)^{N}-\frac{(1+t)^{2 N}+1}{2}=\left(N a_{n}-\frac{N^{2}}{2}\right) t^{2}+c_{3} t^{3}+\ldots+c_{2 N} t^{2 N}
 \]
 
-with some coefficients \(c_{3}, \ldots, c_{2 N}\). Since \(a_{n}<N / 2\), the right hand side of (1) is negative for sufficiently small \(t\). A contradiction.
+with some coefficients \(c_{3}, \ldots, c_{2 N}\). Since \(a_{n} < N / 2\), the right hand side of (1) is negative for sufficiently small \(t\). A contradiction.
 
 It remains to prove the following inequality
 

@@ -16,7 +16,7 @@ We prove by induction on \(n\) that there exists a partition of \([2,3 n+1]\) in
 
 Lemma. Suppose that the numbers \(a < b < c\) form an obtuse triple, and let \(x\) be any positive number. Then the triple \(\{a, b+x, c+x\}\) is also obtuse.
 
-Proof. The numbers \(a < b+x < c+x\) are the sides of a triangle because \((c+x)-(b+x)=\) \(c-b < a\). This triangle is obtuse since \((c+x)^{2}-(b+x)^{2}=(c-b)(c+b+2 x) > (c-b)(c+b)>a^{2}\).
+Proof. The numbers \(a < b+x < c+x\) are the sides of a triangle because \((c+x)-(b+x)=\) \(c-b < a\). This triangle is obtuse since \((c+x)^{2}-(b+x)^{2}=(c-b)(c+b+2 x) > (c-b)(c+b) > a^{2}\).
 
 Now we turn to the induction step. Let \(n > 1\) and put \(t=\lfloor n / 2\rfloor < n\). By the induction hypothesis, there exists a partition of the set \([2,3 t+1]\) into \(t\) obtuse triples \(A_{i}^{\prime}=\left\{i, a_{i}^{\prime}, b_{i}^{\prime}\right\}\) \((i \in[2, t+1])\). For the same values of \(i\), define \(A_{i}=\left\{i, a_{i}^{\prime}+(n-t), b_{i}^{\prime}+(n-t)\right\}\). The constructed triples are obviously disjoint, and they are obtuse by the lemma. Moreover, we have
 

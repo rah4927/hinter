@@ -18,7 +18,7 @@ forms an arithmetic progression. Prove that the terms of the sequence are equal.
 ---
 Suppose that (1) is an arithmetic progression with nonzero difference. Let the difference be \(\Delta=\frac{c}{d}\), where \(d > 0\) and \(c, d\) are coprime.
 
-We will show that too many denominators \(b_{i}\) should be divisible by \(d\). To this end, for any \(1 \leqslant i \leqslant n\) and any prime divisor \(p\) of \(d\), say that the index \(i\) is \(p\)-wrong, if \(v_{p}\left(b_{i}\right)<v_{p}(d) .\left(v_{p}(x)\right.\) stands for the exponent of \(p\) in the prime factorisation of \(x\).)
+We will show that too many denominators \(b_{i}\) should be divisible by \(d\). To this end, for any \(1 \leqslant i \leqslant n\) and any prime divisor \(p\) of \(d\), say that the index \(i\) is \(p\)-wrong, if \(v_{p}\left(b_{i}\right) < v_{p}(d) .\left(v_{p}(x)\right.\) stands for the exponent of \(p\) in the prime factorisation of \(x\).)
 
 Claim 1. For any prime \(p\), all \(p\)-wrong indices are congruent modulo \(p\). In other words, the \(p\)-wrong indices (if they exist) are included in an arithmetic progression with difference \(p\).
 

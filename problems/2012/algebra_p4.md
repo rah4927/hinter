@@ -10,7 +10,7 @@ source: "IMO 2012 Algebra Problem 4"
 Let \(f\) and \(g\) be two nonzero polynomials with integer coefficients and \(\operatorname{deg} f > \operatorname{deg} g\). Suppose that for infinitely many primes \(p\) the polynomial \(p f+g\) has a rational root. Prove that \(f\) has a rational root.
 
 ---
-Since \(\operatorname{deg} f > \operatorname{deg} g\), we have \(|g(x) / f(x)| < 1\) for sufficiently large \(x\); more precisely, there is a real number \(R\) such that \(|g(x) / f(x)| < 1\) for all \(x\) with \(|x|>R\). Then for all such \(x\) and all primes \(p\) we have
+Since \(\operatorname{deg} f > \operatorname{deg} g\), we have \(|g(x) / f(x)| < 1\) for sufficiently large \(x\); more precisely, there is a real number \(R\) such that \(|g(x) / f(x)| < 1\) for all \(x\) with \(|x| > R\). Then for all such \(x\) and all primes \(p\) we have
 
 \[
 |p f(x)+g(x)| \geq|f(x)|\left(p-\frac{|g(x)|}{|f(x)|}\right) > 0
@@ -32,8 +32,8 @@ The equation above implies that \(u^{n}+b_{n-1} u^{n-1}\) is divisible by \(p\) 
 
 \[
 \begin{gathered}
-\frac{\left|p k-b_{n-1}\right|}{p}=\frac{|u|}{p}<R \\
-|k|<R+\frac{\left|b_{n-1}\right|}{p}<R+\left|b_{n-1}\right| .
+\frac{\left|p k-b_{n-1}\right|}{p}=\frac{|u|}{p} < R \\
+|k| < R+\frac{\left|b_{n-1}\right|}{p} < R+\left|b_{n-1}\right| .
 \end{gathered}
 \]
 

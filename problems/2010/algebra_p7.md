@@ -16,7 +16,7 @@ a_{n}=\max _{1 \leq k \leq n-1}\left(a_{k}+a_{n-k}\right) .
 Prove that there exist positive integers \(\ell \leq r\) and \(N\) such that \(a_{n}=a_{n-\ell}+a_{\ell}\) for all \(n \geq N\).
 
 ---
-First, from the problem conditions we have that each \(a_{n}(n > r)\) can be expressed as \(a_{n}=a_{j_{1}}+a_{j_{2}}\) with \(j_{1}, j_{2}<n, j_{1}+j_{2}=n\). If, say, \(j_{1}>r\) then we can proceed in the same way with \(a_{j_{1}}\), and so on. Finally, we represent \(a_{n}\) in a form
+First, from the problem conditions we have that each \(a_{n}(n > r)\) can be expressed as \(a_{n}=a_{j_{1}}+a_{j_{2}}\) with \(j_{1}, j_{2} < n, j_{1}+j_{2}=n\). If, say, \(j_{1} > r\) then we can proceed in the same way with \(a_{j_{1}}\), and so on. Finally, we represent \(a_{n}\) in a form
 
 \[
 \begin{gathered}
@@ -25,10 +25,10 @@ a_{n}=a_{i_{1}}+\cdots+a_{i_{k}}, \\
 \end{gathered}
 \]
 
-Moreover, if \(a_{i_{1}}\) and \(a_{i_{2}}\) are the numbers in (2) obtained on the last step, then \(i_{1}+i_{2}>r\). Hence we can adjust (3) as
+Moreover, if \(a_{i_{1}}\) and \(a_{i_{2}}\) are the numbers in (2) obtained on the last step, then \(i_{1}+i_{2} > r\). Hence we can adjust (3) as
 
 \[
-1 \leq i_{j} \leq r, \quad i_{1}+\cdots+i_{k}=n, \quad i_{1}+i_{2}>r .
+1 \leq i_{j} \leq r, \quad i_{1}+\cdots+i_{k}=n, \quad i_{1}+i_{2} > r .
 \]
 
 On the other hand, suppose that the indices \(i_{1}, \ldots, i_{k}\) satisfy the conditions (4). Then, denoting \(s_{j}=i_{1}+\cdots+i_{j}\), from (1) we have

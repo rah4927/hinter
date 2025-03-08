@@ -55,7 +55,7 @@ d_{s_{n}}=d_{s_{n}+1}=\cdots=d_{s_{n+1}-1}=m & \text { if } d_{n}=M
 \end{aligned}
 \]
 
-Hence, \(d_{n}=m\) implies \(d_{s_{n}}=M\). Note that \(s_{n} \geq s_{1}+(n-1) \geq n\) for all \(n\) and moreover \(s_{n}>n\) if \(d_{n}=n\), because in the case \(s_{n}=n\) we would have \(m=d_{n}=d_{s_{n}}=M\) in contradiction to the assumption \(m < M\). In the same way \(d_{n}=M\) implies \(d_{s_{n}}=m\) and \(s_{n}>n\). Consequently, there is a strictly increasing sequence \(n_{1}, n_{2}, \ldots\) such that
+Hence, \(d_{n}=m\) implies \(d_{s_{n}}=M\). Note that \(s_{n} \geq s_{1}+(n-1) \geq n\) for all \(n\) and moreover \(s_{n} > n\) if \(d_{n}=n\), because in the case \(s_{n}=n\) we would have \(m=d_{n}=d_{s_{n}}=M\) in contradiction to the assumption \(m < M\). In the same way \(d_{n}=M\) implies \(d_{s_{n}}=m\) and \(s_{n} > n\). Consequently, there is a strictly increasing sequence \(n_{1}, n_{2}, \ldots\) such that
 
 \[
 d_{s_{n_{1}}}=M, \quad d_{s_{n_{2}}}=m, \quad d_{s_{n_{3}}}=M, \quad d_{s_{n_{4}}}=m, \quad \ldots

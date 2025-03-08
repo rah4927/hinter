@@ -14,7 +14,7 @@ The final answers are all pairs \((n, k)\) such that \(n \nmid k\) and \(k \nmid
 ---
 As usual, the number of divisors of a positive integer \(n\) is denoted by \(d(n)\). If \(n=\prod_{i} p_{i}^{\alpha_{i}}\) is the prime factorisation of \(n\), then \(d(n)=\prod_{i}\left(\alpha_{i}+1\right)\).
 
-We start by showing that one cannot find any suitable number \(s\) if \(k \mid n\) or \(n \mid k\) (and \(k \neq n)\). Suppose that \(n \mid k\), and choose any positive integer \(s\). Then the set of divisors of \(s n\) is a proper subset of that of \(s k\), hence \(d(s n)<d(s k)\). Therefore, the pair \((n, k)\) does not satisfy the problem requirements. The case \(k \mid n\) is similar.
+We start by showing that one cannot find any suitable number \(s\) if \(k \mid n\) or \(n \mid k\) (and \(k \neq n)\). Suppose that \(n \mid k\), and choose any positive integer \(s\). Then the set of divisors of \(s n\) is a proper subset of that of \(s k\), hence \(d(s n) < d(s k)\). Therefore, the pair \((n, k)\) does not satisfy the problem requirements. The case \(k \mid n\) is similar.
 
 Now assume that \(n \nmid k\) and \(k \nmid n\). Let \(p_{1}, \ldots, p_{t}\) be all primes dividing \(n k\), and consider the prime factorisations
 

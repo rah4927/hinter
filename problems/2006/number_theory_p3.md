@@ -15,9 +15,9 @@ f(n)=\frac{1}{n}\left(\left\lfloor\frac{n}{1}\right\rfloor+\left\lfloor\frac{n}{
 
 where \(\lfloor x\rfloor\) denotes the integer part of \(x\).
 
-(a) Prove that \(f(n+1)>f(n)\) infinitely often.
+(a) Prove that \(f(n+1) > f(n)\) infinitely often.
 
-(b) Prove that \(f(n+1)<f(n)\) infinitely often.
+(b) Prove that \(f(n+1) < f(n)\) infinitely often.
 
 ---
 Let \(g(n)=n f(n)\) for \(n \geq 1\) and \(g(0)=0\). We note that, for \(k=1, \ldots, n\),
@@ -54,10 +54,10 @@ meaning that
 f(n)=\frac{d(1)+d(2)+\cdots+d(n)}{n} .
 \]
 
-In other words, \(f(n)\) is equal to the arithmetic mean of \(d(1), d(2), \ldots, d(n)\). In order to prove the claims, it is therefore sufficient to show that \(d(n+1)>f(n)\) and \(d(n+1)<f(n)\) both hold infinitely often.
+In other words, \(f(n)\) is equal to the arithmetic mean of \(d(1), d(2), \ldots, d(n)\). In order to prove the claims, it is therefore sufficient to show that \(d(n+1) > f(n)\) and \(d(n+1) < f(n)\) both hold infinitely often.
 
 We note that \(d(1)=1\). For \(n > 1, d(n) \geq 2\) holds, with equality if and only if \(n\) is prime. Since \(f(6)=7 / 3 > 2\), it follows that \(f(n) > 2\) holds for all \(n \geq 6\).
 
 Since there are infinitely many primes, \(d(n+1)=2\) holds for infinitely many values of \(n\), and for each such \(n \geq 6\) we have \(d(n+1)=2 < f(n)\). This proves claim (b).
 
-To prove (a), notice that the sequence \(d(1), d(2), d(3), \ldots\) is unbounded (e. g. \(d\left(2^{k}\right)=k+1\) for all \(k)\). Hence \(d(n+1) > \max \{d(1), d(2), \ldots, d(n)\}\) for infinitely many \(n\). For all such \(n\), we have \(d(n+1)>f(n)\). This completes the solution.
+To prove (a), notice that the sequence \(d(1), d(2), d(3), \ldots\) is unbounded (e. g. \(d\left(2^{k}\right)=k+1\) for all \(k)\). Hence \(d(n+1) > \max \{d(1), d(2), \ldots, d(n)\}\) for infinitely many \(n\). For all such \(n\), we have \(d(n+1) > f(n)\). This completes the solution.

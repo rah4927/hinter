@@ -16,9 +16,9 @@ S(P(n))=P(S(n))
 The final answer is
 
 \begin{itemize}
-  \item \(P(x)=c\) where \(1 \leqslant c \leqslant 9\) is an integer; or
+ \item \(P(x)=c\) where \(1 \leqslant c \leqslant 9\) is an integer; or
 
-  \item \(P(x)=x\).
+ \item \(P(x)=x\).
 
 \end{itemize}
 
@@ -26,13 +26,13 @@ The final answer is
 We consider three cases according to the degree of \(P\).
 
 \begin{itemize}
-  \item Case 1. \(P(x)\) is a constant polynomial.
+ \item Case 1. \(P(x)\) is a constant polynomial.
 \end{itemize}
 
 Let \(P(x)=c\) where \(c\) is an integer constant. Then (1) becomes \(S(c)=c\). This holds if and only if \(1 \leqslant c \leqslant 9\).
 
 \begin{itemize}
-  \item Case 2. \(\operatorname{deg} P=1\).
+ \item Case 2. \(\operatorname{deg} P=1\).
 \end{itemize}
 
 We have the following observation. For any positive integers \(m, n\), we have

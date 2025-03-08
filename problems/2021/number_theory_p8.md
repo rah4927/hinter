@@ -31,10 +31,10 @@ f_{m, a b}=f_{m, a} f_{m, b}
 by the Chinese remainder theorem. Also, note that, if \(f_{m, \ell}=f_{m+1, \ell}\), then \(P\) permutes the image of \(P^{m}\) on \(\mathbb{Z}_{\ell}\), and therefore \(f_{s, \ell}=f_{m, \ell}\) for all \(s > m\). So, as \(f_{m, a b}=1\) for sufficiently large \(m\), we have for each \(m\)
 
 \[
-f_{m, a}>f_{m+1, a} \quad \text { or } \quad f_{m, a}=1, \quad f_{m, b}>f_{m+1, b} \quad \text { or } \quad f_{m, b}=1
+f_{m, a} > f_{m+1, a} \quad \text { or } \quad f_{m, a}=1, \quad f_{m, b} > f_{m+1, b} \quad \text { or } \quad f_{m, b}=1
 \]
 
-Choose the smallest \(m\) such that \(f_{m+1, a}=1\) or \(f_{m+1, b}=1\). Without loss of generality assume that \(f_{m+1, a}=1\). Then \(f_{m+1, a b}=f_{m+1, b}<f_{m, b} \leqslant f_{m, a b} / 2 \leqslant f_{m+1, a b}\), a contradiction.
+Choose the smallest \(m\) such that \(f_{m+1, a}=1\) or \(f_{m+1, b}=1\). Without loss of generality assume that \(f_{m+1, a}=1\). Then \(f_{m+1, a b}=f_{m+1, b} < f_{m, b} \leqslant f_{m, a b} / 2 \leqslant f_{m+1, a b}\), a contradiction.
 
 Part 3. The required polynomial does not exist when \(n\) is an odd prime power that is not a prime.
 
@@ -46,7 +46,7 @@ If \(p \mid P^{\prime}(r)\), then \(P(r+p s) \equiv P(r)\left(\bmod p^{2}\right)
 
 Now we show that \(p \nmid P^{\prime}(r)\) implies \(\left|P\left(S_{r}\right)\right|=p^{k-1}\) for all \(k\).
 
-Suppose the contrary: \(\left|P\left(S_{r}\right)\right|<p^{k-1}\) for some \(k > 1\). Let us choose the smallest \(k\) for which this is so. To each residue in \(P\left(S_{r}\right)\) we assign its residue modulo \(p^{k-1}\); denote the resulting set by \(\bar{P}(S, r)\). We have \(|\bar{P}(S, r)|=p^{k-2}\) by virtue of minimality of \(k\). Then \(\left|P\left(S_{r}\right)\right|<p^{k-1}=p \cdot|\bar{P}(S, r)|\), that is, there is \(u=P(x) \in P\left(S_{r}\right)(x \equiv r(\bmod p))\) and \(t \not \equiv 0\) \((\bmod p)\) such that \(u+p^{k-1} t \notin P\left(S_{r}\right)\).
+Suppose the contrary: \(\left|P\left(S_{r}\right)\right| < p^{k-1}\) for some \(k > 1\). Let us choose the smallest \(k\) for which this is so. To each residue in \(P\left(S_{r}\right)\) we assign its residue modulo \(p^{k-1}\); denote the resulting set by \(\bar{P}(S, r)\). We have \(|\bar{P}(S, r)|=p^{k-2}\) by virtue of minimality of \(k\). Then \(\left|P\left(S_{r}\right)\right| < p^{k-1}=p \cdot|\bar{P}(S, r)|\), that is, there is \(u=P(x) \in P\left(S_{r}\right)(x \equiv r(\bmod p))\) and \(t \not \equiv 0\) \((\bmod p)\) such that \(u+p^{k-1} t \notin P\left(S_{r}\right)\).
 
 Note that \(P\left(x+p^{k-1} s\right) \equiv u+p^{k-1} s P^{\prime}(x)\left(\bmod p^{k}\right)\). Since \(P\left(x+p^{k-1} s\right) \not \equiv u+p^{k-1} t\) \(\left(\bmod p^{k}\right)\), the congruence \(p^{k-1} s P^{\prime}(x) \equiv p^{k-1} t\left(\bmod p^{k}\right)\) has no solutions. So the congruence \(s P^{\prime}(x) \equiv t(\bmod p)\) has no solutions, which contradicts \(p \nmid P^{\prime}(r)\). Since the image of \(P^{m}\) consists of one element for sufficiently large \(m\), we can take the smallest \(m\) such that \(\left|P^{m-1}\left(S_{r}\right)\right|=p^{k-1}\) for some \(r \in \mathbb{Z}_{p}\), but \(\left|P^{m}\left(S_{q}\right)\right| \leqslant p^{k-2}\) for all \(q \in \mathbb{Z}_{p}\).
 
