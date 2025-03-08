@@ -1,6 +1,10 @@
 import { NextResponse } from 'next/server';
 import OpenAI from 'openai';
 import { Message } from '@/types/chat';
+import { MODEL_CONFIGS, formatMessagesForModel } from '@/lib/models';
+
+// Get model from environment or use default
+const CURRENT_MODEL = process.env.OPENAI_MODEL || 'gpt-4';
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -19,54 +23,64 @@ export async function POST(request: Request) {
       );
     }
 
+    const modelConfig = MODEL_CONFIGS[CURRENT_MODEL];
+    if (!modelConfig) {
+      console.error(`Invalid model configuration for ${CURRENT_MODEL}`);
+      return NextResponse.json(
+        { error: 'Invalid model configuration' },
+        { status: 500 }
+      );
+    }
+
+    const formattedMessages = formatMessagesForModel([
+      {
+        role: "system",
+        content: modelConfig.promptTemplate?.system || `Math tutor helping with IMO problems.`,
+        timestamp: Date.now()
+      },
+      {
+        role: "system",
+        content: (modelConfig.promptTemplate?.problemContext || `Problem: {problem}\nSolution: {solution}`)
+          .replace('{problem}', problem)
+          .replace('{solution}', solution),
+        timestamp: Date.now()
+      },
+      ...history.filter((msg: Message) => msg.content && typeof msg.content === 'string').map((msg: Message) => ({
+        role: msg.role,
+        content: msg.content,
+        timestamp: Date.now()
+      })),
+      {
+        role: "user",
+        content: message || 'Can you help me with this problem?',
+        timestamp: Date.now()
+      }
+    ], CURRENT_MODEL);
+
     const completion = await openai.chat.completions.create({
-      model: "gpt-4",
-      messages: [
-        {
-          role: "system",
-          content: `You are a helpful assistant for solving IMO problems. 
-          
-The current problem is:
-${problem}
-
-The solution is:
-${solution}
-
-Your role is to help students learn and understand the problem-solving process. You should:
-1. Use your knowledge of the solution to provide accurate and helpful guidance
-2. Never give away the solution directly
-3. Provide hints that lead students towards understanding
-4. Ask probing questions to help students discover key insights
-5. Confirm when students are on the right track
-6. Gently redirect when students go off track
-7. Focus on teaching problem-solving techniques
-
-IMPORTANT: Always use LaTeX notation for ALL mathematical expressions, even simple ones. For example:
-- Use \\(n^2\\) instead of n^2 or n²
-- Use \\(\\frac{1}{4}\\) instead of 1/4
-- Use \\(\\cdot\\) for multiplication instead of *
-- Always wrap expressions in \\( \\) for inline math or \\[ \\] for display math
-- Never use plain text or ASCII/Unicode for mathematical notation
-
-Remember: Your goal is to help students learn how to solve the problem, not to solve it for them.`
-        },
-        ...history.map((msg: Message) => ({
-          role: msg.role,
-          content: msg.content
-        })),
-        {
-          role: "user",
-          content: message
-        }
-      ],
-      temperature: 0.7,
-      max_tokens: 500,
+      model: modelConfig.name,
+      messages: formattedMessages,
+      ...(modelConfig.temperature && { temperature: modelConfig.temperature }),
+      ...(modelConfig.top_p && { top_p: modelConfig.top_p }),
+      ...(modelConfig.maxTokens && { max_tokens: modelConfig.maxTokens }),
+      ...(modelConfig.max_completion_tokens && { max_completion_tokens: modelConfig.max_completion_tokens }),
+      ...(modelConfig.frequencyPenalty && { frequency_penalty: modelConfig.frequencyPenalty }),
+      ...(modelConfig.presencePenalty && { presence_penalty: modelConfig.presencePenalty }),
     });
 
-    console.log('OpenAI response:', completion.choices[0].message);
+    console.log('Full OpenAI response:', JSON.stringify(completion, null, 2));
+    
+    const responseContent = completion.choices[0]?.message?.content;
+    if (!responseContent) {
+      console.error('Empty response from model:', modelConfig.name);
+      return NextResponse.json(
+        { error: 'Model returned an empty response. Please try again.' },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json({
-      message: completion.choices[0].message.content,
+      message: responseContent,
       isComplete: false
     });
   } catch (error) {

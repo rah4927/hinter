@@ -1,10 +1,13 @@
 import OpenAI from 'openai';
 import { ChatMessage } from '@/types';
 import { SYSTEM_PROMPT } from './config';
+import { MODEL_CONFIGS, formatMessagesForModel } from './models';
 
 if (!process.env.OPENAI_API_KEY) {
   throw new Error('Missing OPENAI_API_KEY environment variable');
 }
+
+const CURRENT_MODEL = process.env.OPENAI_MODEL || 'gpt-4';
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -28,41 +31,55 @@ export async function generateHint({
   hintIndex,
 }: GenerateHintParams): Promise<string> {
   try {
-    const messages = [
-      { role: 'system' as const, content: SYSTEM_PROMPT },
+    const modelConfig = MODEL_CONFIGS[CURRENT_MODEL];
+    if (!modelConfig) {
+      throw new Error(`Invalid model configuration for ${CURRENT_MODEL}`);
+    }
+
+    const messages = formatMessagesForModel([
+      { 
+        role: 'system', 
+        content: modelConfig.promptTemplate?.system || `Math tutor helping with IMO problems.`,
+        timestamp: Date.now() 
+      },
       {
-        role: 'system' as const,
-        content: `
-Problem: ${problemStatement}
-
-Complete solution: ${solution}
-
-Previous hints given (in order):
-${previousHints.slice(0, hintIndex).map((hint, i) => `${i + 1}. ${hint}`).join('\n')}
-
-Current hint level: ${hintIndex + 1} out of ${previousHints.length}
-
-Remember: Give hints that are appropriate for the current progression level. Don't reveal too much at once.`,
+        role: 'system',
+        content: (modelConfig.promptTemplate?.problemContext || `Problem: {problem}\nSolution: {solution}\nHint level: {hintLevel}`)
+          .replace('{problem}', problemStatement)
+          .replace('{solution}', solution)
+          .replace('{hintLevel}', `${hintIndex + 1}/${previousHints.length}`) +
+          (previousHints.length > 0 ? `\n\nPrevious hints:\n${previousHints.slice(0, hintIndex).map((hint, i) => `${i + 1}. ${hint}`).join('\n')}` : ''),
+        timestamp: Date.now()
       },
       // Convert chat history to OpenAI message format
-      ...history.map(msg => ({
+      ...history.filter((msg: ChatMessage) => msg.content && typeof msg.content === 'string').map(msg => ({
         role: msg.role === 'user' ? 'user' as const : 'assistant' as const,
         content: msg.content,
+        timestamp: Date.now()
       })),
-      { role: 'user' as const, content: userMessage },
-    ];
+      { role: 'user', content: userMessage || 'Can you help me with this problem?', timestamp: Date.now() },
+    ], CURRENT_MODEL);
 
     const completion = await openai.chat.completions.create({
-      model: 'gpt-4',
+      model: modelConfig.name,
       messages,
-      temperature: 0.7,
-      max_tokens: 1000,
-      top_p: 1,
-      frequency_penalty: 0,
-      presence_penalty: 0.5,
+      ...(modelConfig.temperature && { temperature: modelConfig.temperature }),
+      ...(modelConfig.top_p && { top_p: modelConfig.top_p }),
+      ...(modelConfig.maxTokens && { max_tokens: modelConfig.maxTokens }),
+      ...(modelConfig.max_completion_tokens && { max_completion_tokens: modelConfig.max_completion_tokens }),
+      ...(modelConfig.frequencyPenalty && { frequency_penalty: modelConfig.frequencyPenalty }),
+      ...(modelConfig.presencePenalty && { presence_penalty: modelConfig.presencePenalty }),
     });
 
-    return completion.choices[0]?.message?.content || 'I apologize, but I was unable to generate a hint. Please try asking your question differently.';
+    console.log('Full OpenAI response:', JSON.stringify(completion, null, 2));
+    
+    const responseContent = completion.choices[0]?.message?.content;
+    if (!responseContent) {
+      console.error('Empty response from model:', modelConfig.name);
+      throw new Error('Model returned an empty response. Please try again.');
+    }
+
+    return responseContent;
   } catch (error) {
     console.error('Error generating hint:', error);
     throw new Error('Failed to generate hint. Please try again later.');
