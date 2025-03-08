@@ -1,5 +1,22 @@
 import { getProblemById } from '@/app/actions';
 import Chat from '@/components/Chat';
+import { Metadata } from 'next';
+
+export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const problem = await getProblemById(resolvedParams.id);
+  
+  if (!problem) {
+    return {
+      title: 'Problem Not Found | Problem Assistant',
+    };
+  }
+
+  return {
+    title: `${problem.source} | Problem Assistant`,
+    description: `Get help solving ${problem.source} with our AI-powered assistant`,
+  };
+}
 
 export default async function ProblemPage({
   params,
